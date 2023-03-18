@@ -1,0 +1,485 @@
+//Colors
+@background-color:#FFFFFF;
+@text-color:#5E371B;
+@dot-color:#E88537;
+@button-color:#FFE6C0;
+@features-bckg-color: #FAEEDB;
+
+//Fonts
+@font-face {
+    font-family: 'Bion';
+    src: url('/fonts/Bion-Bold.eot');
+    src: url('/fonts/Bion-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Bion-Bold.woff2') format('woff2'),
+        url('/fonts/Bion-Bold.woff') format('woff'),
+        url('/fonts/Bion-Bold.ttf') format('truetype'),
+        url('/fonts/Bion-Bold.svg#Bion-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bion Book';
+    src: url('/fonts/Bion-Book.eot');
+    src: url('/fonts/Bion-Book.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Bion-Book.woff2') format('woff2'),
+        url('/fonts/Bion-Book.woff') format('woff'),
+        url('/fonts/Bion-Book.ttf') format('truetype'),
+        url('/fonts/Bion-Book.svg#Bion-Book') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+  }
+
+
+
+.book() {
+    font-family: 'Bion Book';
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+// Basic settings
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: @background-color;
+    color: @text-color;
+    font-family: 'Bion';
+    
+}
+
+.header {
+    min-height: 1.6rem;
+    font-family: 'Bion';
+    font-size: 14px;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.menu {
+    display: inline-block;
+    // .bold();
+    & a {
+        text-transform: uppercase;
+        // .book();
+    }
+}
+
+/* set the background color for container nav. */
+nav {
+        /* remove paddings and margins, also list-style for "ul", * and add "position:relative" */
+    & ul {
+        padding:0;
+        margin:0;
+        list-style: none;
+        position: relative;
+    }
+    /* Apply inline-block positioning to the navigation elements */
+    & ul li {
+    // margin: 0px -7px 0 0;
+    display:inline-block;
+    position: relative;
+    // background-color: #E64A19;
+    }
+
+    & li {
+        // margin-left: 4rem;
+        // padding: 0px 30px 0px 0px;
+    }
+
+    li > a:after { 
+        content:  ' \02C7'; //02EF  02C7
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    li > a:only-child:after { content: ''; }
+
+    ul:first-child > li:first-child {
+        // box-shadow: 0 65px 20px  rgba(0,0,0,0.1); 
+        // margin-bottom: 20px;
+        // height: 90px;
+        // background-color: #E88537;
+    } 
+
+    ul li ul li:first-child {
+        // background-color: red;
+        // margin-top: 10px;
+    }
+
+    /* styling links*/
+    & a {
+        display:block;
+        padding:0 20px;
+        color:@text-color;
+        line-height: 60px;
+        text-decoration:none;
+       
+        
+    }
+    // & a:visited {
+    //     text-decoration:none;
+    //     color: red;
+    // }
+    /* change background color on hover by cursor*/
+
+    & a:hover {
+        text-decoration: none;
+        color: @text-color;
+        
+    }
+
+    /* hide the default dropdown lists and set absolute positioning */
+    & ul ul {
+        display: none;
+        position: absolute;
+        width:100%;
+        top: 100%;
+    }
+
+        /* display a drop-down list on hovering */
+    & ul li:hover > ul {
+        display:inherit;
+    }
+
+    /* the first level of the drop-down list */
+    & ul ul li {
+        // width:100%;
+        float:none;
+        z-index: 100;
+        display:list-item;
+        position: relative;
+        // margin-left: -1rem;
+        background-color: white;
+        margin: 0;
+        font-size: 10px;
+        
+    }
+    // customize the bottom edge of drop-down list
+    & ul ul :nth-child(3) { 
+        border-radius: 0 0 20px 20px;
+        
+    }
+
+}
+
+
+.fotorama__loaded .fotorama__img {
+    opacity: 0.55;
+}
+
+ .fotorama__wrap {
+    background: black;
+}
+
+.slider {
+    position: relative;
+    &-text  {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+        color: white;
+        
+        & h1 {
+            // .bold();
+        }
+        & p {
+            // .book();
+        }
+    }
+}
+
+
+  .fotorama__nav__frame.fotorama__active .fotorama__dot {
+    border: 4px solid @dot-color;
+  }
+
+  .fotorama__nav-wrap {
+    position: absolute;
+    top: 90%;
+  }
+  
+  .fotorama__dot {
+    border: 4px solid white;
+  }
+
+
+  .dropdown {
+    display: inline-block;
+  }
+
+  .menu-dropdown-btn {
+    border: none;
+    background-color: white;
+    font-family: 'Bion';
+    font-size: 14px;
+    text-transform: uppercase;
+  
+  }
+
+  .button {
+    background-color:@dot-color;
+    padding: 1rem 2rem;
+    border-radius: 55px;
+    color: #FEFEFE;
+    font-size: 1.8rem;
+    font-family: 'Bion';
+    // width: 14.5rem;
+    border: none;
+}
+
+.production {
+    text-align: center;
+    h1 {
+        
+        margin-top: 40px;
+        font-size: 4.8rem;
+        font-family: 'Bion';
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    &-block {
+        text-align: center;
+        & img {
+            display: block;
+            margin: 0 auto;
+            height: 160px;
+        }
+    }
+
+    &-slider {
+        margin: 8rem 0 4.2rem ;
+        border: 1px solid red;
+    }
+
+    
+
+    .arrow {
+        position: absolute;
+        z-index: 99;
+        width: 3.2rem;
+        height: 3.2rem;
+        border: none;
+        background-color: black;
+        background-size: 20%;
+        border-radius: 50%;
+        top:25%;
+    }
+
+    .prev {
+        left: -2%;
+        background: url(/img/left-arrow.svg) center no-repeat;
+        background-color: black;
+    }
+    .next {
+        right: -2%;
+        background: url(/img/right-arrow.svg) center no-repeat;
+        background-color: black;
+    }
+
+    &-text {
+        h1 {
+            font-size: 3.2rem;
+        }
+        p {
+            font-size: 1.6rem;
+            font-family: 'Bion Book';
+            padding: 9px 0 2rem;
+            line-height: 24.77px;
+        }
+    }
+
+}
+
+.content {
+    &-btn {
+        color: @text-color;
+        font-size: 1.6rem;
+        // width: 16.7rem;
+        // word-wrap: normal;
+        background-color: @button-color;
+    }
+}
+
+
+
+.novelty {
+    margin-top: 10.8rem;
+    box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    &-slider  {
+        img {
+            height: 239px;
+        }
+    }
+    &-text {
+        margin-left: 6.8rem;  
+    }
+}
+
+.slick-list {
+    border-radius: 12px 0 0 12px;
+}
+
+.about {
+    margin-top: 16.5rem;
+    img {
+        border-radius: 7%;
+        // width: 400px;
+        // height: 395px;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+    &-text h1 {
+        font-size: 4.8rem;
+    }
+}
+
+.partner {
+    margin-top: 20rem;
+    position: relative;
+    img {
+        border-radius: 7%;
+        position: absolute;
+        top: 0;
+        left: -15%;
+        width: 617px;
+        height: 476px;  
+    }
+    &-text h1 {
+        font-size: 4.8rem;
+    }
+}
+
+.features {
+    background-color: @features-bckg-color;
+    margin-top: 9.4rem;
+    text-align: center;
+    h1 {
+        margin-top: 9.4rem;
+        font-size: 4.8rem;
+    }
+    &-item {
+        width: 343px;
+        height: 484px;
+        margin-top: 7.5rem;
+        margin-bottom: 13.5rem;
+        border-radius: 12px;
+        padding: 62px 0px 96px 41px;
+        background-color: @background-color;
+        margin-left: 2.5rem;
+        box-shadow: 0px 8px 34px rgba(145, 118, 75, 0.18);
+        h1 {
+            font-size: 3.2rem;
+            margin-top: 4.8rem;
+            text-align: left;
+        }
+        p {
+            font-family: 'Bion Book';
+            font-size: 1.6rem;
+            margin-top: 1.7rem;
+            margin-bottom: 9.6rem;
+            text-align: left;
+        }
+        img {
+            height: 13.5rem;
+            
+        }
+    }
+}
+
+.read {
+    h1 {
+        margin-top: 10.2rem;
+    }
+
+    &-block {
+        position: relative;
+
+    .read-header {
+        position: absolute;
+        top: 5px;
+        left: 3rem;
+    }
+
+    img {
+        width: 100%;
+        height: 141px;
+        border-radius: 12px 12px 0 0;
+    }
+    h4 {
+        padding: 0.5rem 1rem;
+    }
+    .date {
+        font-family: 'Bion Book';
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+
+    p {
+        font-family: 'Bion Book';
+        font-size: 1.2rem;
+        margin-top: 4rem;
+    }
+    }
+    
+}
+
+.tab-content {
+    margin-top: 6rem;
+}
+
+.nav-tabs {
+    margin-top: 4rem;
+    border: none;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+ .nav-tabs > li.active > a:focus {
+    background-color:@dot-color;
+    padding: 0.5rem 2rem;
+    border-radius: 55px;
+    color: #FEFEFE;
+    font-size: 1.6rem;
+    font-family: 'Bion';
+    border: none;
+    box-shadow: 0px 7px 26px rgba(232, 133, 55, 0.25);
+}
+.nav-tabs > li > a {
+    border: node;
+    color: @text-color;
+    font-size: 1.6rem;
+}
+.nav-tabs > li > a:hover {
+    background-color: transparent;
+    border: none;
+}
+

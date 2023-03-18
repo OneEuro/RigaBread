@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Bion';
+    src: url('Bion-Bold.eot');
+    src: url('Bion-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Bion-Bold.woff2') format('woff2'),
+        url('Bion-Bold.woff') format('woff'),
+        url('Bion-Bold.ttf') format('truetype'),
+        url('Bion-Bold.svg#Bion-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bion Book';
+    src: url('Bion-Book.eot');
+    src: url('Bion-Book.eot?#iefix') format('embedded-opentype'),
+        url('Bion-Book.woff2') format('woff2'),
+        url('Bion-Book.woff') format('woff'),
+        url('Bion-Book.ttf') format('truetype'),
+        url('Bion-Book.svg#Bion-Book') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
