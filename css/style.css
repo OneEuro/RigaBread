@@ -28,6 +28,16 @@ body {
   color: #5e371b;
   font-family: 'Bion';
 }
+h1 {
+  font-size: 4.8rem;
+}
+h5 {
+  font-family: 'Bion Book';
+  font-size: 1.6rem;
+}
+p {
+  font-family: 'Bion Book';
+}
 .header {
   min-height: 1.6rem;
   font-family: 'Bion';
@@ -347,4 +357,54 @@ nav ul ul :nth-child(3) {
 .nav-tabs > li > a:hover {
   background-color: transparent;
   border: none;
+}
+.long-dash {
+  border-color: #5e371b;
+  border-width: 4px;
+  width: 4.5rem;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+}
+.contacts-block-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contacts-block-btn button {
+  color: #5e371b;
+  background-color: #ffe6c0;
+  box-shadow: 0px 4px 12px rgba(235, 199, 146, 0.1), 0px 7px 26px rgba(249, 220, 177, 0.45);
+}
+.contacts-block > hr {
+  border-width: 2px;
+  border-color: #b7b7b7;
+}
+.right-side {
+  background: lightgreen;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  left: 50%;
+  padding: 0;
+}
+.left-side {
+  background: lightgreen;
+  width: 50%;
+  position: absolute;
+  left: 0;
+  right: 50%;
+  padding: 0;
+}
+@media (max-width: 970px) {
+  .right-side {
+    background: lightgreen;
+    position: static;
+    width: auto;
+  }
+  .left-side {
+    background: lightgreen;
+    position: static;
+    width: auto;
+  }
 }
