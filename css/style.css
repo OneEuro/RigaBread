@@ -37,6 +37,7 @@ h5 {
 }
 p {
   font-family: 'Bion Book';
+  font-size: 1.6rem;
 }
 .header {
   min-height: 1.6rem;
@@ -427,4 +428,37 @@ nav ul ul :nth-child(3) {
 }
 iframe {
   border-radius: 12px;
+}
+.substrate {
+  box-shadow: 0px 8px 34px rgba(145, 118, 75, 0.18);
+  border-radius: 18px;
+  margin-top: 16rem;
+}
+.substrate .form-block {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.substrate .form-block-input {
+  border: none;
+  border-bottom: 1px solid #b7b7b7;
+  color: #8b8b8b;
+  font-family: 'Bion Book';
+  font-size: 1.6rem;
+  padding: 2rem 0 1rem;
+}
+.substrate .form-block-input:focus {
+  outline: none;
+  border-bottom: 1px solid #b7b7b7;
+}
+.substrate button {
+  padding: 10px 30px;
+  margin-top: 5rem;
+  margin-bottom: 7.6rem;
+}
+.substrate-form {
+  margin-top: 8rem;
+}
+.substrate-form p {
+  margin-top: 5.4rem;
 }
