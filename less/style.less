@@ -5,6 +5,7 @@
 @button-color:#FFE6C0;
 @features-bckg-color: #FAEEDB;
 @dash-color: #B7B7B7;
+@button-text-color: #93391D;
 
 //Fonts
 @font-face {
@@ -376,14 +377,11 @@ nav {
 
 .partner {
     margin-top: 20rem;
-    position: relative;
+    margin-bottom: 15rem;
     img {
         border-radius: 7%;
-        position: absolute;
-        top: 0;
-        left: -15%;
-        width: 617px;
         height: 476px;  
+        width: 100%;
     }
     &-text h1 {
         font-size: 4.8rem;
@@ -508,8 +506,13 @@ nav {
 }
 
 .contacts {
+    margin-top: 14rem;
     &-block {
+        p {
+            margin-top: 5.5rem;
+        }
         &-btn {
+            margin-top: 5.5rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -520,76 +523,59 @@ nav {
             }
     }
     & > hr {
+        margin-top: 5.5rem;
         border-width: 2px;
         border-color: @dash-color;
     }
 }
+    .map {
+        &-buttons {
+            margin-left: 50%;
+            transform: translateX(-40%) translateY(-50%);
+        }
+        button {    
+            background-color: @background-color;
+            font-size: 1.6rem;
+            padding: 5px 20px;
+            color: @button-text-color;
+            box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
+           margin-left: 2rem;
+        }
+        button:hover,.button:active {
+            background-color: @text-color;
+            color: @background-color;
+        }
+    }
 }
 
-// .right {
-//     background: red;
-//     position: relative;
-//     top: 50%;
-//     transform: translateY(-50%);
-// }
-
-// .right::after {
-//     right: -999em;
-//     background: red;
-//     content: '';
-//     display: block;
-//     position: absolute;
-//     width: 999em;
-//     top: 0;
-//     bottom: 0;
-// }
-
-// .blk {
-//     background: lightgreen;
-//     width: 50%;
-//     position: absolute;
-
-// }
-// @media only screen and (min-width: 1170px) {
-    
-//     .cell {
-//     position: static;
-// }
-// .blk {
-//     right: 0;
-//     left: 50%;
-//     text-align: right;
-//     padding-right: calc((100% - 1170px) / 2);
-// }
-// }
-
 .right-side {
-    background: lightgreen;
+    // background: lightgreen;
     width: 50%;
     position: absolute;
     right: 0;
     left: 50%;
     padding: 0;
+    
 }
 
 .left-side {
-    background: lightgreen;
     width: 50%;
     position: absolute;
-    left: 0;
-    right: 50%;
+    left: -10rem;
     padding: 0;
 }
 
 @media  (max-width: 970px) {
     .right-side  {
-        background: lightgreen;
         position: static;
         width: auto;
     }
     .left-side {
-        background: lightgreen;
         position: static;
         width: auto;
     }
+}
+
+iframe {
+    border-radius: 12px;
 }

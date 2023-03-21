@@ -249,15 +249,12 @@ nav ul ul :nth-child(3) {
 }
 .partner {
   margin-top: 20rem;
-  position: relative;
+  margin-bottom: 15rem;
 }
 .partner img {
   border-radius: 7%;
-  position: absolute;
-  top: 0;
-  left: -15%;
-  width: 617px;
   height: 476px;
+  width: 100%;
 }
 .partner-text h1 {
   font-size: 4.8rem;
@@ -366,7 +363,14 @@ nav ul ul :nth-child(3) {
   position: relative;
   top: 10px;
 }
+.contacts {
+  margin-top: 14rem;
+}
+.contacts-block p {
+  margin-top: 5.5rem;
+}
 .contacts-block-btn {
+  margin-top: 5.5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -377,11 +381,28 @@ nav ul ul :nth-child(3) {
   box-shadow: 0px 4px 12px rgba(235, 199, 146, 0.1), 0px 7px 26px rgba(249, 220, 177, 0.45);
 }
 .contacts-block > hr {
+  margin-top: 5.5rem;
   border-width: 2px;
   border-color: #b7b7b7;
 }
+.contacts .map-buttons {
+  margin-left: 50%;
+  transform: translateX(-40%) translateY(-50%);
+}
+.contacts .map button {
+  background-color: #ffffff;
+  font-size: 1.6rem;
+  padding: 5px 20px;
+  color: #93391d;
+  box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
+  margin-left: 2rem;
+}
+.contacts .map button:hover,
+.contacts .map .button:active {
+  background-color: #5e371b;
+  color: #ffffff;
+}
 .right-side {
-  background: lightgreen;
   width: 50%;
   position: absolute;
   right: 0;
@@ -389,22 +410,21 @@ nav ul ul :nth-child(3) {
   padding: 0;
 }
 .left-side {
-  background: lightgreen;
   width: 50%;
   position: absolute;
-  left: 0;
-  right: 50%;
+  left: -10rem;
   padding: 0;
 }
 @media (max-width: 970px) {
   .right-side {
-    background: lightgreen;
     position: static;
     width: auto;
   }
   .left-side {
-    background: lightgreen;
     position: static;
     width: auto;
   }
+}
+iframe {
+  border-radius: 12px;
 }
