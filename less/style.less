@@ -3,10 +3,12 @@
 @text-color:#5E371B;
 @dot-color:#E88537;
 @button-color:#FFE6C0;
-@features-bckg-color: #FAEEDB;
+@features-bkg-color: #FAEEDB;
 @dash-color: #B7B7B7;
 @button-text-color: #93391D;
 @form-color:#8B8B8B;
+@subscription-background:#FAEEDA;
+@footer-bkg-color:#281819;
 
 //Fonts
 @font-face {
@@ -76,6 +78,13 @@ h5 {
 p {
     font-family: 'Bion Book';
     font-size: 1.6rem;
+}
+
+a,a:hover,a:visited {
+    font-family: 'Bion Book';
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: @features-bkg-color;
 }
 
 .header {
@@ -149,8 +158,12 @@ nav {
         color:@text-color;
         line-height: 60px;
         text-decoration:none;
-       
-        
+    }
+    a,a:hover,a:visited {
+        font-family: 'Bion';
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: @text-color;
     }
     // & a:visited {
     //     text-decoration:none;
@@ -158,11 +171,7 @@ nav {
     // }
     /* change background color on hover by cursor*/
 
-    & a:hover {
-        text-decoration: none;
-        color: @text-color;
-        
-    }
+    
 
     /* hide the default dropdown lists and set absolute positioning */
     & ul ul {
@@ -220,10 +229,10 @@ nav {
         color: white;
         
         & h1 {
-            // .bold();
+            font-size: 7.5rem;
         }
         & p {
-            // .book();
+            font-size: 2rem;
         }
     }
 }
@@ -282,7 +291,7 @@ nav {
     &-block {
         text-align: center;
         & img {
-            display: block;
+            display: inline-block;
             margin: 0 auto;
             height: 160px;
         }
@@ -290,7 +299,7 @@ nav {
 
     &-slider {
         margin: 8rem 0 4.2rem ;
-        border: 1px solid red;
+        // border: 1px solid red;
     }
 
     
@@ -336,8 +345,6 @@ nav {
     &-btn {
         color: @text-color;
         font-size: 1.6rem;
-        // width: 16.7rem;
-        // word-wrap: normal;
         background-color: @button-color;
     }
 }
@@ -350,7 +357,7 @@ nav {
     border-radius: 12px;
     &-slider  {
         img {
-            height: 239px;
+            min-height: 24rem;
         }
     }
     &-text {
@@ -366,8 +373,7 @@ nav {
     margin-top: 16.5rem;
     img {
         border-radius: 7%;
-        // width: 400px;
-        // height: 395px;
+        width: 100%;
     }
     p {
         font-size: 1.6rem;
@@ -391,22 +397,19 @@ nav {
 }
 
 .features {
-    background-color: @features-bckg-color;
+    background-color: @features-bkg-color;
     margin-top: 9.4rem;
     text-align: center;
     h1 {
         margin-top: 9.4rem;
-        font-size: 4.8rem;
+        text-align: center;
     }
     &-item {
-        width: 343px;
         height: 484px;
-        margin-top: 7.5rem;
-        margin-bottom: 13.5rem;
+        margin: 7.5rem 0 13.5rem;
         border-radius: 12px;
         padding: 62px 0px 96px 41px;
         background-color: @background-color;
-        margin-left: 2.5rem;
         box-shadow: 0px 8px 34px rgba(145, 118, 75, 0.18);
         h1 {
             font-size: 3.2rem;
@@ -422,7 +425,6 @@ nav {
         }
         img {
             height: 13.5rem;
-            
         }
     }
 }
@@ -435,35 +437,36 @@ nav {
     &-block {
         position: relative;
 
-    .read-header {
-        position: absolute;
-        top: 5px;
-        left: 3rem;
-    }
+        .read-header {
+            position: absolute;
+            top: 5px;
+            left: 3rem;
+        }
 
-    img {
-        width: 100%;
-        height: 141px;
-        border-radius: 12px 12px 0 0;
-    }
-    h4 {
-        padding: 0.5rem 1rem;
-    }
-    .date {
-        font-family: 'Bion Book';
-        font-size: 1.2rem;
-        margin-top: 2rem;
-    }
-    h3 {
-        font-size: 1.8rem;
-        margin-top: 1rem;
-    }
+        img {
+            width: 100%;
+            max-width: 30rem;
+            height: 141px;
+            border-radius: 12px 12px 0 0;
+        }
+        h4 {
+            padding: 0.5rem 1rem;
+        }
+        .date {
+            font-family: 'Bion Book';
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+        h3 {
+            font-size: 1.8rem;
+            margin-top: 1rem;
+        }
 
-    p {
-        font-family: 'Bion Book';
-        font-size: 1.2rem;
-        margin-top: 4rem;
-    }
+        p {
+            font-family: 'Bion Book';
+            font-size: 1.2rem;
+            margin-top: 4rem;
+        }
     }
     
 }
@@ -551,7 +554,6 @@ nav {
 }
 
 .right-side {
-    // background: lightgreen;
     width: 50%;
     position: absolute;
     right: 0;
@@ -586,6 +588,9 @@ iframe {
     box-shadow: 0px 8px 34px rgba(145, 118, 75, 0.18);
     border-radius: 18px;
     margin-top: 16rem;
+    img {
+        width: 100%;
+    }
     .form-block {
         margin-top: 4rem;
         display: flex;
@@ -618,3 +623,67 @@ iframe {
     }
 }
 
+
+
+.subscription {
+    margin-top: 12rem;
+    text-align: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='1440' height='577' viewBox='0 0 1440 577' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='724.5' cy='1300' rx='3359.5' ry='1300' fill='%23FAEEDA'/%3E%3C/svg%3E%0A");
+    background-size: cover;
+    background-position-x: center;
+    &-item {
+        margin: 8.2rem 0 7rem;
+    }
+    .flex-block {
+        margin-top: 2.7rem;
+        display: flex;
+        justify-content: center;
+        column-gap: 1rem;
+
+        input {
+            box-shadow: 0px 7px 26px rgba(249, 220, 177, 0.35);
+            border-radius: 78px;
+            padding: 1rem 5rem;
+            border: none;
+            
+            font-family: 'Bion Book';
+        }
+
+        button {
+            padding: 1rem 3rem;
+        }
+    }
+}
+
+
+footer {
+    background-image: url("data:image/svg+xml,%3Csvg width='1440' height='263' viewBox='0 0 1440 263' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='719.5' cy='1300' rx='3359.5' ry='1300' fill='%23281819'/%3E%3C/svg%3E%0A");
+    background-size: cover;
+    background-position-x: center;
+    background-color: @subscription-background;
+    color: @features-bkg-color;
+    padding: 11.2rem 0 1rem ;
+    .site-map {
+        &-grid {
+            margin-top: 1.5rem;
+            display:grid;
+            grid-template-columns: 1fr 2fr ;
+            grid-column-gap: 40px;
+            grid-row-gap: 0.6rem;
+        }
+    }
+    
+    h4 {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 1.2rem;
+        line-height: 154.84%;
+    }
+
+    .references {
+        margin-top: 3.8rem;
+    }
+    
+}
