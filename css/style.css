@@ -533,3 +533,8 @@ footer p {
 footer .references {
   margin-top: 3.8rem;
 }
+footer .references a:after {
+  content: url(/img/link-icon.svg);
+  position: relative;
+  margin-left: 5px;
+}
