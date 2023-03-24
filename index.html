@@ -8,7 +8,7 @@
         <title>Рижский хлеб</title>
 
         <!-- Bootstrap CSS -->
-        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         
        
          <!-- jQuery -->
@@ -314,7 +314,7 @@
                         </div>
                         <hr>
                         <h5>Наша электронная почта</h5>
-                        <h2>example@gmail.com</h2>
+                        <h3>example@gmail.com</h3>
                         
                     </div>
                     <div class="map right-side">
@@ -360,8 +360,13 @@
                                 <h2>Подпишитесь и получайте <br> лучшие предложения!</h2>
                                 <form action="#">
                                     <div class="flex-block">
-                                        <input type="email" class="" placeholder="example@mail.ru">
-                                        <button type="submit" class="button">Отправить</button>
+                                        <div class="flex-item">
+                                            <input type="email" class="" placeholder="example@mail.ru">
+                                        </div>
+                                        <div class="flex-item">
+                                            <button type="submit" class="button">Отправить</button>
+                                        </div>
+                                    
                                     </div>
                                     
                                 </form>
@@ -433,7 +438,7 @@
                         });      
                     });
 
-
+                //main-image-slider
                 const slider = document.querySelector(".slider");
                 const slides = slider.querySelectorAll(".slide");
                 const dots = document.querySelectorAll(".dot");
@@ -477,6 +482,15 @@
                     currentSlide = index;
                     updateSlider();
                 });
+
+                dot.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+                });
+
+                dot.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, intervalTime);
+                });
+
                 });
 
                 // обработчик событий для листания свайпом

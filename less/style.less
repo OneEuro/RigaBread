@@ -70,6 +70,18 @@ h1 {
     font-size: 4.8rem;
 }
 
+@media (max-width: 768px) {
+    h1 {
+      font-size: 36px; /* Уменьшенный размер шрифта для экранов шириной до 768px */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 24px; /* Ещё меньший размер шрифта для экранов шириной до 480px */
+    }
+  }
+
 h5 {
     font-family: 'Bion Book';
     font-size: 1.6rem;
@@ -112,8 +124,9 @@ a,a:hover,a:visited {
 nav {
     padding: 0rem 0 1.5rem;
     text-transform: uppercase;
+    
     & ul {
-        
+        flex-wrap: wrap;
         margin: 0;
         padding:0;
         list-style: none;
@@ -123,13 +136,14 @@ nav {
       }
 
       & li {
+        z-index: 99;
         display: flex;
         align-items: center;
         margin: 0 10px;
         padding-top: 1.2rem;
       }
 
-      & a,a:visited,a:hover {
+      & a,a:visited,a:hover,a:focus {
         color: @text-color;
         text-decoration: none;
         font-size: 1.4rem;
@@ -192,13 +206,7 @@ nav {
 
   }
   
-.fotorama__loaded .fotorama__img {
-    opacity: 0.55;
-}
 
- .fotorama__wrap {
-    background: black;
-}
 
 .main-image {
     position: relative;
@@ -222,29 +230,6 @@ nav {
 }
 
 
-//   .fotorama__nav__frame.fotorama__active .fotorama__dot {
-//     border: 4px solid @dot-color;
-//   }
-
-//   .fotorama__nav-wrap {
-//     position: absolute;
-//     top: 90%;
-//   }
-  
-//   .fotorama__dot {
-//     border: 4px solid white;
-//   }
-
-
-//   .menu-dropdown-btn {
-//     border: none;
-//     background-color: white;
-//     font-family: 'Bion';
-//     font-size: 14px;
-//     text-transform: uppercase;
-  
-//   }
-
   .button {
     background-color:@dot-color;
     padding: 1rem 2rem;
@@ -257,8 +242,7 @@ nav {
 
 .production {
     text-align: center;
-    h1 {
-        
+    &-header {
         margin-top: 40px;
         font-size: 4.8rem;
         font-family: 'Bion';
@@ -278,7 +262,6 @@ nav {
 
     &-slider {
         margin: 8rem 0 4.2rem ;
-        // border: 1px solid red;
     }
 
 
@@ -381,6 +364,8 @@ nav {
     h1 {
         margin-top: 9.4rem;
         text-align: center;
+        // font-size: 4.8rem;
+        // width: 100%;
     }
     &-item {
         height: 484px;
@@ -389,6 +374,7 @@ nav {
         padding: 62px 0px 96px 41px;
         background-color: @background-color;
         box-shadow: 0px 8px 34px rgba(145, 118, 75, 0.18);
+        text-align: center;
         h1 {
             font-size: 3.2rem;
             margin-top: 4.8rem;
@@ -402,7 +388,9 @@ nav {
             text-align: left;
         }
         img {
-            height: 13.5rem;
+            display: block;
+            max-width: 100%;
+            height: auto;
         }
     }
 }
@@ -488,12 +476,18 @@ nav {
     top:10px;
 }
 
+
+
 .contacts {
     margin-top: 14rem;
     &-block {
+        h3 {
+            font-size: 3.2rem;
+            
+        }
         p {
             margin-top: 5.5rem;
-        }
+    }
         &-btn {
             margin-top: 5.5rem;
             display: flex;
@@ -530,6 +524,20 @@ nav {
         }
     }
 }
+
+@media (max-width:420px) {
+    .contacts-block h3 {
+        font-size: 2rem;
+    }
+    .main-image-text h1 {
+        font-size: 4.5rem;
+    }
+   .production-header {
+        font-size: 2.8rem;  
+    }
+    
+}
+
 
 .right-side {
     width: 50%;
@@ -631,6 +639,15 @@ iframe {
             padding: 1rem 3rem;
         }
     }
+
+    @media (max-width: 480px) {
+        .flex-block {
+            flex-direction: column;
+        }
+       
+        
+    }
+
 }
 
 
@@ -712,12 +729,25 @@ footer {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #bbb;
+    background-color: @background-color;
     margin: 0 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .dot.active {
-    background-color: #717171;
+    background-color: @dot-color;
+  }
+
+  @media (max-width: 767px) {
+    .slide {
+      width: 100%; /* Устанавливаем ширину слайда на 100% */
+    }  
+    
+  }
+
+  @media (max-width:480px) {
+    .subscription .flex-block input {
+        padding: 1rem ;
+    }
   }

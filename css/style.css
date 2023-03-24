@@ -31,6 +31,18 @@ body {
 h1 {
   font-size: 4.8rem;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    /* Уменьшенный размер шрифта для экранов шириной до 768px */
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+    /* Ещё меньший размер шрифта для экранов шириной до 480px */
+  }
+}
 h5 {
   font-family: 'Bion Book';
   font-size: 1.6rem;
@@ -68,6 +80,7 @@ nav {
   text-transform: uppercase;
 }
 nav ul {
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -75,6 +88,7 @@ nav ul {
   justify-content: space-evenly;
 }
 nav li {
+  z-index: 99;
   display: flex;
   align-items: center;
   margin: 0 10px;
@@ -82,7 +96,8 @@ nav li {
 }
 nav a,
 nav a:visited,
-nav a:hover {
+nav a:hover,
+nav a:focus {
   color: #5e371b;
   text-decoration: none;
   font-size: 1.4rem;
@@ -130,12 +145,6 @@ nav .dropdown-menu li {
 nav .dropdown-menu li:last-child {
   border-bottom: none;
 }
-.fotorama__loaded .fotorama__img {
-  opacity: 0.55;
-}
-.fotorama__wrap {
-  background: black;
-}
 .main-image {
   position: relative;
 }
@@ -167,7 +176,7 @@ nav .dropdown-menu li:last-child {
 .production {
   text-align: center;
 }
-.production h1 {
+.production-header {
   margin-top: 40px;
   font-size: 4.8rem;
   font-family: 'Bion';
@@ -276,6 +285,7 @@ nav .dropdown-menu li:last-child {
   padding: 62px 0px 96px 41px;
   background-color: #ffffff;
   box-shadow: 0px 8px 34px rgba(145, 118, 75, 0.18);
+  text-align: center;
 }
 .features-item h1 {
   font-size: 3.2rem;
@@ -290,7 +300,9 @@ nav .dropdown-menu li:last-child {
   text-align: left;
 }
 .features-item img {
-  height: 13.5rem;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .read h1 {
   margin-top: 10.2rem;
@@ -365,6 +377,9 @@ nav .dropdown-menu li:last-child {
 .contacts {
   margin-top: 14rem;
 }
+.contacts-block h3 {
+  font-size: 3.2rem;
+}
 .contacts-block p {
   margin-top: 5.5rem;
 }
@@ -400,6 +415,17 @@ nav .dropdown-menu li:last-child {
 .contacts .map .button:active {
   background-color: #5e371b;
   color: #ffffff;
+}
+@media (max-width: 420px) {
+  .contacts-block h3 {
+    font-size: 2rem;
+  }
+  .main-image-text h1 {
+    font-size: 4.5rem;
+  }
+  .production-header {
+    font-size: 2.8rem;
+  }
 }
 .right-side {
   width: 50%;
@@ -489,6 +515,11 @@ iframe {
 .subscription .flex-block button {
   padding: 1rem 3rem;
 }
+@media (max-width: 480px) {
+  .subscription .flex-block {
+    flex-direction: column;
+  }
+}
 footer {
   background-image: url("data:image/svg+xml,%3Csvg width='1440' height='263' viewBox='0 0 1440 263' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='719.5' cy='1300' rx='3359.5' ry='1300' fill='%23281819'/%3E%3C/svg%3E%0A");
   background-size: cover;
@@ -555,11 +586,22 @@ footer .references a:after {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #bbb;
+  background-color: #ffffff;
   margin: 0 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 .dot.active {
-  background-color: #717171;
+  background-color: #e88537;
+}
+@media (max-width: 767px) {
+  .slide {
+    width: 100%;
+    /* Устанавливаем ширину слайда на 100% */
+  }
+}
+@media (max-width: 480px) {
+  .subscription .flex-block input {
+    padding: 1rem ;
+  }
 }
