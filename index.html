@@ -9,6 +9,7 @@
 
         <!-- Bootstrap CSS -->
         <link href="css/bootstrap.css" rel="stylesheet">
+        
        
          <!-- jQuery -->
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -25,64 +26,47 @@
         <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
          <!-- Main CSS -->
-         <link href="css/style.css" rel="stylesheet">
+         <link rel="stylesheet" type="text/css" href="css/style.css" />
         
     </head>
     <body>
         <div class="main">
-            <div class="container">
-                <div class="header">
-                    <div class="row">
-                        <div class="logo col-lg-2 col-sm-2">
-                            <img src="img/logo.svg" alt="Рижский ХЛЕБ">
-                        </div>
-                        <div class="menu col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-0 ">
-                            <nav>
-                                <ul>
-                                    <!-- <div class="dropdown dropright">
-                                        <button class="dropdown-toggle menu-dropdown-btn" type="button" data-toggle="dropdown">продукция
-                                        <span>&#9660;</span>
-                                    </button>
-                                        <ul class="dropdown-menu">
-                                          <li class="dropdown-item "><a href="#">рижский хлеб</a></li>
-                                          <li class="dropdown-item"><a href="#">дары мира</a></li>
-                                          <li class="dropdown-item"><a href="#">каталог</a></li>
-                                        </ul>
-                                      </div> -->
-                                    <li><a href="#">продукция</a>
-                                        <!-- the first level of the drop-down list-->
-                                        <ul>
-                                            <li><a href="#">рижский хлеб</a></li>
-                                            <li><a href="#">дары мира</a></li>
-                                            <li><a href="#">каталог</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">о нас</a></li>
-                                    <li><a href="#">партнерам</a></li>
-                                    <li><a href="#">акции</a></li>
-                                    <li><a href="#">контакты</a></li> 
-                                   
-                                </ul>
-                            </nav>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            <nav>
+                <ul>
+                    <li class="logo"><a href="#">
+                        <img src="/img/logo.svg" alt="logo" />
+                      </a></li>
+                      <li class="dropdown">
+                        <a href="#">Продукция &#9662;</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Рижский хлеб</a></li>
+                          <li><a href="#">Дары мира</a></li>
+                          <li><a href="#">Каталог</a></li>
+                        </ul>
+                      </li>
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Партнерам</a></li>
+                  <li><a href="#">Акции</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </nav>
+          
         </div>
-        <section class="slider">
-            <div class="slider-text">
+        <section class="main-image">
+            <div class="main-image-text">
                 <h1>Лучшая выпечка</h1>
                 <p>Самая свежая и приготовленная <br> с любовью выпечка</p>
             </div>
             
-            <!-- Add images to <div class="fotorama"></div> -->
             <div class="fotorama" data-transition="crossfade" data-fit="cover" data-height="600" data-width="100%" data-arrows="false" data-click="false" data-swipe="false">
-                <!-- <div class="slider-img-wrap"> -->
                     <img src="/img/slider-image_1.png">
-                <!-- </div>  -->
                 <img src="https://s.fotorama.io/2.jpg">
             </div>
+            <!-- <div class="main-image-slider">
+                <img src="/img/slider-image_1.png">
+                <img src="https://s.fotorama.io/2.jpg">
+            </div> -->
             
             
         </section>
@@ -435,19 +419,30 @@
         <script>
             
             $(document).ready(function(){
-            $('.production-slider').slick({
-                infinite: true,
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                prevArrow:' <button class="arrow prev"></button>',
-                nextArrow:' <button class="arrow next"></button>'
-                });
-            $('.novelty-slider').slick({
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: 2000
+                $('.production-slider').slick({
+                    infinite: true,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    prevArrow:' <button class="arrow prev"></button>',
+                    nextArrow:' <button class="arrow next"></button>'
                     });
-                });
+                $('.novelty-slider').slick({
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+                        });
+                // $('.main-image-slider').slick({
+                //     arrows: false,
+                //     autoplay: false,
+                //     autoplaySpeed: 2000,
+                //     dots: true,
+                //     customPaging : function(slider, i) {
+                //             return "<div class='square'></div>";
+                //         },
+                //     adaptiveHeight: false,
+                //     appendDots:$('.main-image-slider')
+                //         });        
+                    });
        </script>
     </body>
 </html>

@@ -101,113 +101,97 @@ a,a:hover,a:visited {
 
 .menu {
     display: inline-block;
-    // .bold();
+    
     & a {
         text-transform: uppercase;
-        // .book();
+      
     }
 } 
 
 
-/* set the background color for container nav. */
 nav {
-        /* remove paddings and margins, also list-style for "ul", * and add "position:relative" */
+    padding: 0rem 0 1.5rem;
+    text-transform: uppercase;
     & ul {
+        
+        margin: 0;
         padding:0;
-        margin:0;
         list-style: none;
-        position: relative;
-    }
-    /* Apply inline-block positioning to the navigation elements */
-    & ul li {
-    // margin: 0px -7px 0 0;
-    display:inline-block;
-    position: relative;
-    // background-color: #E64A19;
-    }
+        display: flex;
+        justify-content:space-evenly;
+        // align-items: stretch;
+      }
 
-    & li {
-        // margin-left: 4rem;
-        // padding: 0px 30px 0px 0px;
-    }
+      & li {
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+        padding-top: 1.2rem;
+      }
 
-    li > a:after { 
-        content:  ' \02C7'; //02EF  02C7
-        position: absolute;
-        margin-top: 5px;
-        margin-left: 5px;
-    }
-    li > a:only-child:after { content: ''; }
-
-    ul:first-child > li:first-child {
-        // box-shadow: 0 65px 20px  rgba(0,0,0,0.1); 
-        // margin-bottom: 20px;
-        // height: 90px;
-        // background-color: #E88537;
-    } 
-
-    ul li ul li:first-child {
-        // background-color: red;
-        // margin-top: 10px;
-    }
-
-    /* styling links*/
-    & a {
-        display:block;
-        padding:0 20px;
-        color:@text-color;
-        line-height: 60px;
-        text-decoration:none;
-    }
-    a,a:hover,a:visited {
-        font-family: 'Bion';
-        font-size: 1.4rem;
-        text-decoration: none;
+      & a,a:visited,a:hover {
         color: @text-color;
-    }
-    // & a:visited {
-    //     text-decoration:none;
-    //     color: red;
-    // }
-    /* change background color on hover by cursor*/
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-family: 'Bion';
+        
+      }
 
+      .logo {
+        flex-grow: 0.5;
+        padding-top: 1.2rem;
+      }
     
-
-    /* hide the default dropdown lists and set absolute positioning */
-    & ul ul {
+      .dropdown {
+        display: flex;
+        align-items: center;
+        position: relative;
+        // flex-grow: 0.1;
+        justify-content: center;
+        padding: 1.2rem 1.8rem 0; 
+      }
+      
+      .dropdown-menu > li > a {
+        padding: 0;
+        white-space:break-spaces;
+      }
+    
+      
+      .dropdown-menu {
         display: none;
         position: absolute;
-        width:100%;
-        top: 100%;
-    }
-
-        /* display a drop-down list on hovering */
-    & ul li:hover > ul {
-        display:inherit;
-    }
-
-    /* the first level of the drop-down list */
-    & ul ul li {
-        // width:100%;
-        float:none;
-        z-index: 100;
-        display:list-item;
-        position: relative;
-        // margin-left: -1rem;
         background-color: white;
+        top:calc(100% - 10px);
+        min-width: 100%;
+        width: 100%;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+        border-radius: 0 0 12px 12px;
+        border: none;
+      }
+      
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        
+      }
+    
+      .dropdown:hover {
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        border: none;
+      }
+      
+      .dropdown-menu li {
+        display: block;
         margin: 0;
-        font-size: 10px;
-        
-    }
-    // customize the bottom edge of drop-down list
-    & ul ul :nth-child(3) { 
-        border-radius: 0 0 20px 20px;
-        
-    }
+        padding: 10px;
+        border-bottom: 1px solid #fff;
+      }
+      
+      .dropdown-menu li:last-child {
+        border-bottom: none;
+      }
 
-}
-
-
+  }
+  
 .fotorama__loaded .fotorama__img {
     opacity: 0.55;
 }
@@ -216,7 +200,7 @@ nav {
     background: black;
 }
 
-.slider {
+.main-image {
     position: relative;
     &-text  {
         position: absolute;
@@ -252,10 +236,6 @@ nav {
   }
 
 
-  .dropdown {
-    display: inline-block;
-  }
-
   .menu-dropdown-btn {
     border: none;
     background-color: white;
@@ -272,7 +252,6 @@ nav {
     color: #FEFEFE;
     font-size: 1.8rem;
     font-family: 'Bion';
-    // width: 14.5rem;
     border: none;
 }
 
@@ -302,7 +281,6 @@ nav {
         // border: 1px solid red;
     }
 
-    
 
     .arrow {
         position: absolute;
@@ -688,9 +666,8 @@ footer {
             content: url(/img/link-icon.svg);
             position: relative;
             margin-left: 5px;
-            // width: 5px;
-            // height: 5px;
+           
         }
     }
     
-}
+}  
