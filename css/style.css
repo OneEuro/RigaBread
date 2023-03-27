@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Bion';
-  src: url('/fonts/Bion-Bold.eot');
-  src: url('/fonts/Bion-Bold.eot?#iefix') format('embedded-opentype'), url('/fonts/Bion-Bold.woff2') format('woff2'), url('/fonts/Bion-Bold.woff') format('woff'), url('/fonts/Bion-Bold.ttf') format('truetype'), url('/fonts/Bion-Bold.svg#Bion-Bold') format('svg');
+  src: url('../fonts/Bion-Bold.eot');
+  src: url('../fonts/Bion-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Bion-Bold.woff2') format('woff2'), url('../fonts/Bion-Bold.woff') format('woff'), url('../fonts/Bion-Bold.ttf') format('truetype'), url('../fonts/Bion-Bold.svg#Bion-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Bion Book';
-  src: url('/fonts/Bion-Book.eot');
-  src: url('/fonts/Bion-Book.eot?#iefix') format('embedded-opentype'), url('/fonts/Bion-Book.woff2') format('woff2'), url('/fonts/Bion-Book.woff') format('woff'), url('/fonts/Bion-Book.ttf') format('truetype'), url('/fonts/Bion-Book.svg#Bion-Book') format('svg');
+  src: url('../fonts/Bion-Book.eot');
+  src: url('../fonts/Bion-Book.eot?#iefix') format('embedded-opentype'), url('../fonts/Bion-Book.woff2') format('woff2'), url('../fonts/Bion-Book.woff') format('woff'), url('../fonts/Bion-Book.ttf') format('truetype'), url('../fonts/Bion-Book.svg#Bion-Book') format('svg');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -604,4 +604,33 @@ footer .references a:after {
   .subscription .flex-block input {
     padding: 1rem ;
   }
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.filter-block {
+  width: 30%;
+  background-color: #FBD38D;
+  padding: 20px;
+  margin-right: 20px;
+}
+.checkbox-container {
+  margin-bottom: 20px;
+}
+.main-content-block {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.product-card {
+  width: calc(13.33%);
+  background-color: #F9D9B4;
+  padding: 20px;
+  text-align: center;
+}
+.hidden {
+  display: none;
 }
