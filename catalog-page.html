@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/catalog-style.css">
     <title>Document</title>
 </head>
 <body>
         <div class="container">
             <div class="filter-block">
-              <h2>Filter By:</h2>
+              
               <div class="checkbox-container">
-                <h3>Category</h3>
+                <h3>Выберете бренд</h3>
                 <label><input type="checkbox" class="category-filter" value="Riga_Bread">Рижский хлеб</label>
                 <label><input type="checkbox" class="category-filter" value="Gifts_World">Дары мира</label>
-                <!-- <label><input type="checkbox" class="category-filter" value="Home">Home</label> -->
               </div>
               <div class="checkbox-container">
-                <h3>Brand</h3>
+                <h3>Категория товара</h3>
                 <label><input type="checkbox" class="brand-filter" value="Bread">Хлеб</label>
                 <label><input type="checkbox" class="brand-filter" value="Buns">Булочки</label>
                 <label><input type="checkbox" class="brand-filter" value="Pastries">Кондитерские изделия</label>
               </div>
               <div class="checkbox-container">
-                <h3>Packaging</h3>
+                <h3>Упаковка</h3>
                 <label><input type="checkbox" class="packaging-filter" value="Tray">Лоток</label>
                 <label><input type="checkbox" class="packaging-filter" value="PET_bag">Пакет ПЭТ</label>
                 <label><input type="checkbox" class="packaging-filter" value="Laminated_Paper">Бумага ламинир.</label>
@@ -32,22 +31,54 @@
             </div>
             <div class="main-content-block">
               <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
-                <img src="#" alt="Product 1">
-                <h3>Рижский хлеб</h3>
-                <p>Хлеб</p>
-                <button class="details-btn">Details about product</button>
+                <div class="product-information">
+                  <div class="product-information-top">
+                  <div class="product-information-mark"><span>Хит продаж</span></div>
+                  <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
+                  </div>
+                  <img src="/img/croutons.png" alt="Product 1">
+                  <div class="product-information-bottom">
+                    <div class="product-information-weight">120г.</div>
+                    <div class="product-information-amount">1 шт</div>
+                  </div>
+                </div>
+                <h3>Улитка с маком</h3>
+                <p>от 35 Р / упак.</p>
+                <button class="details-btn">Подробнее о товаре</button>
               </div>
+
+              
               <div class="product-card" data-category="Gifts_World" data-brand="Buns" data-packaging="PET_bag">
-                <img src="#" alt="Product 2">
-                <h3>Дары мира</h3>
-                <p>Булочки</p>
-                <button class="details-btn">Details about product</button>
+                <div class="product-information">
+                  <div class="product-information-top">
+                    <div class="product-information-mark"><span>Хит продаж</span></div>
+                    <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
+                    </div>
+                    <img src="/img/chips.png" alt="Product 1">
+                    <div class="product-information-bottom">
+                      <div class="product-information-weight">120г.</div>
+                      <div class="product-information-amount">1 шт</div>
+                    </div>
+                </div> 
+                <h3>Улитка с маком</h3>
+                <p>от 35 Р / упак.</p>
+                <button class="details-btn">Подробнее о товаре</button>
               </div>
               <div class="product-card" data-category="Riga_Bread" data-brand="Pastries" data-packaging="Laminated_Paper">
-                <img src="#" alt="Product 3">
+                <div class="product-information">
+                  <div class="product-information-top">
+                    <div class="product-information-mark"><span>Хит продаж</span></div>
+                    <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
+                    </div>
+                    <img src="/img/buns.png" alt="Product 1">
+                    <div class="product-information-bottom">
+                      <div class="product-information-weight">120г.</div>
+                      <div class="product-information-amount">1 шт</div>
+                    </div>
+                </div>
                 <h3>Рижский хлеб</h3>
                 <p>Кондитерские изделия</p>
-                <button class="details-btn">Details about product</button>
+                <button class="details-btn">Подробнее о товаре</button>
               </div>
             </div>
           </div>

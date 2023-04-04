@@ -605,32 +605,3 @@ footer .references a:after {
     padding: 1rem ;
   }
 }
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.filter-block {
-  width: 30%;
-  background-color: #FBD38D;
-  padding: 20px;
-  margin-right: 20px;
-}
-.checkbox-container {
-  margin-bottom: 20px;
-}
-.main-content-block {
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.product-card {
-  width: calc(13.33%);
-  background-color: #F9D9B4;
-  padding: 20px;
-  text-align: center;
-}
-.hidden {
-  display: none;
-}
