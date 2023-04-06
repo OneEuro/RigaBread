@@ -30,6 +30,7 @@ body {
 }
 h1 {
   font-size: 4.8rem;
+  margin: 0;
 }
 @media (max-width: 768px) {
   h1 {
@@ -50,6 +51,7 @@ h5 {
 p {
   font-family: 'Bion Book';
   font-size: 1.6rem;
+  margin: 0;
 }
 a,
 a:hover,
@@ -70,7 +72,7 @@ a:visited {
   display: inline-block;
 }
 .menu {
-  display: inline-block;
+  box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.06);
 }
 .menu a {
   text-transform: uppercase;

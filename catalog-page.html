@@ -4,84 +4,275 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/catalog-style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+   
+
+
     <title>Document</title>
 </head>
 <body>
-        <div class="wrap">
-            <div class="filter-block">
-              
-              <div class="checkbox-container">
-                <h3>Выберете бренд</h3>
-                <label><input type="checkbox" class="category-filter" value="Riga_Bread">Рижский хлеб</label>
-                <label><input type="checkbox" class="category-filter" value="Gifts_World">Дары мира</label>
-              </div>
-              <div class="checkbox-container">
-                <h3>Категория товара</h3>
-                <label><input type="checkbox" class="brand-filter" value="Bread">Хлеб</label>
-                <label><input type="checkbox" class="brand-filter" value="Buns">Булочки</label>
-                <label><input type="checkbox" class="brand-filter" value="Pastries">Кондитерские изделия</label>
-              </div>
-              <div class="checkbox-container">
-                <h3>Упаковка</h3>
-                <label><input type="checkbox" class="packaging-filter" value="Tray">Лоток</label>
-                <label><input type="checkbox" class="packaging-filter" value="PET_bag">Пакет ПЭТ</label>
-                <label><input type="checkbox" class="packaging-filter" value="Laminated_Paper">Бумага ламинир.</label>
-              </div>
-            </div>
-            <div class="main-content-block">
-              <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
-                <div class="product-information">
-                  <div class="product-information-top">
-                  <div class="product-information-mark"><span>Хит продаж</span></div>
-                  <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
-                  </div>
-                  <img src="/img/croutons.png" alt="Product 1">
-                  <div class="product-information-bottom">
-                    <div class="product-information-weight">120г.</div>
-                    <div class="product-information-amount">1 шт</div>
-                  </div>
-                </div>
-                <h3>Улитка с маком</h3>
-                <p>от 35 Р / упак.</p>
-                <button class="details-btn">Подробнее о товаре</button>
-              </div>
-
-              
-              <div class="product-card" data-category="Gifts_World" data-brand="Buns" data-packaging="PET_bag">
-                <div class="product-information">
-                  <div class="product-information-top">
-                    <div class="product-information-mark"><span>Хит продаж</span></div>
-                    <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
-                    </div>
-                    <img src="/img/chips.png" alt="Product 1">
-                    <div class="product-information-bottom">
-                      <div class="product-information-weight">120г.</div>
-                      <div class="product-information-amount">1 шт</div>
-                    </div>
-                </div> 
-                <h3>Улитка с маком</h3>
-                <p>от 35 Р / упак.</p>
-                <button class="details-btn">Подробнее о товаре</button>
-              </div>
-              <div class="product-card" data-category="Riga_Bread" data-brand="Pastries" data-packaging="Laminated_Paper">
-                <div class="product-information">
-                  <div class="product-information-top">
-                    <div class="product-information-mark"><span>Хит продаж</span></div>
-                    <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
-                    </div>
-                    <img src="/img/buns.png" alt="Product 1">
-                    <div class="product-information-bottom">
-                      <div class="product-information-weight">120г.</div>
-                      <div class="product-information-amount">1 шт</div>
-                    </div>
-                </div>
-                <h3>Рижский хлеб</h3>
-                <p>Кондитерские изделия</p>
-                <button class="details-btn">Подробнее о товаре</button>
-              </div>
-            </div>
+  <div class="menu">
+    <nav>
+        <ul>
+            <li class="logo"><a href="index.html">
+                <img src="/img/logo.svg" alt="logo" />
+              </a></li>
+              <li class="dropdown">
+                <a href="/catalog-page.html">Продукция &#9662;</a>
+                <ul class="dropdown-menu">
+                  <li><a href="/catalog-page.html">Рижский хлеб</a></li>
+                  <li><a href="/catalog-page.html">Дары мира</a></li>
+                </ul>
+              </li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Партнерам</a></li>
+          <li><a href="#">Акции</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>    
+</div>
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="breadcrumbs-line col-md-3">
+          <span>Главная - Продукция</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="introduction ">
+      <div class="container">
+        <div class="row">
+          <div class="introduction-block col-md-6">
+            <h1>Наша продукция</h1>
+            <p>Повседневная практика показывает, что понимание <br> сути ресурсосберегающих технологий является <br> качественно новой ступенью модели развития. <br> А ещё интерактивные прототипы.</p>
           </div>
+        </div>
+        <div class="line"></div>
+      </div>
+      
+    </div>
+    
+  </section>
+  <div class="container">
+    <div class="wrap">
+      <div class="filter-block">
+        
+        <div class="checkbox-container">
+          <h3>Выберете бренд</h3>
+          <label><input type="checkbox" class="category-filter" value="Riga_Bread">Рижский хлеб</label>
+          <label><input type="checkbox" class="category-filter" value="Gifts_World">Дары мира</label>
+        </div>
+        <div class="checkbox-container">
+          <h3>Категория товара</h3>
+          <label><input type="checkbox" class="brand-filter" value="Bread">Хлеб</label>
+          <label><input type="checkbox" class="brand-filter" value="Buns">Булочки</label>
+          <label><input type="checkbox" class="brand-filter" value="Pastries"><span>Кондитерские изделия</span></label>
+        </div>
+        <div class="checkbox-container">
+          <h3>Упаковка</h3>
+          <label><input type="checkbox" class="packaging-filter" value="Tray">Лоток</label>
+          <label><input type="checkbox" class="packaging-filter" value="PET_bag">Пакет ПЭТ</label>
+          <label><input type="checkbox" class="packaging-filter" value="Laminated_Paper">Бумага ламинир.</label>
+        </div>
+      </div>
+      <div class="main-content">
+        <h2>Мы рекомендуем</h2>
+        <div class="main-content-block">
+          
+          <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+            <div class="product-information">
+              <div class="product-information-top">
+              <div class="product-information-mark"><span>Хит продаж</span></div>
+              <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
+              </div>
+              <img src="/img/croutons.png" alt="Product 1">
+              <div class="product-information-bottom">
+                <div class="product-information-weight">120г.</div>
+                <div class="product-information-amount">1 шт</div>
+              </div>
+            </div>
+            <h3>Улитка с маком</h3>
+            <p>от 35 Р / упак.</p>
+            <button class="details-btn">Подробнее о товаре</button>
+          </div>
+  
+          
+          <div class="product-card" data-category="Gifts_World" data-brand="Buns" data-packaging="PET_bag">
+            <div class="product-information">
+              <div class="product-information-top">
+                <div class="product-information-mark"><span>Хит продаж</span></div>
+                <div class="product-information-logo"><img src="/img/gifts_of_peace.svg" alt=""></div>
+                </div>
+                <img src="/img/chips.png" alt="Product 1">
+                <div class="product-information-bottom">
+                  <div class="product-information-weight">120 Г.</div>
+                  <div class="product-information-amount">1 ШТ.</div>
+                </div>
+            </div> 
+            <h3>Улитка с маком</h3>
+            <p>от 35 Р / упак.</p>
+            <button class="details-btn">Подробнее о товаре</button>
+          </div>
+          <div class="product-card" data-category="Riga_Bread" data-brand="Pastries" data-packaging="Laminated_Paper">
+            <div class="product-information">
+              <div class="product-information-top">
+                <div class="product-information-mark"><span>Хит продаж</span></div>
+                <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
+                </div>
+                <img src="/img/buns.png" alt="Product 1">
+                <div class="product-information-bottom">
+                  <div class="product-information-weight">120г.</div>
+                  <div class="product-information-amount">1 шт</div>
+                </div>
+            </div>
+            <h3>Рижский хлеб</h3>
+            <p>Кондитерские изделия</p>
+            <button class="details-btn">Подробнее о товаре</button>
+          </div>
+          <div class="product-card" data-category="Riga_Bread" data-brand="Buns" data-packaging="PET_bag">
+            <div class="product-information">
+              <div class="product-information-top">
+                <div class="product-information-mark"><span>Хит продаж</span></div>
+                <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
+                </div>
+                <img src="/img/buns.png" alt="Product 1">
+                <div class="product-information-bottom">
+                  <div class="product-information-weight">120г.</div>
+                  <div class="product-information-amount">1 шт</div>
+                </div>
+            </div>
+            <h3>Рижский хлеб</h3>
+            <p>Кондитерские изделия</p>
+            <button class="details-btn">Подробнее о товаре</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <section class="contacts">
+    <div class="container">
+        <div class="row">
+            <div class="contacts-block col-md-5">
+                <h1>Наши <br> контакты <hr class="long-dash"> </h1>
+                <p>Разнообразный и богатый опыт укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.</p>
+                <div class="contacts-block-btn">
+                    <button class="button ">Позвонить</button>
+                    <button class="button ">&nbsp;Whatsapp&nbsp;</button>
+                    <button class="button ">&nbsp;&nbsp;Viber&nbsp;&nbsp;</button>
+                </div>
+                <hr>
+                <h5>Наша электронная почта</h5>
+                <h3>example@gmail.com</h3>
+                
+            </div>
+            <div class="map right-side">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ada960f084ffaaa1814dbcdb231e3a91ce39fc2cf5dc4c2de047a8220b5d47531&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
+                <div class="map-buttons">
+                    <button class="button">Наш офис</button>
+                    <button class="button">Магазины</button>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</section>
+<section class="take-a-look">
+    <div class="container">
+        <div class="substrate">
+            <div class="row">
+                <div class="substrate-img col-xs-6 col-xs-offset-3 col-md-5 col-md-offset-1">
+                    <img src="/img/bread-collection.jpeg" alt="bread-collection">
+                </div>
+                <div class="substrate-form col-md-5 ">
+                    <h1>Ознакомьтесь <br> с продукцией</h1>
+                    <p>Для того, чтобы ознакомиться <br> с ассортиментов товара. Разнообразный <br> и богатый опыт укрепление.</p>
+                    <form action="#">
+                        <div class="form-block">
+                            <input type="email" class="form-block-input" placeholder="example@mail.ru">
+                            <input type="tel" class="form-block-input" placeholder="контактный телефон">
+                            <input type="tel" class="form-block-input" placeholder="контактный телефон">
+                        </div>
+                        <button type="submit" class="button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<section class="subscription">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="subscription-item">
+                        <h2>Подпишитесь и получайте <br> лучшие предложения!</h2>
+                        <form action="#">
+                            <div class="flex-block">
+                                <div class="flex-item">
+                                    <input type="email" class="" placeholder="example@mail.ru">
+                                </div>
+                                <div class="flex-item">
+                                    <button type="submit" class="button">Отправить</button>
+                                </div>
+                            
+                            </div>
+                            
+                        </form>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    
+    
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <img src="/img/logo-footer.svg" alt="logo">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="information">
+                    <h4>© Рижский хлеб  2023</h4>
+                    <p>Юридический адрес: <br> г. Москва, пр. Науки, д. 64 <br> Все права защины <br>+7-999-999-99-99</p>
+                    <p>Пользовательское соглашение</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-md-offset-1">
+                <div class="site-map">
+                    <h4>карта сайта</h4>
+                    <div class="site-map-grid">
+                        <a href="#">Главная</a>
+                        <a href="#">Где купить</a>
+                        <a href="#">О нас</a>
+                        <a href="#">Продукция</a>
+                        <a href="#">Контакты</a>
+                        <a href="#">Акции</a>
+                        <a href="#">Партнерам</a>
+                        <a href="#">Читайте также</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="references">
+                    <a href="#">Политика персональных данных</a><br>
+                    <a href="#">Условия пользования сайтом</a><br>
+                    <a href="#">Условия отбора контрагентов</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        
     
       <script>
 const categoryCheckboxes = document.querySelectorAll('.category-filter');

@@ -1,51 +1,104 @@
 @dot-color:#E88537;
+@checkbox-color: #007bff;
+@background-checkbox-color: #D9D9D9;
+@checked-checkbox-color:#E88537;
+@mark-background-color:#FFE6C0;
+@product-inform-bottom-color:#90847A;
 // catalog-filter
 
 .html {
     font-size: 10px;
 }
 
-.container {
+.wrap {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
   }
   
   .filter-block {
-    width: 30%;
     background-color: white;
-    padding: 20px;
-    margin-right: 20px;
+    margin-right: 3.5rem;
+    flex-shrink: 0;
     
   }
   
   .checkbox-container {
     display: flex;
+    // flex-shrink: 0;
     flex-direction: column;
-    margin-bottom: 20px;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
-    width: 240px;
-    padding: 35px 30px 30px 30px;
+    border-radius: 1rem;
+    padding: 35px 25px 30px 30px;
+    & label {
+      display: flex;
+      align-items: center;
+      font-family: 'Bion Book';
+      font-size: 1.2rem;
+    }
+    
+  }
+
+  input[type="checkbox"]{
+    margin: 0 10px 0 0;
+    -webkit-appearance: none; /* убрать стандартный вид checkbox */
+    -moz-appearance: none;
+    appearance: none; 
+    background-color: @background-checkbox-color;
+    width: 17px;
+    height: 17px;
+    border-radius: 4px;
+    position: relative;
   }
   
-  .main-content-block {
-    width: 70%;
+  input[type="checkbox"]:checked {
+    background-color: @checked-checkbox-color;
+  }
+  input[type="checkbox"]:focus, 
+  input[type="checkbox"]:focus-visible {
+    outline: none;
+    border: none;
+  }
+
+  input[type="checkbox"]:checked::after {
+    content: "\2228"; /* символ галочки \2713 */
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: -4px;
+    left: 3px;
+  }
+
+
+  .main-content {
+    flex-grow: 1;
+    &  h2 {
+      text-align: center;
+      margin: 0;
+      
+      // margin-top: 8rem;
+      margin-bottom: 4rem;
+      font-size: 3.2rem;
+    }
+    &-block {
+      // width: 70%;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    
+    gap: 2rem;
+    }
   }
   
   .product-card {
-    // display: none;
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
-    // width: calc(33.33% - 20px);
     background-color:white;
-    padding: 20px;
+    padding: 2rem;
     text-align: center;
     box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
+    border-radius: 1.2rem;
   }
 
   .hidden {
@@ -55,16 +108,36 @@
 .product-information {
     display: flex;
     flex-direction: column;
+    &-mark {
+      text-transform: uppercase;
+      background-color: @mark-background-color;
+      border-radius: 21px;
+      padding: 4px 10px;
+      font-size: 9px;
+      // vertical-align: middle;
+    }
     &-top {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         & img {
-            width: 50px;
+            width: 5rem;
         }
     }
     &-bottom {
         display: flex;
+        color: @product-inform-bottom-color;
+        font-family: 'Bion Book';
+        font-size: 1.2rem;
         justify-content: space-between;
+        margin-top: 1rem;
+    }
+    h3 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-family: 'Bion Book';
+      font-size: 1.6rem;
     }
 }
 
@@ -73,11 +146,44 @@
     // white-space: nowrap;
     background-color:@dot-color;
     padding: 1rem 2rem;
-    border-radius: 55px;
+    border-radius: 5.5rem;
     color: #FEFEFE;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: 'Bion';
-    ;
+    margin-top: 3rem;
     border: none;
+    box-shadow: 0px 7px 26px rgba(232, 133, 55, 0.25);
   }
 
+.breadcrumbs {
+  margin-top: 6.9rem;
+  font-size: 1.4rem;
+  & span {
+    font-family: 'Bion Book';
+  }
+}
+
+.introduction {
+  margin-top: 4.2rem;
+   &  p {
+    margin-top: 2rem;
+    margin-bottom: 9rem;
+   }
+}
+
+.line {
+  position: relative;
+  height: 1px; 
+  margin-bottom: 8rem;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #DDD1C8;
+  transform: translateY(-50%);
+}
