@@ -9,6 +9,8 @@
 @form-color:#8B8B8B;
 @subscription-background:#FAEEDA;
 @footer-bkg-color:#281819;
+@clicked-button-color:#5E371B;
+@active-button-text-color:#FEFEFE;
 
 //fonts
 @font-face {
@@ -514,20 +516,30 @@ nav {
             margin-left: 50%;
             transform: translateX(-40%) translateY(-50%);
         }
-        button {    
+        
+        &-button {    
             background-color: @background-color;
             font-size: 1.6rem;
             padding: 5px 20px;
             color: @button-text-color;
             box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
-           margin-left: 2rem;
+            margin-left: 2rem;
+
+            &-clicked {
+                background-color: @clicked-button-color;
+                color:  @active-button-text-color;
+            }
         }
-        button:hover,.button:active {
-            background-color: @text-color;
+
+        & button:hover, & button:active {
+            background-color: @clicked-button-color;
             color: @background-color;
         }
+
     }
 }
+
+
 
 @media (max-width:420px) {
     .contacts-block h3 {

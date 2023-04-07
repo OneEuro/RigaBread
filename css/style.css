@@ -405,7 +405,7 @@ nav .dropdown-menu li:last-child {
   margin-left: 50%;
   transform: translateX(-40%) translateY(-50%);
 }
-.contacts .map button {
+.contacts .map-button {
   background-color: #ffffff;
   font-size: 1.6rem;
   padding: 5px 20px;
@@ -413,8 +413,12 @@ nav .dropdown-menu li:last-child {
   box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
   margin-left: 2rem;
 }
+.contacts .map-button-clicked {
+  background-color: #5e371b;
+  color: #fefefe;
+}
 .contacts .map button:hover,
-.contacts .map .button:active {
+.contacts .map button:active {
   background-color: #5e371b;
   color: #ffffff;
 }

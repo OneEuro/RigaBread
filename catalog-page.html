@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/catalog-style.css">
     <link rel="stylesheet" href="/css/style.css">
-    
-   
-
+    <script src="/js/calling_number.js" type="text/javascript"></script>
 
     <title>Document</title>
 </head>
@@ -340,16 +338,7 @@ function filterProducts() {
   });
 }
 
-function callNumber(number) { //call number
-  window.location.href = "tel:" + number;
-}
-function sendWhatsAppMessage(number, message) { 
-  window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(message), "_blank");
-}
-function sendViberMessage(number, message) {
-  window.open("viber://chat?number=" + number + "&text=" + encodeURIComponent(message), "_blank");
-}
-   
+
       </script>
   </body>
 </html>
