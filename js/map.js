@@ -5,6 +5,8 @@ ymaps.ready(function() {
         center: [55.76, 37.64],
         zoom: 10
     });
+    // Отключаем зумирование
+    myMap.behaviors.disable("scrollZoom");
 
 var offices = [
     new ymaps.Placemark([55.76, 37.64], { 
