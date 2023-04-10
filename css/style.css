@@ -401,9 +401,12 @@ nav .dropdown-menu li:last-child {
   border-width: 2px;
   border-color: #b7b7b7;
 }
+.contacts .map {
+  position: relative;
+  height: 500px;
+}
 .contacts .map-buttons {
-  margin-left: 50%;
-  transform: translateX(-40%) translateY(-50%);
+  display: flex;
 }
 .contacts .map-button {
   background-color: #ffffff;
@@ -434,11 +437,21 @@ nav .dropdown-menu li:last-child {
   }
 }
 .right-side {
-  width: 50%;
   position: absolute;
+  top: 0;
+  width: 100%;
+  right: -8%;
+  height: 500px;
+}
+.map-controls {
+  position: absolute;
+  bottom: -4%;
+  left: 0;
+  z-index: 99;
   right: 0;
-  left: 50%;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .left-side {
   width: 50%;

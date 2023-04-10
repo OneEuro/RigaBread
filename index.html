@@ -26,7 +26,8 @@
         </script>
         
         <script src="/js/calling_number.js" type="text/javascript"></script>
-        <script src="/js/map.js" type="text/javascript"></script>
+        <script src="/js/form_handler.js" type="text/javascript"></script>
+        
         
     </head>
     <body>
@@ -318,15 +319,21 @@
                         <h3>example@gmail.com</h3>
                         
                     </div>
-                    <div id="map" class="map right-side" style="width: 600px; height: 400px">
-                        <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ada960f084ffaaa1814dbcdb231e3a91ce39fc2cf5dc4c2de047a8220b5d47531&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script> -->
-                        <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=045d5f8f-fd1d-4e39-ab0a-cdca50c428ac&lang=ru_RU" type="text/javascript">
-                        </script> -->
-                        <div class="map-buttons">
-                            <button id="toggle-offices" class="button map-button map-button-clicked">Наш офис</button>
-                            <button id="toggle-shops" class="button map-button">Магазины</button>
+                    <div class="map col-md-6 col-md-offset-1 ">
+                        <div class="right-side" id="map">
+                            <div class="map-controls">
+                                <button id="toggle-offices" class="button map-button map-button-clicked">Наш офис</button>
+                                <button id="toggle-shops"  class="button map-button">Магазины</button>
+                              </div>
                         </div>
                        
+                        <!-- <div class="map-controls">
+                            
+                          </div> -->
+                        <!-- <div class="map-buttons">
+                            <button id="toggle-offices" class="button map-button map-button-clicked">Наш офис</button>
+                            <button id="toggle-shops" class="button map-button">Магазины</button>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -341,11 +348,11 @@
                         <div class="substrate-form col-md-5 ">
                             <h1>Ознакомьтесь <br> с продукцией</h1>
                             <p>Для того, чтобы ознакомиться <br> с ассортиментов товара. Разнообразный <br> и богатый опыт укрепление.</p>
-                            <form action="#">
+                            <form action="#" method="post" id="contactForm" name="contactForm">
                                 <div class="form-block">
-                                    <input type="email" class="form-block-input" placeholder="example@mail.ru">
-                                    <input type="tel" class="form-block-input" placeholder="контактный телефон">
-                                    <input type="tel" class="form-block-input" placeholder="контактный телефон">
+                                    <input name="contactMail" type="email" class="form-block-input" placeholder="example@mail.ru">
+                                    <input name="contactName" type="text" class="form-block-input" placeholder="ваше имя">
+                                    <input name="contactNumber" type="tel" class="form-block-input" placeholder="контактный телефон">
                                 </div>
                                 <button type="submit" class="button">Отправить</button>
                             </form>
@@ -426,5 +433,6 @@
         <script type="text/javascript" src="plugins/slick/slick.min.js"></script>
   
        <script src="/js/slider.js" type="text/javascript"></script>
+       <script src="/js/map.js" type="text/javascript"></script>
     </body>
 </html>

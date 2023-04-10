@@ -37,11 +37,10 @@ for (var i = 0; i < shops.length; i++) {
     shops[i].options.set('visible',false);
 }
 
-            // Функция, которая скрывает или отображает метку
+// Функция, которая скрывает или отображает метку
 function togglePlacemark(placemark) {
     placemark.forEach(element => {
         if (element.options.get('visible')) {
-            console.log("is visible");
             element.options.set('visible', false);
         } else {
         element.options.set('visible', true);
@@ -49,7 +48,7 @@ function togglePlacemark(placemark) {
         }); 
     }
 
-        // Назначаем обработчик события на кнопку
+// Назначаем обработчик события на кнопку
 document.getElementById('toggle-offices').addEventListener('click', function() {
     togglePlacemark(offices);
     document.getElementById('toggle-offices').classList.toggle("map-button-clicked"); 
