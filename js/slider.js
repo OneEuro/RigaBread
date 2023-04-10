@@ -1,4 +1,5 @@
-$(document).ready(function(){
+//slick slider
+document.addEventListener('DOMContentLoaded', function() {
     $('.production-slider').slick({
         infinite: true,
         slidesToShow: 6,
@@ -13,7 +14,7 @@ $(document).ready(function(){
             });      
         });
 
-    //main-image-slider
+    //header-slider
     const slider = document.querySelector(".slider");
     const slides = slider.querySelectorAll(".slide");
     const dots = document.querySelectorAll(".dot");
