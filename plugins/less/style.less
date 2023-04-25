@@ -51,13 +51,6 @@
     scrollbar-width: 0px;
   }
 
-.book() {
-    font-family: 'Bion Book';
-    font-size: 20px;
-    font-weight: 300;
-    font-style: normal;
-}
-
 
 body {
     background-color: @background-color;
@@ -87,11 +80,11 @@ h4 {
     font-size: 1.8rem;
     font-family: 'Bion'; 
 }
+
 h5 {
     font-size: 1.2rem;
     margin-top: 2rem;
 }
-
 
 img {
     margin: 0 auto;
@@ -101,6 +94,9 @@ img {
     h1 {
       font-size: 36px; /* Уменьшенный размер шрифта для экранов шириной до 768px */
     }
+    .slide {
+        width: 100%; /* Устанавливаем ширину слайда на 100% */
+      }  
   }
   
 @media (max-width: 480px) {
@@ -113,10 +109,6 @@ img {
     .subscription .flex-block input {
         padding: 1rem ;
     }
-  
-}
-
-@media (max-width:420px) {
     .contacts-block h3 {
         font-size: 2rem;
     }
@@ -126,7 +118,20 @@ img {
     .production-header {
         font-size: 2.8rem;  
     }
+  
 }
+
+// @media (max-width:420px) {
+//     .contacts-block h3 {
+//         font-size: 2rem;
+//     }
+//     .main-image-text h1 {
+//         font-size: 4.5rem;
+//     }
+//     .production-header {
+//         font-size: 2.8rem;  
+//     }
+// }
 
 @media  (max-width: 970px) {
     .right-side  {
@@ -138,14 +143,6 @@ img {
         width: auto;
     }
 }
-
-@media (max-width: 767px) {
-    .slide {
-      width: 100%; /* Устанавливаем ширину слайда на 100% */
-    }  
-    
-  }
-
 
 p {
     font-size: 1.6rem;
@@ -173,7 +170,6 @@ a,a:hover,a:visited {
 }
 
 nav {
-    padding: 0rem 0 1.5rem;
     text-transform: uppercase;
     
     & ul {
@@ -183,7 +179,6 @@ nav {
         list-style: none;
         display: flex;
         justify-content:space-evenly;
-        // align-items: stretch;
     }
 
     & li {
@@ -191,7 +186,7 @@ nav {
         display: flex;
         align-items: center;
         margin: 0 10px;
-        padding-top: 1.2rem;
+        padding: 2rem 1.8rem;
     }
 
     & a,a:visited,a:hover,a:focus {
@@ -203,16 +198,13 @@ nav {
 
     .logo {
         flex-grow: 0.5;
-        padding-top: 1.2rem;
     }
     
     .dropdown {
         display: flex;
         align-items: center;
         position: relative;
-        // flex-grow: 0.1;
         justify-content: center;
-        padding: 1.2rem 1.8rem 0; 
 
         &-menu {
             display: none;

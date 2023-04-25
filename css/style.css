@@ -56,6 +56,10 @@ img {
     font-size: 36px;
     /* Уменьшенный размер шрифта для экранов шириной до 768px */
   }
+  .slide {
+    width: 100%;
+    /* Устанавливаем ширину слайда на 100% */
+  }
 }
 @media (max-width: 480px) {
   h1 {
@@ -68,8 +72,6 @@ img {
   .subscription .flex-block input {
     padding: 1rem ;
   }
-}
-@media (max-width: 420px) {
   .contacts-block h3 {
     font-size: 2rem;
   }
@@ -88,12 +90,6 @@ img {
   .left-side {
     position: static;
     width: auto;
-  }
-}
-@media (max-width: 767px) {
-  .slide {
-    width: 100%;
-    /* Устанавливаем ширину слайда на 100% */
   }
 }
 p {
@@ -119,7 +115,6 @@ a:visited {
   top: 10px;
 }
 nav {
-  padding: 0rem 0 1.5rem;
   text-transform: uppercase;
 }
 nav ul {
@@ -135,7 +130,7 @@ nav li {
   display: flex;
   align-items: center;
   margin: 0 10px;
-  padding-top: 1.2rem;
+  padding: 2rem 1.8rem;
 }
 nav a,
 nav a:visited,
@@ -148,14 +143,12 @@ nav a:focus {
 }
 nav .logo {
   flex-grow: 0.5;
-  padding-top: 1.2rem;
 }
 nav .dropdown {
   display: flex;
   align-items: center;
   position: relative;
   justify-content: center;
-  padding: 1.2rem 1.8rem 0;
 }
 nav .dropdown-menu {
   display: none;
