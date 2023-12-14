@@ -1,0 +1,53 @@
+/* Стиль для блока "Наша продукция" (горизонтальный стек) */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .stack-item {
+    /* Убрано свойство box-sizing */
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .stack-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Добавлен отступ снизу */
+  }
+  
+  .stack-item h4 {
+    margin-top: 5px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 300px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .production {
+    text-align: center;
+    margin-top: 40px;
+  }
