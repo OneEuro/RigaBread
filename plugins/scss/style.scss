@@ -1,9 +1,11 @@
-@import "_variable";
+@import "variable";
 @import "production";
-@import "_main-top-bar";
+@import "main-top-bar";
 
 :root {
-    --h2-font-size: 48px; /* Глобальная переменная для размера шрифта */
+    --h2-font-size: 48px;
+    --font-family-Bion: 'Bion'; 
+    --font-family-Bion-Book: 'Bion Book'; 
 }
 
 //fonts
@@ -54,7 +56,7 @@ h1 {
 
 h2 {
     font-size: var(--h2-font-size);
-    font-family: 'Bion'; 
+    font-family: var(--font-family-Bion);
     margin: 0 auto;
 }
 
@@ -84,9 +86,8 @@ img {
     }
     .slide {
         width: 100%; /* Устанавливаем ширину слайда на 100% */
-      }  
-  }
-  
+    }  
+}
 @media (max-width: 480px) {
     h1 {
         font-size: 24px; /* Ещё меньший размер шрифта для экранов шириной до 480px */
@@ -120,7 +121,7 @@ img {
     :root {
       --h2-font-size: 28px; /* Изменение переменной для размера шрифта на узких экранах */
     }
-  }
+}
 
 p {
     font-size: 1.6rem;
@@ -133,9 +134,6 @@ a,a:hover,a:visited {
     color: $features-bg-color;
 }
 
-
-
-
 .long-dash {
     border-color: $text-color;
     border-width: 4px;
@@ -145,8 +143,6 @@ a,a:hover,a:visited {
     top:10px;
 }
 
-
-
 .slider-container {
     position: relative;
     width: 100%;
@@ -154,7 +150,7 @@ a,a:hover,a:visited {
     overflow: hidden;
     
 }
-  
+
 .slider {
     position: relative;
     width: 300%;
@@ -162,8 +158,8 @@ a,a:hover,a:visited {
     display: flex;
     transition: transform 0.5s ease;
     background: black;
-  }
-  
+}
+
 .slide  {
     width: 33.33%;
     height: 100%;
@@ -482,7 +478,6 @@ a,a:hover,a:visited {
 
 }
 
-
 .subscription {
     margin-top: 12rem;
     text-align: center;
@@ -508,7 +503,6 @@ a,a:hover,a:visited {
     }
 
 }
-
 
 footer {
     background-image: url("data:image/svg+xml,%3Csvg width='1440' height='263' viewBox='0 0 1440 263' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='719.5' cy='1300' rx='3359.5' ry='1300' fill='%23281819'/%3E%3C/svg%3E%0A");
