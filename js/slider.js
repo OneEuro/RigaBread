@@ -11,8 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
         arrows: false,
         autoplay: true,
         autoplaySpeed: 2000
-            });      
-        });
+            });   
+    var myDiv = document.getElementById('top-bar-menu');
+    var headerSlider = document.querySelector('.header-slider');
+    if (myDiv) {
+        var divHeight = myDiv.offsetHeight;
+        headerSlider.style.marginTop = divHeight + 'px';
+        console.log("Высота элемента div:", divHeight, "пикселей");
+        } else {
+        console.error("Элемент с id 'myDiv' не найден.");
+        } 
+        });     
 
     //header-slider
     const slider = document.querySelector(".slider");

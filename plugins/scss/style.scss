@@ -1,6 +1,7 @@
 @import "variable";
-@import "production";
 @import "main-top-bar";
+@import "slider";
+@import "production";
 @import "buttons";
 
 :root {
@@ -59,6 +60,7 @@ h1 {
     font-size: var(--h1-font-size);
     margin: 0;
     font-family: 'Bion';  
+    line-height: 0.9;
 }
 
 h2 {
@@ -95,17 +97,17 @@ img {
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 36px;
-    }
+    // h1 {
+    //     font-size: 36px;
+    // }
     .slide {
         width: 100%;
     }  
 }
 @media (max-width: 480px) {
-    h1 {
-        font-size: 24px;
-    }
+    // h1 {
+    //     font-size: 36px;
+    // }
     .flex-block {
         flex-direction: column;
     }
@@ -133,8 +135,10 @@ img {
 
 @media (max-width: 430px) {
     :root {
+        --h1-font-size: 36px;
         --h2-font-size: 28px;
         --h3-font-size: 22px;
+        --h4-font-size: 14px;
         --button-font-size: 13px;
         --button-padding: 8px 20px;
     }
@@ -165,83 +169,7 @@ a,a:hover,a:visited {
     top:10px;
 }
 
-.slider-container {
-    position: relative;
-    width: 100%;
-    height: 60rem;
-    overflow: hidden;
-    
-}
 
-@media (max-width: 390px) {
-    .slider-container {
-        height: 260px;
-    }
-}
-
-.slider {
-    position: relative;
-    width: 300%;
-    height: 100%;
-    display: flex;
-    transition: transform 0.5s ease;
-    background: black;
-}
-
-.slide  {
-    width: 33.33%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    & img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.55;
-    }
-}
-.dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-}
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: $background-color;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.dot.active {
-    background-color: $dot-color;
-}
-
-
-.header-slider {
-    position: relative;
-    &-text  {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        z-index: 99;
-        width: 100%;
-        text-align: center;
-        transform: translateY(-50%);
-        color: white;
-        
-        & h1 {
-            font-size: 7.5rem;
-        }
-        & p {
-            font-size: 2rem;
-        }
-    }
-}
 
 .novelty {
     margin-top: 10.8rem;

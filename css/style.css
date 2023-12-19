@@ -1,57 +1,4 @@
 @charset "UTF-8";
-/* Стиль для блока "Наша продукция" (горизонтальный стек) */
-.center-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.stack-item {
-  /* Убрано свойство box-sizing */
-  padding: 10px;
-  text-align: center;
-  overflow: hidden;
-}
-
-.stack-item img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  /* Добавлен отступ снизу */
-}
-
-.stack-item h4 {
-  margin-top: 5px;
-  font-size: 14px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-@media screen and (max-width: 600px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 300px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-}
-.production {
-  text-align: center;
-  margin-top: 40px;
-}
-
 .top-bar {
   display: flex;
   padding-left: 12%;
@@ -61,6 +8,7 @@
   text-transform: uppercase;
   position: fixed;
   z-index: 100;
+  top: 0;
   background-color: white;
   width: 100%;
 }
@@ -177,6 +125,134 @@
     justify-content: space-between;
   }
 }
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  width: 300%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  width: 33.33%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #E88537;
+}
+
+.header-slider {
+  position: relative;
+}
+.header-slider-text {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  z-index: 99;
+  transform: translateY(-50%);
+  color: #5E371B;
+}
+.header-slider-text h3 {
+  margin-top: 26px;
+  font-size: 26px;
+  font-family: var(--font-family-Bion-Book);
+}
+
+@media screen and (max-width: 480px) {
+  .slider-container {
+    height: 260px;
+  }
+
+  .header-slider-text > h3 {
+    font-size: 14px;
+  }
+}
+/* Стиль для блока "Наша продукция" (горизонтальный стек) */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stack-item {
+  /* Убрано свойство box-sizing */
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.stack-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  /* Добавлен отступ снизу */
+}
+
+.stack-item h4 {
+  margin-top: 5px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 300px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+.production {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .button {
   background-color: #E88537;
   padding: var(--button-padding);
@@ -254,6 +330,7 @@ h1 {
   font-size: var(--h1-font-size);
   margin: 0;
   font-family: "Bion";
+  line-height: 0.9;
 }
 
 h2 {
@@ -290,19 +367,11 @@ img {
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 36px;
-  }
-
   .slide {
     width: 100%;
   }
 }
 @media (max-width: 480px) {
-  h1 {
-    font-size: 24px;
-  }
-
   .flex-block {
     flex-direction: column;
   }
@@ -332,8 +401,10 @@ img {
 }
 @media (max-width: 430px) {
   :root {
+    --h1-font-size: 36px;
     --h2-font-size: 28px;
     --h3-font-size: 22px;
+    --h4-font-size: 14px;
     --button-font-size: 13px;
     --button-padding: 8px 20px;
   }
@@ -361,82 +432,6 @@ a, a:hover, a:visited {
   display: inline-block;
   position: relative;
   top: 10px;
-}
-
-.slider-container {
-  position: relative;
-  width: 100%;
-  height: 60rem;
-  overflow: hidden;
-}
-
-@media (max-width: 390px) {
-  .slider-container {
-    height: 260px;
-  }
-}
-.slider {
-  position: relative;
-  width: 300%;
-  height: 100%;
-  display: flex;
-  transition: transform 0.5s ease;
-  background: black;
-}
-
-.slide {
-  width: 33.33%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.55;
-}
-
-.dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  margin: 0 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background-color: #E88537;
-}
-
-.header-slider {
-  position: relative;
-}
-.header-slider-text {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 99;
-  width: 100%;
-  text-align: center;
-  transform: translateY(-50%);
-  color: white;
-}
-.header-slider-text h1 {
-  font-size: 7.5rem;
-}
-.header-slider-text p {
-  font-size: 2rem;
 }
 
 .novelty {
