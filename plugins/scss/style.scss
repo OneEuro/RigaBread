@@ -1,11 +1,19 @@
 @import "variable";
 @import "production";
 @import "main-top-bar";
+@import "buttons";
 
 :root {
+    --h1-font-size: 75px;
     --h2-font-size: 48px;
+    --h3-font-size: 32px;
+    --h4-font-size: 18px;
+    --h5-font-size: 16px;
+    --h6-font-size: 12px;
     --font-family-Bion: 'Bion'; 
     --font-family-Bion-Book: 'Bion Book'; 
+    --button-font-size: 18px;
+    --button-padding: 10px 27px;
 }
 
 //fonts
@@ -41,7 +49,6 @@
     scrollbar-width: 0px;
 }
 
-
 body {
     background-color: $background-color;
     color: $text-color;
@@ -49,7 +56,7 @@ body {
 }
 
 h1 {
-    font-size: 7.5rem;
+    font-size: var(--h1-font-size);
     margin: 0;
     font-family: 'Bion';  
 }
@@ -61,19 +68,26 @@ h2 {
 }
 
 h3 {
-    font-size: 3.2rem;
+    font-size: var(--h3-font-size);
     font-family: 'Bion'; 
     margin: 0;
 }
 
 h4 {
-    font-size: 1.8rem;
+    font-size: var(--h4-font-size);
     font-family: 'Bion'; 
 }
 
 h5 {
-    font-size: 1.2rem;
+    font-size: var(--h5-font-size);
+    font-family: 'Bion';
     margin-top: 2rem;
+}
+
+h6 {
+    font-size: var(--h6-font-size);
+    font-family: var(--font-family-Bion-Book);
+    margin: 0;
 }
 
 img {
@@ -82,15 +96,15 @@ img {
 
 @media (max-width: 768px) {
     h1 {
-      font-size: 36px; /* Уменьшенный размер шрифта для экранов шириной до 768px */
+        font-size: 36px;
     }
     .slide {
-        width: 100%; /* Устанавливаем ширину слайда на 100% */
+        width: 100%;
     }  
 }
 @media (max-width: 480px) {
     h1 {
-        font-size: 24px; /* Ещё меньший размер шрифта для экранов шириной до 480px */
+        font-size: 24px;
     }
     .flex-block {
         flex-direction: column;
@@ -117,9 +131,12 @@ img {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 430px) {
     :root {
-      --h2-font-size: 28px; /* Изменение переменной для размера шрифта на узких экранах */
+        --h2-font-size: 28px;
+        --h3-font-size: 22px;
+        --button-font-size: 13px;
+        --button-padding: 8px 20px;
     }
 }
 
@@ -132,6 +149,11 @@ a,a:hover,a:visited {
     font-size: 1.2rem;
     text-decoration: none;
     color: $features-bg-color;
+}
+
+.divider {
+    border: 1px solid #ccc;
+    margin: 20px 0;
 }
 
 .long-dash {
@@ -149,6 +171,12 @@ a,a:hover,a:visited {
     height: 60rem;
     overflow: hidden;
     
+}
+
+@media (max-width: 390px) {
+    .slider-container {
+        height: 260px;
+    }
 }
 
 .slider {
@@ -212,34 +240,6 @@ a,a:hover,a:visited {
         & p {
             font-size: 2rem;
         }
-    }
-}
-
-
-.button {
-    background-color: $button-bg-color;
-    padding: 1rem 2rem;
-    border-radius: 55px;
-    color: $button-text-color;
-    font-size: 1.8rem;
-    font-family: 'Bion';
-    border: none;
-    box-shadow: 0px 7px 26px rgba(232, 133, 55, 0.25);
-}
-
-.content-button {
-    background-color: $content-button-bg-color;
-    padding: 1rem 2rem;
-    border-radius: 55px;
-    color: $content-button-text-color;
-    font-size: 1.8rem;
-    font-family: 'Bion';
-    border: none;
-    box-shadow: 0px 7px 26px rgba(232, 133, 55, 0.25);
-
-    &:hover {
-        background-color: #5E371B;
-        color: #FEFEFE;
     }
 }
 
@@ -368,15 +368,14 @@ a,a:hover,a:visited {
 
 }
 
-
 .contacts {
     margin-top: 14rem;
     &-block {
 
         &-btn {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            // flex-wrap: wrap;
+            justify-content: space-evenly;
     }
     & > hr {
         margin-top: 5.5rem;

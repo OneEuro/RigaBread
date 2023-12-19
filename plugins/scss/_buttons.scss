@@ -1,0 +1,31 @@
+.button {
+    background-color: $button-bg-color;
+    padding: var(--button-padding);
+    border-radius: 55px;
+    color: $button-text-color;
+    font-size: var(--button-font-size);
+    font-family: 'Bion';
+    border: none;
+    box-shadow: 0px 7px 26px rgba(232, 133, 55, 0.25);
+}
+
+.content-button {
+    background-color: $content-button-bg-color;
+    padding: var(--button-padding);
+    border-radius: 55px;
+    color: $content-button-text-color;
+    font-size: var(--button-font-size);
+    font-family: 'Bion';
+    border: none;
+    box-shadow: 0px 7px 26px rgba(232, 133, 55, 0.25);
+
+    &:hover {
+        background-color: #5E371B;
+        color: #FEFEFE;
+    }
+}
+
+.content-button.active {
+    background-color: $content-button-active-bg-color;
+    color: $content-button-active-text-color;
+}

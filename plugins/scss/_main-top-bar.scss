@@ -1,10 +1,14 @@
 .top-bar {
     display: flex;
-    padding-left: 180px;
-    padding-right: 180px;
+    padding-left: 12%;
+    padding-right: 12%;
     font-family: $top-bar-font;
     font-size: $top-bar-font-size;
     text-transform: uppercase;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
 
 & a,a:visited,a:hover,a:focus {
     color: $text-color;
@@ -73,7 +77,38 @@
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+.top-bar-menu-contacts {
+    display: none;
+    flex-direction: column;
+    text-transform: none ;
+}
+
+
+@media screen and (max-width: 430px) {
+.menu.active {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 100;
+    border-radius: 12px 12px 12px 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.top-bar-menu-contacts.active {
+    display: flex;
+    width: 90%;
+}
+
+.dropdown {
+    align-self: auto;
+}
+
 .menu-toggle {
     display: flex;
     align-items: center;
@@ -83,9 +118,12 @@
     display: none;
 }
 
+body.menu-open > *:not(#top-bar-menu) {
+    filter: blur(2px);
+    pointer-events: none; 
+}
+
 .top-bar {
     justify-content: space-between;
-    padding-left: 45px;
-    padding-right: 45px;
 }
 }
