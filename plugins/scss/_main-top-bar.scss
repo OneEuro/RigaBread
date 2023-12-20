@@ -85,7 +85,7 @@
 }
 
 
-@media screen and (max-width: $max-screen-width) {
+@media screen and (max-width: $middle-screen-width) {
 .menu.active {
     display: flex;
     flex-direction: column;
