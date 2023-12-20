@@ -27,5 +27,34 @@ $top-bar-font: 'Bion';
 $top-bar-font-size: 14px;
 
 //Size
+$large-screen-width: 1080px;
 $max-screen-width: 480px;
+$middle-screen-width: 768px;
+$small-screen-width: 390px;
 
+//fonts
+@font-face {
+    font-family: 'Bion';
+    src: url('../fonts/Bion-Bold.eot');
+    src: url('../fonts/Bion-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Bion-Bold.woff2') format('woff2'),
+        url('../fonts/Bion-Bold.woff') format('woff'),
+        url('../fonts/Bion-Bold.ttf') format('truetype'),
+        url('../fonts/Bion-Bold.svg#Bion-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bion Book';
+    src: url('../fonts/Bion-Book.eot');
+    src: url('../fonts/Bion-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Bion-Book.woff2') format('woff2'),
+        url('../fonts/Bion-Book.woff') format('woff'),
+        url('../fonts/Bion-Book.ttf') format('truetype'),
+        url('../fonts/Bion-Book.svg#Bion-Book') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

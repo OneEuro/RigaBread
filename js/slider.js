@@ -1,12 +1,12 @@
 //slick slider
 document.addEventListener('DOMContentLoaded', function() {
-    $('.production-slider').slick({
-        infinite: true,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        prevArrow:' <button class="arrow prev"></button>',
-        nextArrow:' <button class="arrow next"></button>'
-        });
+    // $('.production-slider').slick({
+    //     infinite: true,
+    //     slidesToShow: 6,
+    //     slidesToScroll: 1,
+    //     prevArrow:' <button class="arrow prev"></button>',
+    //     nextArrow:' <button class="arrow next"></button>'
+    //     });
     $('.novelty-slider').slick({
         arrows: false,
         autoplay: true,
@@ -23,34 +23,34 @@ document.addEventListener('DOMContentLoaded', function() {
         } 
         });     
 
-    //header-slider
-    const slider = document.querySelector(".slider");
-    const slides = slider.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".dot");
-    const slideWidth = slides[0].clientWidth;
+//header-slider
+const slider = document.querySelector(".slider");
+const slides = slider.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const slideWidth = slides[0].clientWidth;
 
-    let currentSlide = 0;
+let currentSlide = 0;
 
-    // функция для переключения на следующий слайд
-    function nextSlide() {
+// функция для переключения на следующий слайд
+function nextSlide() {
     currentSlide++;
     if (currentSlide >= slides.length) {
         currentSlide = 0;
     }
     updateSlider();
-    }
+}
 
-    // функция для переключения на предыдущий слайд
-    function prevSlide() {
+// функция для переключения на предыдущий слайд
+function prevSlide() {
     currentSlide--;
     if (currentSlide < 0) {
         currentSlide = slides.length - 1;
     }
     updateSlider();
-    }
+}
 
-    // функция для обновления слайдера
-    function updateSlider() {
+// функция для обновления слайдера
+function updateSlider() {
     slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
     dots.forEach((dot, index) => {
         if (index === currentSlide) {
@@ -59,55 +59,55 @@ document.addEventListener('DOMContentLoaded', function() {
         dot.classList.remove("active");
         }
     });
-    }
+}
 
-    // обработчик событий для точек
-    dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-        currentSlide = index;
-        updateSlider();
-    });
+// обработчик событий для точек
+dots.forEach((dot, index) => {
+dot.addEventListener("click", () => {
+    currentSlide = index;
+    updateSlider();
+});
 
-    dot.addEventListener('mouseenter', () => {
+dot.addEventListener('mouseenter', () => {
     clearInterval(slideInterval);
-    });
+});
 
-    dot.addEventListener('mouseleave', () => {
+dot.addEventListener('mouseleave', () => {
     slideInterval = setInterval(nextSlide, intervalTime);
-    });
+});
 
-    });
+});
 
-    // обработчик событий для листания свайпом
-    let touchStartX = 0;
-    let touchEndX = 0;
+// обработчик событий для листания свайпом
+let touchStartX = 0;
+let touchEndX = 0;
 
-    slider.addEventListener("touchstart", e => {
+slider.addEventListener("touchstart", e => {
     touchStartX = e.changedTouches[0].clientX;
-    });
+});
 
 
-    const intervalTime = 2000; // время между переключениями (в миллисекундах)
-    let slideInterval;
+const intervalTime = 2000; // время между переключениями (в миллисекундах)
+let slideInterval;
 
-    const nextSlideAuto = () => {
-    const currentSlide = slider.querySelector('.active');
-    currentSlide.classList.remove('active');
+const nextSlideAuto = () => {
+const currentSlide = slider.querySelector('.active');
+currentSlide.classList.remove('active');
 
-    let nextSlide = currentSlide.nextElementSibling;
-    if (!nextSlide) {
-        nextSlide = slides[0];
-    }
+let nextSlide = currentSlide.nextElementSibling;
+if (!nextSlide) {
+    nextSlide = slides[0];
+}
 
-    nextSlide.classList.add('active');
-    };
+nextSlide.classList.add('active');
+};
 
-    slideInterval = setInterval(nextSlideAuto, intervalTime);
+slideInterval = setInterval(nextSlideAuto, intervalTime);
 
-    slider.addEventListener('mouseenter', () => {
+slider.addEventListener('mouseenter', () => {
     clearInterval(slideInterval);
-    });
+});
 
-    slider.addEventListener('mouseleave', () => {
+slider.addEventListener('mouseleave', () => {
     slideInterval = setInterval(nextSlide, intervalTime);
-    });
+});

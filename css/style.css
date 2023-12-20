@@ -1,7 +1,23 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Bion";
+  src: url("../fonts/Bion-Bold.eot");
+  src: url("../fonts/Bion-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Bion-Bold.woff2") format("woff2"), url("../fonts/Bion-Bold.woff") format("woff"), url("../fonts/Bion-Bold.ttf") format("truetype"), url("../fonts/Bion-Bold.svg#Bion-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bion Book";
+  src: url("../fonts/Bion-Book.eot");
+  src: url("../fonts/Bion-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Bion-Book.woff2") format("woff2"), url("../fonts/Bion-Book.woff") format("woff"), url("../fonts/Bion-Book.ttf") format("truetype"), url("../fonts/Bion-Book.svg#Bion-Book") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 .top-bar {
   display: flex;
-  padding-left: 12%;
+  padding-left: 6%;
   padding-right: 12%;
   font-family: "Bion";
   font-size: 14px;
@@ -82,7 +98,7 @@
   text-transform: none;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 480px) {
   .menu.active {
     display: flex;
     flex-direction: column;
@@ -141,7 +157,7 @@
 }
 
 .slide {
-  width: 33.33%;
+  width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -253,6 +269,63 @@
   margin-top: 40px;
 }
 
+.novelty {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: 108px;
+  box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+.novelty-slider {
+  display: inline-block;
+  width: 60%;
+  height: 100%;
+}
+.novelty-text {
+  display: inline-block;
+  padding-left: 68px;
+  margin-top: 20px;
+}
+.novelty-text > h5 {
+  margin: 10px 0 30px;
+}
+
+.about {
+  margin-top: 165px;
+}
+.about img {
+  border-radius: 7%;
+  width: 100%;
+}
+
+.partner {
+  margin: 200px auto;
+}
+.partner img {
+  border-radius: 7%;
+  width: 100%;
+}
+
+.slick-list {
+  border-radius: 12px 0 0 12px;
+}
+
+@media screen and (max-width: 1080px) {
+  .novelty-slider {
+    width: 100%;
+  }
+
+  .slick-list {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .novelty-text {
+    padding-left: 26px;
+    padding-bottom: 26px;
+  }
+}
 .button {
   background-color: #E88537;
   padding: var(--button-padding);
@@ -297,22 +370,6 @@
   --button-padding: 10px 27px;
 }
 
-@font-face {
-  font-family: "Bion";
-  src: url("../fonts/Bion-Bold.eot");
-  src: url("../fonts/Bion-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Bion-Bold.woff2") format("woff2"), url("../fonts/Bion-Bold.woff") format("woff"), url("../fonts/Bion-Bold.ttf") format("truetype"), url("../fonts/Bion-Bold.svg#Bion-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Bion Book";
-  src: url("../fonts/Bion-Book.eot");
-  src: url("../fonts/Bion-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Bion-Book.woff2") format("woff2"), url("../fonts/Bion-Book.woff") format("woff"), url("../fonts/Bion-Book.ttf") format("truetype"), url("../fonts/Bion-Book.svg#Bion-Book") format("svg");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
 * {
   box-sizing: border-box;
   scrollbar-color: transparent transparent;
@@ -352,8 +409,7 @@ h4 {
 
 h5 {
   font-size: var(--h5-font-size);
-  font-family: "Bion";
-  margin-top: 2rem;
+  font-family: var(--font-family-Bion-Book);
 }
 
 h6 {
@@ -366,11 +422,6 @@ img {
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-  .slide {
-    width: 100%;
-  }
-}
 @media (max-width: 480px) {
   .flex-block {
     flex-direction: column;
@@ -404,7 +455,8 @@ img {
     --h1-font-size: 36px;
     --h2-font-size: 28px;
     --h3-font-size: 22px;
-    --h4-font-size: 14px;
+    --h4-font-size: 16px;
+    --h5-font-size: 12px;
     --button-font-size: 13px;
     --button-padding: 8px 20px;
   }
@@ -432,39 +484,6 @@ a, a:hover, a:visited {
   display: inline-block;
   position: relative;
   top: 10px;
-}
-
-.novelty {
-  margin-top: 10.8rem;
-  box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-}
-.novelty-text {
-  padding-left: 5rem;
-  margin-top: 2rem;
-}
-.novelty-text p {
-  margin: 1rem 0 3rem;
-}
-
-.slick-list {
-  border-radius: 12px 0 0 12px;
-}
-
-.about {
-  margin-top: 16.5rem;
-}
-.about img {
-  border-radius: 7%;
-  width: 100%;
-}
-
-.partner {
-  margin: 20rem auto;
-}
-.partner img {
-  border-radius: 7%;
-  width: 100%;
 }
 
 .features {

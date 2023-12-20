@@ -1,6 +1,6 @@
 .top-bar {
     display: flex;
-    padding-left: 12%;
+    padding-left: 6%;
     padding-right: 12%;
     font-family: $top-bar-font;
     font-size: $top-bar-font-size;
@@ -85,7 +85,7 @@
 }
 
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: $max-screen-width) {
 .menu.active {
     display: flex;
     flex-direction: column;
