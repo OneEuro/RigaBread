@@ -42,7 +42,7 @@ h1 {
 h2 {
     font-size: var(--h2-font-size);
     font-family: var(--font-family-Bion);
-    margin: 0 auto;
+    margin: 0;
 }
 
 h3 {
@@ -59,7 +59,7 @@ h4 {
 h5 {
     font-size: var(--h5-font-size);
     font-family: var(--font-family-Bion-Book);
-    // margin-top: 2rem;
+    // margin: 0;
 }
 
 h6 {
@@ -81,9 +81,6 @@ img {
     // }  
 }
 @media (max-width: $middle-screen-width) {
-    // h1 {
-    //     font-size: 36px;
-    // }
     .flex-block {
         flex-direction: column;
     }
@@ -130,6 +127,15 @@ a,a:hover,a:visited {
     font-size: 1.2rem;
     text-decoration: none;
     color: $features-bg-color;
+}
+
+.section-horizon-margin {
+    margin-left: 6%;
+    margin-right: 6%; 
+}
+
+.vertical-margin {
+    margin-top: 140px;
 }
 
 .divider {
@@ -402,3 +408,9 @@ footer {
         }
     }
 }  
+
+@media (max-width: $middle-screen-width) {
+    .vertical-margin {
+        margin-top: 50px;
+    }
+}
