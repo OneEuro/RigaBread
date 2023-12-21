@@ -360,9 +360,15 @@
   .about img {
     height: auto;
   }
+  .about-text button {
+    align-self: center;
+  }
 
   .partner img {
     height: auto;
+  }
+  .partner-text button {
+    align-self: center;
   }
 }
 .advantages {
@@ -519,7 +525,7 @@
 }
 .contacts .map-button {
   background-color: #FFFFFF;
-  font-size: 1.6rem;
+  font-size: var(--h4-font-size);
   padding: 5px 20px;
   color: #5e371b;
   box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
@@ -613,6 +619,51 @@
     flex-direction: column;
   }
 }
+.subscription {
+  margin-top: 120px;
+  padding-top: 54px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='577' viewBox='0 0 1440 577' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='724.5' cy='1300' rx='3359.5' ry='1300' fill='%23FAEEDA'/%3E%3C/svg%3E%0A");
+  background-size: cover;
+  background-position-x: center;
+}
+.subscription-container h5 {
+  color: black;
+  opacity: 50%;
+  margin-bottom: 0;
+}
+.subscription .flex-block {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+.subscription .flex-block input {
+  box-shadow: 0px 7px 26px rgba(249, 220, 177, 0.35);
+  border-radius: 78px;
+  padding: 0 50px;
+  height: 100%;
+  border: none;
+}
+
+.flex-item input::placeholder {
+  font-size: var(--h5-font-size);
+}
+
+@media screen and (max-width: 480px) {
+  .subscription .flex-block {
+    margin-top: 15px;
+    flex-direction: column;
+  }
+  .subscription .flex-block input {
+    padding: 10px;
+  }
+
+  .flex-item {
+    margin-top: 15px;
+  }
+}
 .button {
   background-color: #E88537;
   padding: var(--button-padding);
@@ -626,7 +677,7 @@
 
 .content-button {
   background-color: #FFE6C0;
-  padding: var(--button-padding);
+  padding: var(--content-button-padding);
   border-radius: 55px;
   color: #5e371b;
   font-size: var(--button-font-size);
@@ -655,6 +706,7 @@
   --font-family-Bion-Book: "Bion Book";
   --button-font-size: 18px;
   --button-padding: 10px 27px;
+  --content-button-padding: 10px 27px;
 }
 
 * {
@@ -709,21 +761,10 @@ img {
   margin: 0 auto;
 }
 
-@media (max-width: 480px) {
-  .flex-block {
-    flex-direction: column;
-  }
-
-  .subscription .flex-block input {
-    padding: 1rem;
-  }
-
-  .contacts-block h3 {
-    font-size: 2rem;
-  }
-
-  .main-image-text h1 {
-    font-size: 4.5rem;
+@media (max-width: 1220px) {
+  :root {
+    --button-padding: 8px 20px;
+    --content-button-padding: 8px 20px;
   }
 }
 @media (max-width: 480px) {
@@ -734,11 +775,8 @@ img {
     --h4-font-size: 16px;
     --h5-font-size: 12px;
     --button-font-size: 13px;
-  }
-}
-@media (max-width: 1220px) {
-  :root {
     --button-padding: 8px 20px;
+    --content-button-padding: 8px 10px;
   }
 }
 p {
@@ -774,29 +812,6 @@ a, a:hover, a:visited {
   position: relative;
   top: 10px;
   left: 20px;
-}
-
-.subscription {
-  margin-top: 12rem;
-  text-align: center;
-  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='577' viewBox='0 0 1440 577' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='724.5' cy='1300' rx='3359.5' ry='1300' fill='%23FAEEDA'/%3E%3C/svg%3E%0A");
-  background-size: cover;
-  background-position-x: center;
-}
-.subscription-item {
-  margin: 8.2rem 0 7rem;
-}
-.subscription .flex-block {
-  margin-top: 2.7rem;
-  display: flex;
-  justify-content: center;
-  column-gap: 1rem;
-}
-.subscription .flex-block input {
-  box-shadow: 0px 7px 26px rgba(249, 220, 177, 0.35);
-  border-radius: 78px;
-  padding: 1rem 5rem;
-  border: none;
 }
 
 footer {

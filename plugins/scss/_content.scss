@@ -26,6 +26,8 @@
         align-items: flex-start;
         padding-right: 52px;
         flex: 1;
+
+        
     }
 
     img {
@@ -44,6 +46,8 @@
         justify-content: space-between;
         align-items: flex-start;
         flex: 1;
+
+        
     }
     img {
         border-radius: 12px;
@@ -85,10 +89,25 @@
 }
 
 @media screen and (max-width: $middle-screen-width) {
-    .about img {
-        height: auto;
+    .about {
+        img {
+            height: auto;
+        }
+        &-text {
+            button {
+                align-self: center;
+            }
+        }
     }
-    .partner img {
-        height: auto;
+
+    .partner {
+        img {
+            height: auto;
+        }
+        &-text {
+            button {
+                align-self: center;
+            }
+        }
     }
 }

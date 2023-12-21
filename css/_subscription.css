@@ -1,0 +1,26 @@
+.subscription {
+  margin-top: 120px;
+  padding-top: 54px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='577' viewBox='0 0 1440 577' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='724.5' cy='1300' rx='3359.5' ry='1300' fill='%23FAEEDA'/%3E%3C/svg%3E%0A");
+  background-size: cover;
+  background-position-x: center;
+}
+.subscription .flex-block {
+  margin-top: 27px;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+.subscription .flex-block input {
+  box-shadow: 0px 7px 26px rgba(249, 220, 177, 0.35);
+  border-radius: 78px;
+  padding: 0 50px;
+  height: 100%;
+  border: none;
+}
+
+.flex-item input::placeholder {
+  font-size: var(--h5-font-size);
+}
