@@ -738,6 +738,11 @@ footer p {
     margin-top: 40px;
   }
 }
+@media screen and (max-width: 768px) {
+  footer .footer-container {
+    flex-direction: column;
+  }
+}
 .button {
   background-color: #E88537;
   padding: var(--button-padding);

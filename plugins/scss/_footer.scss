@@ -76,3 +76,11 @@ footer {
         margin-top: 40px;
     }
 }
+
+@media screen and (max-width: $big-screen-width) {
+    footer {
+        .footer-container {
+            flex-direction: column;
+        }
+    }
+} 
