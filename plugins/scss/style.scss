@@ -78,6 +78,10 @@ img {
     margin: 0 auto;
 }
 
+.vertical-margin {
+    margin-top: 140px;
+}
+
 @media (max-width: $large-screen-width) {
     :root {
         --button-padding: 8px 20px;
@@ -111,10 +115,6 @@ a,a:hover,a:visited {
 .horizontal-margin {
     margin-left: 6%;
     margin-right: 6%; 
-}
-
-.vertical-margin {
-    margin-top: 140px;
 }
 
 .divider {

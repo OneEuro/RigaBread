@@ -652,6 +652,9 @@
 }
 
 @media screen and (max-width: 480px) {
+  .subscription {
+    background-image: url(/img/small_subscription_bg.svg);
+  }
   .subscription .flex-block {
     margin-top: 15px;
     flex-direction: column;
@@ -711,6 +714,7 @@ footer p {
 @media screen and (max-width: 480px) {
   footer {
     padding: 62px 0 10px;
+    background-image: url("/img/small_footer_bg.svg");
   }
   footer .footer-container {
     flex-direction: column;
@@ -789,13 +793,13 @@ footer p {
 body {
   background-color: #FFFFFF;
   color: #5E371B;
-  font-family: "Bion Book";
+  font-family: var(--font-family-Bion-Book);
 }
 
 h1 {
   font-size: var(--h1-font-size);
   margin: 0;
-  font-family: "Bion";
+  font-family: var(--font-family-Bion);
   line-height: 0.9;
 }
 
@@ -807,13 +811,13 @@ h2 {
 
 h3 {
   font-size: var(--h3-font-size);
-  font-family: "Bion";
+  font-family: var(--font-family-Bion);
   margin: 0;
 }
 
 h4 {
   font-size: var(--h4-font-size);
-  font-family: "Bion";
+  font-family: var(--font-family-Bion);
 }
 
 h5 {
@@ -829,6 +833,10 @@ h6 {
 
 img {
   margin: 0 auto;
+}
+
+.vertical-margin {
+  margin-top: 140px;
 }
 
 @media (max-width: 1220px) {
@@ -863,10 +871,6 @@ a, a:hover, a:visited {
 .horizontal-margin {
   margin-left: 6%;
   margin-right: 6%;
-}
-
-.vertical-margin {
-  margin-top: 140px;
 }
 
 .divider {

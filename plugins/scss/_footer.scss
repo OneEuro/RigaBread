@@ -49,7 +49,7 @@ footer {
 @media screen and (max-width: $middle-screen-width) {
     footer {
         padding: 62px 0 10px;
-
+        background-image: url("/img/small_footer_bg.svg");
         .footer-container {
             flex-direction: column;
             padding-bottom: 30px;

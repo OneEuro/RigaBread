@@ -38,6 +38,7 @@
 
 @media screen and (max-width: $middle-screen-width) {
     .subscription {
+        background-image: url(/img/small_subscription_bg.svg);
         .flex-block {
             margin-top: 15px;
             flex-direction: column;
