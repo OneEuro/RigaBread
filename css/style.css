@@ -481,6 +481,76 @@
     flex-basis: 74%;
   }
 }
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-block {
+  flex-basis: 50%;
+}
+.contacts-block-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-block h5 {
+  width: 74%;
+}
+.contacts-block > hr {
+  margin-top: 55px;
+  border-width: 2px;
+  border-color: #B7B7B7;
+}
+.contacts .map {
+  position: relative;
+  flex-basis: 40%;
+}
+.contacts .map-controls {
+  position: absolute;
+  bottom: -4%;
+  left: 0;
+  z-index: 99;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contacts .map-buttons {
+  display: flex;
+}
+.contacts .map-button {
+  background-color: #FFFFFF;
+  font-size: 1.6rem;
+  padding: 5px 20px;
+  color: #5e371b;
+  box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
+  margin-left: 2rem;
+}
+.contacts .map-button-clicked {
+  background-color: #5E371B;
+  color: #FEFEFE;
+}
+.contacts .map button:hover, .contacts .map button:active {
+  background-color: #5E371B;
+  color: #FEFEFE;
+}
+
+.ymaps-2-1-79-inner-panes,
+.ymaps-2-1-79-map {
+  border-radius: 12px;
+}
+
+.right-side {
+  height: 100%;
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    flex-direction: column-reverse;
+  }
+  .contacts-block {
+    margin-top: 76px;
+  }
+}
 .button {
   background-color: #E88537;
   padding: var(--button-padding);
@@ -496,7 +566,7 @@
   background-color: #FFE6C0;
   padding: var(--button-padding);
   border-radius: 55px;
-  color: #93391D;
+  color: #5e371b;
   font-size: var(--button-font-size);
   font-family: "Bion";
   border: none;
@@ -594,12 +664,6 @@ img {
     font-size: 4.5rem;
   }
 }
-@media (max-width: 1220px) {
-  .right-side {
-    position: static;
-    width: auto;
-  }
-}
 @media (max-width: 480px) {
   :root {
     --h1-font-size: 36px;
@@ -643,65 +707,7 @@ a, a:hover, a:visited {
   display: inline-block;
   position: relative;
   top: 10px;
-}
-
-.contacts {
-  margin-top: 14rem;
-}
-.contacts-block-btn {
-  display: flex;
-  justify-content: space-evenly;
-}
-.contacts-block > hr {
-  margin-top: 5.5rem;
-  border-width: 2px;
-  border-color: #B7B7B7;
-}
-.contacts .map {
-  position: relative;
-  height: 500px;
-}
-.contacts .map-controls {
-  position: absolute;
-  bottom: -4%;
-  left: 0;
-  z-index: 99;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contacts .map-buttons {
-  display: flex;
-}
-.contacts .map-button {
-  background-color: #FFFFFF;
-  font-size: 1.6rem;
-  padding: 5px 20px;
-  color: #93391D;
-  box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
-  margin-left: 2rem;
-}
-.contacts .map-button-clicked {
-  background-color: #5E371B;
-  color: #FEFEFE;
-}
-.contacts .map button:hover, .contacts .map button:active {
-  background-color: #5E371B;
-  color: #FEFEFE;
-}
-
-.right-side {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  right: -8%;
-  height: 500px;
-}
-
-.ymaps-2-1-79-inner-panes,
-.ymaps-2-1-79-map {
-  border-radius: 12px;
+  left: 20px;
 }
 
 .substrate {
