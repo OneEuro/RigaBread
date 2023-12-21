@@ -8,6 +8,7 @@
 @import "advantages";
 @import "read";
 @import "contacts";
+@import "form";
 @import "buttons";
 
 :root {
@@ -113,9 +114,16 @@ img {
         --h4-font-size: 16px;
         --h5-font-size: 12px;
         --button-font-size: 13px;
+        // --button-padding: 8px 20px;
+    }
+}
+
+@media (max-width: $large-screen-width) {
+    :root {
         --button-padding: 8px 20px;
     }
 }
+
 
 p {
     font-size: var(--h4-font-size);
@@ -152,35 +160,6 @@ a,a:hover,a:visited {
     left: 20px;
 }
 
-.substrate {
-    box-shadow: 0px 8px 34px rgba(145, 118, 75, 0.18);
-    border-radius: 18px;
-    margin-top: 16rem;
-    &-form {
-        margin-top: 8rem;
-    }
-    img {
-        width: 100%;
-    }
-    .form-block {
-        margin: 4rem 0 7rem;
-        display: flex;
-        flex-direction: column;
-        
-        &-input {
-            border: none;
-            border-bottom: 1px solid $dash-color;
-            color: $form-color;
-            padding: 2rem 0 1rem;
-        }
-        &-input:focus {
-            outline: none;
-            border-bottom: 1px solid $dash-color;
-        }
-    
-    }
-
-}
 
 .subscription {
     margin-top: 12rem;

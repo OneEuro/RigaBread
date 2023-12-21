@@ -543,12 +543,74 @@
   height: 100%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1220px) {
   .contacts {
     flex-direction: column-reverse;
   }
   .contacts-block {
     margin-top: 76px;
+  }
+}
+.form {
+  box-shadow: 0px 8px 34px rgba(145, 118, 75, 0.18);
+  border-radius: 18px;
+}
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 26px;
+  padding-bottom: 5%;
+}
+.form-img img {
+  width: 100%;
+  height: auto;
+}
+.form-production {
+  margin-top: 54px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+.form-production h5 {
+  width: 80%;
+}
+.form-block {
+  margin: 0 0 70px;
+  display: flex;
+  flex-direction: column;
+}
+.form-block-input {
+  border: none;
+  border-bottom: 1px solid #B7B7B7;
+  color: #8B8B8B;
+  padding: 20px 0 10px;
+}
+.form-block-input:focus {
+  outline: none;
+  border-bottom: 1px solid #B7B7B7;
+}
+
+@media screen and (max-width: 1220px) {
+  .form-block {
+    margin: 0 0 30px;
+  }
+  .form-production {
+    margin-top: 0;
+  }
+  .form-production h5 {
+    width: auto;
+  }
+  .form-img {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    align-self: center;
+    transform: rotate(90deg);
+  }
+  .form-container {
+    flex-direction: column;
   }
 }
 .button {
@@ -672,6 +734,10 @@ img {
     --h4-font-size: 16px;
     --h5-font-size: 12px;
     --button-font-size: 13px;
+  }
+}
+@media (max-width: 1220px) {
+  :root {
     --button-padding: 8px 20px;
   }
 }
@@ -708,33 +774,6 @@ a, a:hover, a:visited {
   position: relative;
   top: 10px;
   left: 20px;
-}
-
-.substrate {
-  box-shadow: 0px 8px 34px rgba(145, 118, 75, 0.18);
-  border-radius: 18px;
-  margin-top: 16rem;
-}
-.substrate-form {
-  margin-top: 8rem;
-}
-.substrate img {
-  width: 100%;
-}
-.substrate .form-block {
-  margin: 4rem 0 7rem;
-  display: flex;
-  flex-direction: column;
-}
-.substrate .form-block-input {
-  border: none;
-  border-bottom: 1px solid #B7B7B7;
-  color: #8B8B8B;
-  padding: 2rem 0 1rem;
-}
-.substrate .form-block-input:focus {
-  outline: none;
-  border-bottom: 1px solid #B7B7B7;
 }
 
 .subscription {

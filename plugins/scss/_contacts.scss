@@ -70,7 +70,7 @@
     height: 100%;
 }
 
-@media (max-width: $middle-screen-width) {
+@media (max-width: $large-screen-width) {
     .contacts {
         flex-direction: column-reverse;
         &-block {
