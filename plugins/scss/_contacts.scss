@@ -78,3 +78,9 @@
         }
     }
 }
+
+@media (max-width: $middle-screen-width) {
+    .right-side {
+        height: 400px;
+    }
+}
