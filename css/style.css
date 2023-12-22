@@ -658,7 +658,7 @@
 
 @media screen and (max-width: 480px) {
   .subscription {
-    background-image: url(/img/small_subscription_bg.svg);
+    background-image: url(../img/small_subscription_bg.svg);
   }
   .subscription .flex-block {
     margin-top: 15px;
@@ -706,7 +706,7 @@ footer .site-map-grid {
   grid-row-gap: 6px;
 }
 footer .site-map-grid a.references:after {
-  content: url(/img/link-icon.svg);
+  content: url(../img/link-icon.svg);
   position: relative;
   margin-left: 5px;
 }
@@ -719,7 +719,7 @@ footer p {
 @media screen and (max-width: 480px) {
   footer {
     padding: 62px 0 10px;
-    background-image: url("/img/small_footer_bg.svg");
+    background-image: url("../img/small_footer_bg.svg");
   }
   footer .footer-container {
     flex-direction: column;
