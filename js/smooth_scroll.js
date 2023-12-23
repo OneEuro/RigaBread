@@ -1,22 +1,53 @@
+window.addEventListener('load', function() {
+    const currentHash = sessionStorage.getItem('targetId');
+    const targetElement = document.getElementById(currentHash);
+    scrollToElement(targetElement);
+});
+
 document.addEventListener('DOMContentLoaded', function() {
-    const anchors = document.querySelectorAll('a[href^="#"]');
+    const anchors = document.querySelectorAll('a');
+    const currentURL = window.location.href;
+    const startPage = 'index.html';
 
     anchors.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+            const targetId = this.getAttribute('href');
+            e.preventDefault();
 
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+            if (!currentURL.includes(startPage)) {
+                
+                sessionStorage.setItem('targetId', extractAfterHash(targetId));
+                window.location.href = startPage;
+            }
 
-        if (targetElement) {
-            const fixedHeaderHeight = 90;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - fixedHeaderHeight;
+            if (!targetId.includes(startPage)) {
+                window.location.href = targetId;
+            }
 
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
+            const result = extractAfterHash(targetId);
+            const targetElement = document.getElementById(result);
+            scrollToElement(targetElement);
         });
     });
 });
+
+function extractAfterHash(inputString) {
+    const indexOfHash = inputString.indexOf('#');
+    if (indexOfHash !== -1) {
+        return inputString.substring(indexOfHash + 1);
+    } else {
+        return null;
+    }
+}
+
+function scrollToElement(element) {
+    if (element) {
+        const fixedHeaderHeight = 90;
+        const targetPosition = element.getBoundingClientRect().top + window.scrollY - fixedHeaderHeight;
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+            });
+        }
+}
+
