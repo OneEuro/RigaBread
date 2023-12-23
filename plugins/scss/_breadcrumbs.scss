@@ -1,0 +1,18 @@
+.breadcrumbs {
+    padding-top: 68px;
+    margin-bottom: 36px;
+    span {
+        font-family: var(--font-family-Bion-Book);
+        font-size: 14px;
+        color: $breadcrumbs-color;
+    }
+}
+@media screen and (max-width: $middle-screen-width) {
+    .breadcrumbs {
+        padding-top: 0;
+        margin-bottom: 0;
+        span {
+            font-size: 10px;
+        }
+    }
+}

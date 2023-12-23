@@ -5,6 +5,7 @@
 @import "form";
 @import "subscription";
 @import "partners-title";
+@import "breadcrumbs";
 @import "footer";
 
 
@@ -40,6 +41,7 @@ body {
     font-family: var(--font-family-Bion-Book);  
     margin: 0;
 }
+
 
 hr {
     -webkit-box-sizing: content-box;
