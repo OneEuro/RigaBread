@@ -4,6 +4,7 @@
 @import "main-top-bar";
 @import "form";
 @import "subscription";
+@import "partners-title";
 @import "footer";
 
 
@@ -40,6 +41,17 @@ body {
     margin: 0;
 }
 
+hr {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+}
+
 input {
     font-family: var(--font-family-Bion-Book);
 }
@@ -71,6 +83,7 @@ h4 {
 h5 {
     font-size: var(--h5-font-size);
     font-family: var(--font-family-Bion-Book);
+    margin: 0;
 }
 
 h6 {

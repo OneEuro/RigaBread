@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.toggle('menu-open');
         toggleMenuImage();
     });
+
+    topBarMargin();
 });
 
 function toggleMenuImage() {
@@ -26,3 +28,27 @@ function toggleMenuImage() {
             menuBtn.src = '/img/menuBtn.svg'; // Замените путь на ваш путь к изображению menuBtn.svg
         }
     }
+
+function topBarMargin() {
+    var myDiv = document.getElementById('top-bar-menu');    
+    if (myDiv) {
+        var divHeight = myDiv.offsetHeight;
+        // Находим родительский элемент
+        var parentElement = myDiv.parentElement;
+        // Получаем все дочерние элементы родителя
+        var childElements = parentElement.children;
+        // Ищем индекс элемента с идентификатором 'top-bar-menu' в списке дочерних элементов
+        var indexOfMyDiv = Array.prototype.indexOf.call(childElements, myDiv);
+        // Получаем следующий элемент
+        var nextElement = childElements[indexOfMyDiv + 1];
+        // Если следующий элемент существует, устанавливаем marginTop
+        if (nextElement) {
+            nextElement.style.marginTop = divHeight + 'px';
+            console.log("marginTop следующего элемента установлен:", divHeight, "пикселей");
+        } else {
+            console.error("Нет следующего элемента");
+        }
+    } else {
+        console.error("Элемент с id 'top-bar-menu' не найден.");
+    }
+}    
