@@ -606,32 +606,79 @@ a, a:hover, a:visited {
     width: 100%;
   }
 }
-.wrap {
+.product-filter {
   display: flex;
-  align-items: flex-start;
 }
-
-.filter-block {
-  background-color: white;
-  margin-right: 3.5rem;
-  flex-shrink: 0;
-}
-
-.checkbox-container {
+.product-filter-block {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  margin-bottom: 2rem;
-  box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
-  border-radius: 1rem;
-  padding: 35px 25px 30px 30px;
+  margin-right: 30px;
+}
+.product-filter-block-item {
+  box-shadow: 0px 8px 34px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 34px 12px 24px 30px;
+  margin: 10px 0;
+}
+.product-filter-block-item h5 {
+  margin-top: 0;
+  font-family: var(--font-family-Bion);
+}
+.product-filter-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.product-filter .product-card-container {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.product-filter .product-card {
+  border-radius: 12px;
+  width: 250px;
+  height: 400px;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0px 8px 34px 0px rgba(144, 118, 75, 0.18);
+}
+.product-filter .product-card .button {
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 0;
+}
+.product-filter .product-card img {
+  width: 100%;
+  height: 200px;
+}
+.product-filter .product-card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-filter .product-card-info > img {
+  width: 50px;
+  height: auto;
+  margin: 0;
+}
+.product-filter .product-card .shading {
+  text-transform: uppercase;
+  background-color: #ffe6c0;
+  border-radius: 21px;
+  padding: 4px 10px;
+  font-size: 9px;
+  font-family: var(--font-family-Bion);
 }
 
 .checkbox-container label {
   display: flex;
-  align-items: center;
-  font-family: "Bion Book";
-  font-size: 1.2rem;
+  white-space: nowrap;
+  margin: 8px 0;
+  font-family: var(--font-family-Bion-Book);
+  font-size: var(--h6-font-size);
 }
 
 input[type=checkbox] {
@@ -667,97 +714,6 @@ input[type=checkbox]:checked::after {
   left: 3px;
 }
 
-.main-content {
-  flex-grow: 1;
-}
-
-.main-content h2 {
-  text-align: center;
-  margin: 0;
-  margin-bottom: 4rem;
-  font-size: 3.2rem;
-}
-
-.main-content-block {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.product-card {
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: column;
-  background-color: white;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
-  border-radius: 1.2rem;
-}
-
 .hidden {
   display: none;
-}
-
-.product-information {
-  display: flex;
-  flex-direction: column;
-}
-
-.product-information-mark {
-  text-transform: uppercase;
-  background-color: #ffe6c0;
-  border-radius: 21px;
-  padding: 4px 10px;
-  font-size: 9px;
-}
-
-.product-information-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.product-information-top img {
-  width: 5rem;
-}
-
-.product-information-bottom {
-  display: flex;
-  color: #90847a;
-  font-family: "Bion Book";
-  font-size: 1.2rem;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.product-information h3 {
-  font-size: 1.8rem;
-}
-
-.product-information p {
-  font-family: "Bion Book";
-  font-size: 1.6rem;
-}
-
-.details-btn {
-  width: 100%;
-  background-color: #e88537;
-  padding: 1rem 2rem;
-  border-radius: 5.5rem;
-  color: #FEFEFE;
-  font-size: 1.4rem;
-  font-family: "Bion";
-  margin-top: 3rem;
-  border: none;
-  box-shadow: 0px 7px 26px rgba(232, 133, 55, 0.25);
-}
-
-.introduction {
-  margin-top: 4.2rem;
-}
-
-.introduction p {
-  margin-top: 2rem;
-  margin-bottom: 9rem;
 }

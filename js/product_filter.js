@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 const categoryCheckboxes = document.querySelectorAll('.category-filter');
 const brandCheckboxes = document.querySelectorAll('.brand-filter');
 const packagingCheckboxes = document.querySelectorAll('.packaging-filter');
@@ -41,7 +42,7 @@ function getSelectedCheckboxes(checkboxes) {
 
 function filterProducts() {
   const selectedFilters = getSelectedCheckboxes(
-    document.querySelectorAll('.filter-block input[type="checkbox"]')
+    document.querySelectorAll('.product-filter-block input[type="checkbox"]')
   );
 
   const products = document.querySelectorAll('.product-card');
@@ -62,3 +63,4 @@ function filterProducts() {
     }
   });
 }
+});

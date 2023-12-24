@@ -60,108 +60,135 @@
     <h5>Наша продукция представляет собой широкий ассортимент свежих и качественных хлебобулочных изделий, отвечающих самым взыскательным вкусовым предпочтениям наших клиентов. Мы гордимся тем, что каждый день предлагаем свежеиспеченные хлебы различных сортов.</h5>
   </section>
   <hr class="horizontal-margin">
-  <div class="container">
-    <div class="wrap">
-      <div class="filter-block">
-        
+  <section class="product-filter horizontal-margin">
+    <div class="product-filter-block">
+      <div class="product-filter-block-item">
+        <h5>Выберете бренд</h5>
         <div class="checkbox-container">
-          <h3>Выберете бренд</h3>
           <label><input type="checkbox" class="category-filter" value="Riga_Bread">Рижский хлеб</label>
           <label><input type="checkbox" class="category-filter" value="Gifts_World">Дары мира</label>
         </div>
+      </div>
+      <div class="product-filter-block-item">
+        <h5>Категория товара</h5>
         <div class="checkbox-container">
-          <h3>Категория товара</h3>
           <label><input type="checkbox" class="brand-filter" value="Bread">Хлеб</label>
           <label><input type="checkbox" class="brand-filter" value="Buns">Булочки</label>
-          <label><input type="checkbox" class="brand-filter" value="Pastries"><span>Кондитерские изделия</span></label>
+          <label><input type="checkbox" class="brand-filter" value="Pastries">Кондитерские изделия</label>
         </div>
+      </div>
+      <div class="product-filter-block-item">
+        <h5>Упаковка</h5>
         <div class="checkbox-container">
-          <h3>Упаковка</h3>
           <label><input type="checkbox" class="packaging-filter" value="Tray">Лоток</label>
           <label><input type="checkbox" class="packaging-filter" value="PET_bag">Пакет ПЭТ</label>
           <label><input type="checkbox" class="packaging-filter" value="Laminated_Paper">Бумага ламинир.</label>
         </div>
       </div>
-      <div class="main-content">
-        <h2>Мы рекомендуем</h2>
-        <div class="main-content-block">
-          
-          <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
-            <div class="product-information">
-              <div class="product-information-top">
-              <div class="product-information-mark"><span>Хит продаж</span></div>
-              <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
-              </div>
-              <img src="/img/croutons.png" alt="Product 1">
-              <div class="product-information-bottom">
-                <div class="product-information-weight">120г.</div>
-                <div class="product-information-amount">1 шт</div>
-              </div>
-            </div>
-            <h3>Улитка с маком</h3>
-            <p>от 35 Р / упак.</p>
-            <button class="details-btn">Подробнее о товаре</button>
+    </div>
+    <div class="product-filter-content">
+      <h2>Мы рекомендуем</h2>
+      <div class="product-card-container">
+        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+          <div class="product-card-info">
+            <span class="shading">Хит продаж</span>
+            <img src="/img/logo.png" alt="icon">
           </div>
-  
-          
-          <div class="product-card" data-category="Gifts_World" data-brand="Buns" data-packaging="PET_bag">
-            <div class="product-information">
-              <div class="product-information-top">
-                <div class="product-information-mark"><span>Хит продаж</span></div>
-                <div class="product-information-logo"><img src="/img/gifts_of_peace.svg" alt=""></div>
-                </div>
-                <img src="/img/chips.png" alt="Product 1">
-                <div class="product-information-bottom">
-                  <div class="product-information-weight">120 Г.</div>
-                  <div class="product-information-amount">1 ШТ.</div>
-                </div>
-            </div> 
-            <h3>Улитка с маком</h3>
-            <p>от 35 Р / упак.</p>
-            <button class="details-btn">Подробнее о товаре</button>
+          <img src="/img/croutons.png" alt="Product 1">
+          <div class="product-card-info">
+            <h6>120г.</h6>
+            <h6>1 шт</h6>
           </div>
-          <div class="product-card" data-category="Riga_Bread" data-brand="Pastries" data-packaging="Laminated_Paper">
-            <div class="product-information">
-              <div class="product-information-top">
-                <div class="product-information-mark"><span>Хит продаж</span></div>
-                <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
-                </div>
-                <img src="/img/buns.png" alt="Product 1">
-                <div class="product-information-bottom">
-                  <div class="product-information-weight">120г.</div>
-                  <div class="product-information-amount">1 шт</div>
-                </div>
-            </div>
-            <h3>Рижский хлеб</h3>
-            <p>Кондитерские изделия</p>
-            <button class="details-btn">Подробнее о товаре</button>
+          <h4>Улитка с маком</h4>
+          <button class="button">Подробнее о товаре</button>
+        </div>
+        <div class="product-card" data-category="Gifts_World" data-brand="Buns" data-packaging="PET_bag">
+          <div class="product-card-info">
+            <span class="shading">Хит продаж</span>
+            <img src="/img/logo.png" alt="icon">
           </div>
-          <div class="product-card" data-category="Riga_Bread" data-brand="Buns" data-packaging="PET_bag">
-            <div class="product-information">
-              <div class="product-information-top">
-                <div class="product-information-mark"><span>Хит продаж</span></div>
-                <div class="product-information-logo"><img src="/img/logo.png" alt=""></div>
-                </div>
-                <img src="/img/buns.png" alt="Product 1">
-                <div class="product-information-bottom">
-                  <div class="product-information-weight">120г.</div>
-                  <div class="product-information-amount">1 шт</div>
-                </div>
-            </div>
-            <h3>Рижский хлеб</h3>
-            <p>Кондитерские изделия</p>
-            <button class="details-btn">Подробнее о товаре</button>
+          <img src="/img/gifts_of_peace.svg" alt="Product 1">
+          <div class="product-card-info">
+            <h6>120г.</h6>
+            <h6>1 шт</h6>
           </div>
+          <h4>Рижский хлеб</h4>
+          <button class="button">Подробнее о товаре</button>
+        </div>
+        <div class="product-card" data-category="Riga_Bread" data-brand="Pastries" data-packaging="Laminated_Paper">
+          <div class="product-card-info">
+            <span class="shading">Хит продаж</span>
+            <img src="/img/logo.png" alt="icon">
+          </div>
+          <img src="/img/buns.png" alt="Product 1">
+          <div class="product-card-info">
+            <h6>120г.</h6>
+            <h6>1 шт</h6>
+          </div>
+          <h4>Улитка с маком</h4>
+          <button class="button">Подробнее о товаре</button>
+        </div>
+        <div class="product-card" data-category="Riga_Bread" data-brand="Buns" data-packaging="PET_bag">
+          <div class="product-card-info">
+            <span class="shading">Хит продаж</span>
+            <img src="/img/logo.png" alt="icon">
+          </div>
+          <img src="/img/buns.png" alt="Product 1">
+          <div class="product-card-info">
+            <h6>120г.</h6>
+            <h6>1 шт</h6>
+          </div>
+          <h4>Улитка с маком</h4>
+          <button class="button">Подробнее о товаре</button>
+        </div>
+        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+          <div class="product-card-info">
+            <span class="shading">Хит продаж</span>
+            <img src="/img/logo.png" alt="icon">
+          </div>
+          <img src="/img/croutons.png" alt="Product 1">
+          <div class="product-card-info">
+            <h6>120г.</h6>
+            <h6>1 шт</h6>
+          </div>
+          <h4>Улитка с маком</h4>
+          <button class="button">Подробнее о товаре</button>
+        </div>
+        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+          <div class="product-card-info">
+            <span class="shading">Хит продаж</span>
+            <img src="/img/logo.png" alt="icon">
+          </div>
+          <img src="/img/croutons.png" alt="Product 1">
+          <div class="product-card-info">
+            <h6>120г.</h6>
+            <h6>1 шт</h6>
+          </div>
+          <h4>Улитка с маком</h4>
+          <button class="button">Подробнее о товаре</button>
+        </div>
+        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+          <div class="product-card-info">
+            <span class="shading">Хит продаж</span>
+            <img src="/img/logo.png" alt="icon">
+          </div>
+          <img src="/img/croutons.png" alt="Product 1">
+          <div class="product-card-info">
+            <h6>120г.</h6>
+            <h6>1 шт</h6>
+          </div>
+          <h4>Улитка с маком</h4>
+          <button class="button">Подробнее о товаре</button>
+        </div>
         </div>
       </div>
-      
     </div>
-  </div>
+  </section>
   <section class="contacts horizontal-margin vertical-margin">
     <div class="contacts-block" id="contacts-section">
         <h2>Наши <br> контакты <hr class="long-dash"> </h2>
         <h5>Если у вас еще остались вопросы или вы хотели бы оставить предложения, мы с большим удовольствием готовы ответить на ваше обращение.</h5>
-        <div class="contacts-block-btn">
+        <div class="horizontal-button-stack">
             <button class="content-button" onclick="callNumber('+1234567890', 'Привет!')">Позвонить</button>
             <button class="content-button" onclick="sendWhatsAppMessage('+1234567890', 'Привет!')">&nbsp;Whatsapp&nbsp;</button>
             <button class="content-button" onclick="sendTelegramMessage('+1234567890', 'Привет!')" >&nbsp;&nbsp;Telegram&nbsp;&nbsp;</button>
