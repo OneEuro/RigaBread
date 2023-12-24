@@ -1,0 +1,12 @@
+.our-production {
+    h5 {
+        width: 50%;
+    }
+}
+@media screen and (max-width: $middle-screen-width) {
+    .our-production {
+        h5 {
+            width: 100%;
+        }
+    }
+}

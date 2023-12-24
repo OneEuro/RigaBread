@@ -8,10 +8,9 @@
 @import "form";
 @import "footer";
 @import "common";
+@import "our-production";
 
-.html {
-    font-size: 10px;
-  }
+
   .wrap {
     display: flex;
     align-items: flex-start;
@@ -138,13 +137,6 @@
     border: none;
     box-shadow: 0px 7px 26px rgba(232, 133, 55, 0.25);
   }
-  .breadcrumbs {
-    margin-top: 6.9rem;
-    font-size: 1.4rem;
-  }
-  .breadcrumbs span {
-    font-family: 'Bion Book';
-  }
   .introduction {
     margin-top: 4.2rem;
   }
@@ -152,19 +144,3 @@
     margin-top: 2rem;
     margin-bottom: 9rem;
   }
-  .line {
-    position: relative;
-    height: 1px;
-    margin-bottom: 8rem;
-  }
-  .line::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: #DDD1C8;
-    transform: translateY(-50%);
-  }
-  
