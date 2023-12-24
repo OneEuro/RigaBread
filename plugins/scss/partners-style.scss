@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@import "variable";
+@import "buttons";
+@import "main-top-bar";
+@import "form";
+@import "subscription";
+@import "partners-title";
+@import "terms-of-cooperation";
+@import "breadcrumbs";
+@import "footer";
+@import "common";
+
+
+// :root {
+//     --h1-font-size: 75px;
+//     --h2-font-size: 48px;
+//     --h3-font-size: 32px;
+//     --h4-font-size: 18px;
+//     --h5-font-size: 16px;
+//     --h6-font-size: 12px;
+//     --font-family-Bion: 'Bion'; 
+//     --font-family-Bion-Book: 'Bion Book'; 
+//     --button-font-size: 18px;
+//     --button-padding: 10px 27px;
+//     --content-button-padding: 10px 27px;
+// }
+
+// * {
+//     box-sizing: border-box;
+//     scrollbar-color: transparent transparent; /* thumb and track color */
+//     scrollbar-width: 0px;
+// }
+
+// html {
+//     font-family: sans-serif;
+//     -ms-text-size-adjust: 100%;
+//     -webkit-text-size-adjust: 100%;
+// }
+
+// body {
+//     background-color: $background-color;
+//     color: $text-color;
+//     font-family: var(--font-family-Bion-Book);  
+//     margin: 0;
+// }
+
+
+// hr {
+//     -webkit-box-sizing: content-box;
+//     -moz-box-sizing: content-box;
+//     box-sizing: content-box;
+//     height: 0;
+//     margin-top: 20px;
+//     margin-bottom: 20px;
+//     border: 0;
+//     border-top: 1px solid #eeeeee;
+// }
+
+// input {
+//     font-family: var(--font-family-Bion-Book);
+// }
+
+// h1 {
+//     font-size: var(--h1-font-size);
+//     margin: 0;
+//     font-family: var(--font-family-Bion);  
+//     line-height: 0.9;
+// }
+
+// h2 {
+//     font-size: var(--h2-font-size);
+//     font-family: var(--font-family-Bion);
+//     margin: 0;
+// }
+
+// h3 {
+//     font-size: var(--h3-font-size);
+//     font-family: var(--font-family-Bion); 
+//     margin: 0;
+// }
+
+// h4 {
+//     font-size: var(--h4-font-size);
+//     font-family: var(--font-family-Bion); 
+// }
+
+// h5 {
+//     font-size: var(--h5-font-size);
+//     font-family: var(--font-family-Bion-Book);
+//     // margin: 0;
+// }
+
+// h6 {
+//     font-size: var(--h6-font-size);
+//     font-family: var(--font-family-Bion-Book);
+//     margin: 0;
+// }
+
+// img {
+//     margin: 0 auto;
+//     border: 0;
+// }
+
+// .vertical-margin {
+//     margin-top: 140px;
+// }
+
+// @media (max-width: $large-screen-width) {
+//     :root {
+//         --button-padding: 8px 20px;
+//         --content-button-padding: 8px 20px;
+//     }
+// }
+
+// @media (max-width: $middle-screen-width) {
+//     :root {
+//         --h1-font-size: 36px;
+//         --h2-font-size: 28px;
+//         --h3-font-size: 22px;
+//         --h4-font-size: 16px;
+//         --h5-font-size: 12px;
+//         --h6-font-size: 8px;
+//         --button-font-size: 13px;
+//         --button-padding: 8px 20px;
+//         --content-button-padding: 8px 10px;
+//     }
+//     .vertical-margin {
+//         margin-top: 50px;
+//     }
+// }
+
+// a,a:hover,a:visited {
+//     font-size: var(--h6-font-size);
+//     text-decoration: none;
+//     color: $link-color;
+// }
+
+// .horizontal-margin {
+//     margin-left: 6%;
+//     margin-right: 6%; 
+// }
+
+// .divider {
+//     border: 1px solid #ccc;
+//     margin: 20px 0;
+// }
+
+// .long-dash {
+//     border-color: $text-color;
+//     border-width: 4px;
+//     width: 45px;
+//     display: inline-block;
+//     position: relative;
+//     top: 10px;
+//     left: 20px;
+// }

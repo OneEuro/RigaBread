@@ -1,0 +1,170 @@
+@charset "UTF-8";
+@import "variable";
+@import "buttons";
+@import "breadcrumbs";
+@import "main-top-bar";
+@import "subscription";
+@import "contacts";
+@import "form";
+@import "footer";
+@import "common";
+
+.html {
+    font-size: 10px;
+  }
+  .wrap {
+    display: flex;
+    align-items: flex-start;
+  }
+  .filter-block {
+    background-color: white;
+    margin-right: 3.5rem;
+    flex-shrink: 0;
+  }
+  .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+    box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    padding: 35px 25px 30px 30px;
+  }
+  .checkbox-container label {
+    display: flex;
+    align-items: center;
+    font-family: 'Bion Book';
+    font-size: 1.2rem;
+  }
+  input[type="checkbox"] {
+    margin: 0 10px 0 0;
+    -webkit-appearance: none;
+    /* убрать стандартный вид checkbox */
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #d9d9d9;
+    width: 17px;
+    height: 17px;
+    border-radius: 4px;
+    position: relative;
+  }
+  input[type="checkbox"]:checked {
+    background-color: #e88537;
+  }
+  input[type="checkbox"]:focus,
+  input[type="checkbox"]:focus-visible {
+    outline: none;
+    border: none;
+  }
+  input[type="checkbox"]:checked::after {
+    content: "\2228";
+    /* символ галочки \2713 */
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: -4px;
+    left: 3px;
+  }
+  .main-content {
+    flex-grow: 1;
+  }
+  .main-content h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 4rem;
+    font-size: 3.2rem;
+  }
+  .main-content-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .product-card {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    background-color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
+    border-radius: 1.2rem;
+  }
+  .hidden {
+    display: none;
+  }
+  .product-information {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-information-mark {
+    text-transform: uppercase;
+    background-color: #ffe6c0;
+    border-radius: 21px;
+    padding: 4px 10px;
+    font-size: 9px;
+  }
+  .product-information-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .product-information-top img {
+    width: 5rem;
+  }
+  .product-information-bottom {
+    display: flex;
+    color: #90847a;
+    font-family: 'Bion Book';
+    font-size: 1.2rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  .product-information h3 {
+    font-size: 1.8rem;
+  }
+  .product-information p {
+    font-family: 'Bion Book';
+    font-size: 1.6rem;
+  }
+  .details-btn {
+    width: 100%;
+    background-color: #e88537;
+    padding: 1rem 2rem;
+    border-radius: 5.5rem;
+    color: #FEFEFE;
+    font-size: 1.4rem;
+    font-family: 'Bion';
+    margin-top: 3rem;
+    border: none;
+    box-shadow: 0px 7px 26px rgba(232, 133, 55, 0.25);
+  }
+  .breadcrumbs {
+    margin-top: 6.9rem;
+    font-size: 1.4rem;
+  }
+  .breadcrumbs span {
+    font-family: 'Bion Book';
+  }
+  .introduction {
+    margin-top: 4.2rem;
+  }
+  .introduction p {
+    margin-top: 2rem;
+    margin-bottom: 9rem;
+  }
+  .line {
+    position: relative;
+    height: 1px;
+    margin-bottom: 8rem;
+  }
+  .line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #DDD1C8;
+    transform: translateY(-50%);
+  }
+  
