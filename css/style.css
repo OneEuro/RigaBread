@@ -649,8 +649,7 @@
   height: 100%;
   border: none;
 }
-
-.flex-item input::placeholder {
+.subscription .flex-item input::placeholder {
   font-size: var(--h5-font-size);
 }
 
@@ -665,8 +664,7 @@
   .subscription .flex-block input {
     padding: 10px;
   }
-
-  .flex-item {
+  .subscription .flex-item {
     margin-top: 15px;
   }
 }

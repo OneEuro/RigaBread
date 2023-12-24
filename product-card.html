@@ -9,9 +9,160 @@
     <!-- JS scripts -->
     <script src="/js/top-bar.js" type="text/javascript"></script>
     <script src="/js/form_handler.js" type="text/javascript"></script>
+    <script src="/js/photo-slider.js" type="text/javascript" defer></script>
     <title>Карточка товара</title>
 </head>
 <body>
-    
+    <div class="top-bar" id="top-bar-menu">
+        <div class="item logo">
+            <a href="index.html">
+                <img src="/img/logo.svg" alt="logo" />
+            </a>
+        </div>
+        <div class="item menu">
+                <div class="dropdown">
+                    <a href="/catalog-page.html">Продукция &#9662;</a>
+                    <div class="dropdown-menu">
+                        <div><a href="/catalog-page.html">Рижский хлеб</a></div>
+                        <div class="vertical-margin"></div>
+                        <div><a href="/catalog-page.html">Дары мира</a></div>
+                    </div>
+                </div>
+            <div><a href="/index.html#about-section">О нас</a></div>
+            <div><a href="/partners.html">Партнерам</a></div>
+            <div><a href="/index.html#contacts-section">Контакты</a></div>
+            <div class="top-bar-menu-contacts">
+                <div class="horizontal-button-stack">
+                    <button class="content-button active" onclick="callNumber('+1234567890')">Позвонить</button>
+                    <button class="content-button" onclick="sendWhatsAppMessage('+1234567890', 'Привет!')">&nbsp;Whatsapp&nbsp;</button>
+                    <button class="content-button" onclick="sendTelegramMessage('+1234567890', 'Привет!')" >&nbsp;&nbsp;Telegram&nbsp;&nbsp;</button>
+                </div>
+                <hr class="divider">
+                <h6>Наша электронная почта</h6>
+                <h3>example@gmail.com</h3>
+            </div>
+        </div>
+        <div class="item menu-toggle">
+            <img src="/img/menuBtn.svg" alt="menu" id="menuBtn" />
+        </div>
+    </div>
+    <section class="breadcrumbs horizontal-margin">
+        <span>Главная - Продукция - Карточка товара</span>
+    </section>
+
+    <section class="product-container horizontal-margin">
+        <div class="product-details">
+            <h3>Хлеб «Домашний», 400 г</h3>
+            <hr>
+            <h6>1 шт. в упак.</h6>
+            <hr>
+            <div class="product-details-table">
+                <h6>Состав</h6>
+                <div class="flex-item"><h6>Мука пшеничная хлебопекарная сорт, мука ржаная сеяная, вода, солод ржаной, сахар-песок, соль поваренная пищевая, тминпесок, соль поваренная пищевая, солод ржаной, тмин, семена льна</h6></div>
+            </div>
+            <div class="product-details-table top-middle-margin">
+                <h6>Срок реализации</h6>
+                <div class="flex-item"><h6>6 дней</h6></div>
+            </div>
+            <div class="product-details-table top-small-margin">
+                <h6>Пищевая ценность</h6>
+                <div class="flex-item"><h6>Ккал/кДж - 220/940<br>Белки - 6,5 г.<br>Жиры - 1,0 г.<br>Углеводы - 47,0 г.</h6></div>
+            </div>
+            <div class="product-details-table top-middle-margin">
+                <h6>Упаковка</h6>
+                <div class="flex-item"><h6>Нарезка, пленка термоусадочная</h6></div>
+            </div>
+            <hr>
+            <div class="button-container">
+                <button class="content-button active" onclick="">Узнать цену</button>
+            </div>
+            
+        </div>
+        <div class="product-photos">
+            <div class="expand-btn" onclick="expandPhoto(this);">
+                <img src="/img/zoom_button.svg" alt="Expand">
+            </div>
+            <div id="gallery-container">
+                <div id="gallery">
+                    <div class="photo">
+                        <img src="/img/bread_1.svg" alt="Photo 1">
+                    </div>
+                    <div class="photo">
+                        <img src="/img/bread_2.jpeg" alt="Photo 2">
+                    </div>
+                    <div class="photo">
+                        <img src="/img/bread_tray_1.jpg" alt="Photo 2">
+                    </div>
+                </div>
+            </div>
+            <div id="modal">
+                <span id="closeBtn" onclick="closeModal()">&times;</span>
+                <img id="modalImg">
+            </div>
+            <div id="page-indicator"></div>
+        </div>
+    </section>
+
+    <section class="form horizontal-margin vertical-margin">
+        <div class="form-container">
+                    <div class="form-img ">
+                        <img src="/img/bread-collection.jpeg" alt="bread-collection">
+                    </div>
+                    <div class="form-production  ">
+                        <h2>Ознакомьтесь <br> с продукцией</h2>
+                        <h5>Чтобы ознакомится с ценами и начать сотрудничество с нами оставьте свои контакты и мы свяжемся с вами в ближайшее время</h5>
+                        <form action="#" method="post" id="contactForm" name="contactForm">
+                            <div class="form-block">
+                                <input name="contactMail" type="email" class="form-block-input" placeholder="example@mail.ru">
+                                <input name="contactName" type="text" class="form-block-input" placeholder="ваше имя">
+                                <input name="contactNumber" type="tel" class="form-block-input" placeholder="контактный телефон">
+                            </div>
+                            <button type="submit" class="button">Отправить</button>
+                        </form>
+                    </div>
+        </div>
+    </section>
+    <section class="subscription">
+        <div class="subscription-container">
+            <h3>Подпишитесь и получайте <br> лучшие предложения!</h3>
+            <form action="#" method="post" id="subscriptionForm">
+                <div class="flex-block">
+                    <div class="flex-item">
+                        <input type="email" class="custom-input" placeholder="example@mail.ru">
+                    </div>
+                    <div class="flex-item">
+                        <button type="submit" class="button">Отправить</button>
+                    </div>
+                </div>
+            </form>
+            <h5 class="horizontal-margin">Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой. Для получения подробной информации пожалуйста, обращайтесь по номеру телефона, указанному в контактах.</h5>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container horizontal-margin">
+            <div class="footer-left-block">
+                <div class="logo">
+                    <img src="/img/logo-footer.svg" alt="logo">
+                </div>
+                <div class="information">
+                    <p>© Рижский хлеб  2023</p>
+                    <h6>Юридический адрес: г. Москва,<br>проезд Одоевского, д. 2А<br>Все права защищены<br>+7 (495) 943-36-62<br>+7-977-935-31-13</h6>
+                </div>
+            </div>
+            <div class="footer-right-block">
+                <div class="site-map">
+                    <p>карта сайта</p>
+                    <div class="site-map-grid">
+                        <a href="#">Главная</a>
+                        <a href="#">Продукция</a>
+                        <a class="references" href="#">Политика персональных данных</a>
+                        <a href="#">Контакты</a>
+                        <a href="#">Партнерам</a>
+                        <a class="references" href="#">Условия пользования сайтом</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

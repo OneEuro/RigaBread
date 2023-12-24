@@ -268,8 +268,7 @@
   height: 100%;
   border: none;
 }
-
-.flex-item input::placeholder {
+.subscription .flex-item input::placeholder {
   font-size: var(--h5-font-size);
 }
 
@@ -284,8 +283,7 @@
   .subscription .flex-block input {
     padding: 10px;
   }
-
-  .flex-item {
+  .subscription .flex-item {
     margin-top: 15px;
   }
 }
@@ -406,8 +404,8 @@
 
 @media screen and (max-width: 480px) {
   .breadcrumbs {
-    padding-top: 0;
-    margin-bottom: 0;
+    padding-top: 34px;
+    margin-bottom: 20px;
   }
   .breadcrumbs span {
     font-size: 10px;
@@ -523,6 +521,14 @@ body {
   margin: 0;
 }
 
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
 hr {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -531,7 +537,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #ddd1c8;
 }
 
 input {
@@ -582,6 +588,14 @@ img {
   margin-top: 140px;
 }
 
+.top-small-margin {
+  margin-top: 10px;
+}
+
+.top-middle-margin {
+  margin-top: 30px;
+}
+
 @media (max-width: 1220px) {
   :root {
     --button-padding: 8px 20px;
@@ -603,6 +617,14 @@ img {
 
   .vertical-margin {
     margin-top: 50px;
+  }
+
+  .top-small-margin {
+    margin-top: 10px;
+  }
+
+  .top-middle-margin {
+    margin-top: 20px;
   }
 }
 a, a:hover, a:visited {
