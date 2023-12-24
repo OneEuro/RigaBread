@@ -29,3 +29,8 @@
     background-color: $content-button-active-bg-color;
     color: $content-button-active-text-color;
 }
+
+.horizontal-button-stack {
+    display: flex;
+    justify-content: space-between;
+}

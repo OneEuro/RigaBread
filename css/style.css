@@ -494,10 +494,6 @@
 .contacts-block {
   flex-basis: 50%;
 }
-.contacts-block-btn {
-  display: flex;
-  justify-content: space-between;
-}
 .contacts-block h5 {
   width: 74%;
 }
@@ -637,6 +633,7 @@
   color: black;
   opacity: 50%;
   margin-bottom: 0;
+  margin-top: 38px;
 }
 .subscription .flex-block {
   margin-top: 30px;
@@ -777,6 +774,11 @@ footer p {
 .content-button.active {
   background-color: #5e371b;
   color: #fefefe;
+}
+
+.horizontal-button-stack {
+  display: flex;
+  justify-content: space-between;
 }
 
 :root {
