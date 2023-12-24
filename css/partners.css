@@ -301,7 +301,7 @@
 }
 .partners-title h2 {
   margin-top: 40px;
-  margin-bottom: 65px;
+  margin-bottom: 45px;
 }
 .partners-title img {
   border-radius: 12px;
@@ -323,7 +323,7 @@
   }
   .partners-title h2 {
     margin-top: 20px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
   }
 }
 .terms-of-cooperation {
@@ -347,6 +347,7 @@
 .terms-of-cooperation .term-cards .card h5 {
   font-family: var(--font-family-Bion);
   margin-top: 36px;
+  margin-bottom: 0;
 }
 .terms-of-cooperation .term-cards .card-empty {
   width: 350px;
@@ -365,7 +366,7 @@
   }
   .terms-of-cooperation .term-cards .card-empty {
     margin: 10px 0;
-    height: 189px;
+    height: 190px;
     width: 100%;
   }
 }
@@ -563,7 +564,6 @@ h4 {
 h5 {
   font-size: var(--h5-font-size);
   font-family: var(--font-family-Bion-Book);
-  margin: 0;
 }
 
 h6 {

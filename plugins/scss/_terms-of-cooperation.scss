@@ -8,6 +8,7 @@
         justify-content: space-between;
         .card {
             width: 350px; 
+            // height: 260px;
             box-sizing: border-box;
             margin: 10px;
             padding: 40px 26px 40px 34px;
@@ -16,6 +17,7 @@
             h5 {
                 font-family: var(--font-family-Bion);
                 margin-top: 36px;
+                margin-bottom: 0;
             }
             &-empty {
                 width: 350px;
@@ -33,10 +35,11 @@
         .term-cards {
             .card {
                 margin: 10px 0;
+                // height: 190px;
                 flex: 1 0 100%; /* Установка ширины 100% для одной колонки на узких экранах */
                 &-empty {
                     margin: 10px 0;
-                    height: 189px;
+                    height: 190px;
                     width: 100%;
                 }
             }
