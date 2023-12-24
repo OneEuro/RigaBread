@@ -489,6 +489,14 @@ body {
   margin: 0;
 }
 
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
 hr {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
