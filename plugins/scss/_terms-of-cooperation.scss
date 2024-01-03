@@ -5,10 +5,8 @@
         margin-top: 80px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
         .card {
-            width: 350px; 
-            // height: 260px;
+            width: calc(33.33% - 20px);
             box-sizing: border-box;
             margin: 10px;
             padding: 40px 26px 40px 34px;
@@ -20,7 +18,7 @@
                 margin-bottom: 0;
             }
             &-empty {
-                width: 350px;
+                width: calc(33.33% - 20px);
                 padding: 40px;
                 margin: 10px;
                 box-sizing: border-box;
@@ -35,8 +33,7 @@
         .term-cards {
             .card {
                 margin: 10px 0;
-                // height: 190px;
-                flex: 1 0 100%; /* Установка ширины 100% для одной колонки на узких экранах */
+                flex: 1 0 100%;
                 &-empty {
                     margin: 10px 0;
                     height: 190px;

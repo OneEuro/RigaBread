@@ -712,7 +712,6 @@ a, a:hover, a:visited {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
 }
 .product-filter .product-card-content {
   border-radius: 12px;

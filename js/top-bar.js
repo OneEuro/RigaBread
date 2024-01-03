@@ -40,7 +40,13 @@ function topBarMargin() {
         // Ищем индекс элемента с идентификатором 'top-bar-menu' в списке дочерних элементов
         var indexOfMyDiv = Array.prototype.indexOf.call(childElements, myDiv);
         // Получаем следующий элемент
-        var nextElement = childElements[indexOfMyDiv + 1];
+        var nextElement = null;
+        for (var i = indexOfMyDiv + 1; i < childElements.length; i++) {
+            if (childElements[i].tagName.toLowerCase() === 'section') {
+                nextElement = childElements[i];
+                break;
+            }
+        }
         // Если следующий элемент существует, устанавливаем marginTop
         if (nextElement) {
             nextElement.style.marginTop = divHeight + 'px';
