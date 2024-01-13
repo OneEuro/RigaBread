@@ -34,8 +34,8 @@ footer {
 
             & a.references:after {
                 content: url(/img/link-icon.svg);
-                position: relative;
-                margin-left: 5px;
+                position: absolute;
+                // margin-left: 5px;
             }
         }
     }

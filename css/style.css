@@ -218,56 +218,68 @@
   }
 }
 /* Стиль для блока "Наша продукция" (горизонтальный стек) */
+.production {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .center-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  margin-top: 2em;
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  max-width: 800px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  width: 100%;
 }
 
 .stack-item {
-  /* Убрано свойство box-sizing */
-  padding: 10px;
-  text-align: center;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.stack-item img {
-  max-width: 100%;
-  height: auto;
+.circle-container {
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
   border-radius: 50%;
-  margin-bottom: 10px;
-  /* Добавлен отступ снизу */
+  max-width: 160px;
+  min-width: 100px;
+  background-color: bisque;
 }
 
-.stack-item h4 {
-  margin-top: 5px;
-  font-size: 14px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-@media screen and (max-width: 600px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.image-1 {
+  position: absolute;
+  left: 23%;
+  transform: scale(1.5);
 }
-@media screen and (max-width: 300px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
+
+.image-2 {
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  transform: scale(2);
 }
-.production {
-  text-align: center;
-  margin-top: 40px;
+
+.image-3 {
+  position: absolute;
+  left: 14%;
+  transform: scale(1.6);
+}
+
+.mirrored-image {
+  transform: scaleX(-1) scale(1.5);
 }
 
 .novelty {
@@ -703,8 +715,7 @@ footer .site-map-grid {
 }
 footer .site-map-grid a.references:after {
   content: url(/img/link-icon.svg);
-  position: relative;
-  margin-left: 5px;
+  position: absolute;
 }
 footer p {
   font-family: var(--font-family-Bion);

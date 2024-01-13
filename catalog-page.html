@@ -64,16 +64,16 @@
       <div class="product-filter-block-item">
         <h5>Выберете бренд</h5>
         <div class="checkbox-container">
-          <label><input type="checkbox" class="category-filter" value="Riga_Bread">Рижский хлеб</label>
-          <label><input type="checkbox" class="category-filter" value="Gifts_World">Дары мира</label>
+          <label><input type="checkbox" class="brand-filter" value="Riga_Bread">Рижский хлеб</label>
+          <label><input type="checkbox" class="brand-filter" value="Gifts_World">Дары мира</label>
         </div>
       </div>
       <div class="product-filter-block-item">
         <h5>Категория товара</h5>
         <div class="checkbox-container">
-          <label><input type="checkbox" class="brand-filter" value="Bread">Хлеб</label>
-          <label><input type="checkbox" class="brand-filter" value="Buns">Булочки</label>
-          <label><input type="checkbox" class="brand-filter" value="Pastries">Кондитерские изделия</label>
+          <label><input type="checkbox" class="category-filter" value="Bread">Хлеб</label>
+          <label><input type="checkbox" class="category-filter" value="Buns">Булочки</label>
+          <label><input type="checkbox" class="category-filter" value="Pastries">Кондитерские изделия</label>
         </div>
       </div>
       <div class="product-filter-block-item">
@@ -94,8 +94,8 @@
           </div>
           <div class="accordion-content">
               <div class="checkbox-container">
-                  <label><input type="checkbox" class="category-filter" value="Riga_Bread">Рижский хлеб</label>
-                  <label><input type="checkbox" class="category-filter" value="Gifts_World">Дары мира</label>
+                  <label><input type="checkbox" class="brand-filter" value="Riga_Bread">Рижский хлеб</label>
+                  <label><input type="checkbox" class="brand-filter" value="Gifts_World">Дары мира</label>
               </div>
           </div>
       </div>
@@ -106,9 +106,9 @@
         </div>
         <div class="accordion-content">
           <div class="checkbox-container">
-            <label><input type="checkbox" class="brand-filter" value="Bread">Хлеб</label>
-            <label><input type="checkbox" class="brand-filter" value="Buns">Булочки</label>
-            <label><input type="checkbox" class="brand-filter" value="Pastries">Кондитерские изделия</label>
+            <label><input type="checkbox" class="category-filter" value="Bread">Хлеб</label>
+            <label><input type="checkbox" class="category-filter" value="Buns">Булочки</label>
+            <label><input type="checkbox" class="category-filter" value="Pastries">Кондитерские изделия</label>
           </div>
         </div>
     </div>
@@ -132,7 +132,7 @@
     <div class="product-filter-content">
       <h2>Мы рекомендуем</h2>
       <div class="product-card-container">
-        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -143,28 +143,28 @@
               <h6>120г.</h6>
               <h6>1 шт</h6>
             </div>
-            <h4>Улитка с маком</h4>
+            <h4 class="product-card-content-title">Улитка с маком</h4>
             <button class="button" onclick="window.location.href='/product-card.html'">Подробнее о товаре</button>
           </div>
           
         </div>
-        <div class="product-card" data-category="Gifts_World" data-brand="Buns" data-packaging="PET_bag">
+        <div class="product-card" data-brand="Gifts_World" data-category="Buns" data-packaging="PET_bag">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
-              <img src="/img/logo.png" alt="icon">
+              <img src="/img/gifts_of_peace.svg" alt="icon">
             </div>
-            <img src="/img/gifts_of_peace.svg" alt="Product 1" class="image-container">
+            <img src="/img/chips.png" alt="Product 1" class="image-container">
             <div class="product-card-info">
               <h6>120г.</h6>
               <h6>1 шт</h6>
             </div>
-            <h4>Рижский хлеб</h4>
+            <h4 class="product-card-content-title">Рижский хлеб</h4>
             <button class="button">Подробнее о товаре</button>
           </div>
           
         </div>
-        <div class="product-card" data-category="Riga_Bread" data-brand="Pastries" data-packaging="Laminated_Paper">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Pastries" data-packaging="Laminated_Paper">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -175,12 +175,12 @@
               <h6>120г.</h6>
               <h6>1 шт</h6>
             </div>
-            <h4>Улитка с маком</h4>
+            <h4 class="product-card-content-title">Кольцо песочное</h4>
             <button class="button">Подробнее о товаре</button>
           </div>
           
         </div>
-        <div class="product-card" data-category="Riga_Bread" data-brand="Buns" data-packaging="PET_bag">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Buns" data-packaging="PET_bag">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -191,11 +191,11 @@
               <h6>120г.</h6>
               <h6>1 шт</h6>
             </div>
-            <h4>Улитка с маком</h4>
+            <h4 class="product-card-content-title">Печенье с творогом «Белоснежка»</h4>
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -206,11 +206,11 @@
               <h6>120г.</h6>
               <h6>1 шт</h6>
             </div>
-            <h4>Улитка с маком</h4>
+            <h4 class="product-card-content-title">Печенье «Палочки с вишней»</h4>
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Buns" data-packaging="Tray">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -221,11 +221,26 @@
               <h6>120г.</h6>
               <h6>1 шт</h6>
             </div>
-            <h4>Улитка с маком</h4>
+            <h4 class="product-card-content-title">«Улитка» с шоколадной начинкой</h4>
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+        <div class="product-card" data-brand="Gifts_World" data-category="Bread" data-packaging="Tray">
+          <div class="product-card-content">
+            <div class="product-card-info">
+              <span class="shading">Хит продаж</span>
+              <img src="/img/gifts_of_peace.svg" alt="icon">
+            </div>
+            <img src="/img/croutons.png" alt="Product 1" class="image-container">
+            <div class="product-card-info">
+              <h6>120г.</h6>
+              <h6>1 шт</h6>
+            </div>
+            <h4 class="product-card-content-title">Улитка с маком</h4>
+            <button class="button">Подробнее о товаре</button>
+          </div>
+        </div>
+        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -236,11 +251,11 @@
               <h6>120г.</h6>
               <h6>1 шт</h6>
             </div>
-            <h4>Улитка с маком</h4>
+            <h4 class="product-card-content-title">Французский круассан с шоколадной начинкой</h4>
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Laminated_Paper">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -251,11 +266,11 @@
               <h6>120г.</h6>
               <h6>1 шт</h6>
             </div>
-            <h4>Улитка с маком</h4>
+            <h4 class="product-card-content-title">Французский круассан со сгущенкой</h4>
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -266,11 +281,11 @@
               <h6>120г.</h6>
               <h6>1 шт</h6>
             </div>
-            <h4>Улитка с маком</h4>
+            <h4 class="product-card-content-title">Булочка с корицей глазированная</h4>
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Pastries" data-packaging="Laminated_Paper">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -281,22 +296,7 @@
               <h6>120г.</h6>
               <h6>1 шт</h6>
             </div>
-            <h4>Улитка с маком</h4>
-            <button class="button">Подробнее о товаре</button>
-          </div>
-        </div>
-        <div class="product-card" data-category="Riga_Bread" data-brand="Bread" data-packaging="Tray">
-          <div class="product-card-content">
-            <div class="product-card-info">
-              <span class="shading">Хит продаж</span>
-              <img src="/img/logo.png" alt="icon">
-            </div>
-            <img src="/img/croutons.png" alt="Product 1" class="image-container">
-            <div class="product-card-info">
-              <h6>120г.</h6>
-              <h6>1 шт</h6>
-            </div>
-            <h4>Улитка с маком</h4>
+            <h4 class="product-card-content-title">Французкая Бриошь</h4>
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>

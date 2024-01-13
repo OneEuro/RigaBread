@@ -19,15 +19,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function toggleMenuImage() {
-        // Проверяем текущий исходный путь изображения
-        if (menuBtn.src.includes('/img/menuBtn.svg')) {
-            // Если текущий путь - изображение menuBtn.svg, меняем его на другой путь
-            menuBtn.src = '/img/closeBtn.svg'; // Замените путь на ваш путь к другому изображению
-        } else {
-            // Иначе, если текущий путь - не menuBtn.svg, возвращаем его обратно
-            menuBtn.src = '/img/menuBtn.svg'; // Замените путь на ваш путь к изображению menuBtn.svg
-        }
+    // Проверяем текущий исходный путь изображения
+    if (menuBtn.src.includes('/img/menuBtn.svg')) {
+        // Если текущий путь - изображение menuBtn.svg, меняем его на другой путь
+        menuBtn.src = menuBtn.src.replace('/img/menuBtn.svg', '/img/closeBtn.svg'); 
+    } else {
+        // Иначе, если текущий путь - не menuBtn.svg, возвращаем его обратно
+        menuBtn.src = menuBtn.src.replace('/img/closeBtn.svg', '/img/menuBtn.svg'); 
     }
+}
 
 function topBarMargin() {
     var myDiv = document.getElementById('top-bar-menu');    
