@@ -296,6 +296,12 @@
   font-size: 14px;
   color: black;
 }
+.breadcrumbs a, .breadcrumbs a:hover, .breadcrumbs a:visited {
+  font-family: var(--font-family-Bion-Book);
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+}
 
 @media screen and (max-width: 480px) {
   .breadcrumbs {
@@ -341,8 +347,7 @@ footer .site-map-grid {
 }
 footer .site-map-grid a.references:after {
   content: url(/img/link-icon.svg);
-  position: relative;
-  margin-left: 5px;
+  position: absolute;
 }
 footer p {
   font-family: var(--font-family-Bion);

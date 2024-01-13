@@ -6,6 +6,12 @@
         font-size: 14px;
         color: $breadcrumbs-color;
     }
+    a,a:hover,a:visited {
+        font-family: var(--font-family-Bion-Book);
+        font-size: 14px;
+        color: $breadcrumbs-color;
+        text-decoration: none;
+    }
 }
 @media screen and (max-width: $middle-screen-width) {
     .breadcrumbs {
