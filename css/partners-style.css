@@ -52,7 +52,7 @@
 
 .top-bar {
   display: flex;
-  padding-left: 6%;
+  padding-left: 12%;
   padding-right: 12%;
   font-family: "Bion";
   font-size: 14px;
@@ -111,7 +111,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 1;
+  gap: 80px;
+  margin-left: auto;
 }
 
 .logo {
@@ -148,6 +149,7 @@
     border-radius: 12px 12px 12px 0;
     justify-content: space-evenly;
     align-items: center;
+    gap: 0;
   }
 
   .top-bar-menu-contacts.active {
@@ -294,12 +296,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-right: 52px;
+  padding-right: 60px;
   flex: 1;
 }
 .partners-title h2 {
   margin-top: 40px;
-  margin-bottom: 45px;
+  margin-bottom: 22px;
+}
+.partners-title h5 {
+  line-height: 154%;
 }
 .partners-title img {
   border-radius: 12px;
@@ -586,6 +591,11 @@ img {
   border: 0;
 }
 
+.horizontal-margin {
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
 .vertical-margin {
   margin-top: 140px;
 }
@@ -617,6 +627,11 @@ img {
     --content-button-padding: 8px 10px;
   }
 
+  .horizontal-margin {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
   .vertical-margin {
     margin-top: 50px;
   }
@@ -633,11 +648,6 @@ a, a:hover, a:visited {
   font-size: var(--h6-font-size);
   text-decoration: none;
   color: #FAEEDB;
-}
-
-.horizontal-margin {
-  margin-left: 6%;
-  margin-right: 6%;
 }
 
 .divider {

@@ -95,7 +95,10 @@ img {
     margin: 0 auto;
     border: 0;
 }
-
+.horizontal-margin {
+    margin-left: 12%;
+    margin-right: 12%; 
+}
 .vertical-margin {
     margin-top: 140px;
 }
@@ -127,6 +130,10 @@ img {
         --button-padding: 8px 20px;
         --content-button-padding: 8px 10px;
     }
+    .horizontal-margin {
+        margin-left: 6%;
+        margin-right: 6%; 
+    }
     .vertical-margin {
         margin-top: 50px;
     }
@@ -146,10 +153,7 @@ a,a:hover,a:visited {
     color: $link-color;
 }
 
-.horizontal-margin {
-    margin-left: 6%;
-    margin-right: 6%; 
-}
+
 
 .divider {
     border: 1px solid #ccc;

@@ -81,6 +81,10 @@ img {
 .vertical-margin {
     margin-top: 140px;
 }
+.horizontal-margin {
+    margin-left: 12%;
+    margin-right: 12%; 
+}
 
 @media (max-width: $large-screen-width) {
     :root {
@@ -104,17 +108,16 @@ img {
     .vertical-margin {
         margin-top: 50px;
     }
+    .horizontal-margin {
+        margin-left: 6%;
+        margin-right: 6%; 
+    }
 }
 
-a,a:hover,a:visited {
+a,a:hover,a:visited,a:focus {
     font-size: var(--h6-font-size);
     text-decoration: none;
     color: $link-color;
-}
-
-.horizontal-margin {
-    margin-left: 6%;
-    margin-right: 6%; 
 }
 
 .divider {

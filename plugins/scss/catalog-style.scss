@@ -69,6 +69,7 @@
 
 .product-filter {
   display: flex;
+  margin-top: 5em;
   h5 {
     margin-top: 0;
     margin-bottom: 0;
@@ -98,7 +99,9 @@
     margin-top: 40px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill,245px);
+    // grid-template-columns: repeat(auto-fill,245px);
+    grid-template-columns: repeat(auto-fit,minmax(245px,1fr));
+
     column-gap: 10px;
   }
 
@@ -117,7 +120,7 @@
       &-title {
         height: 100%;
         overflow: auto;
-        font-size: 3vh;
+        // font-size: 1.5em;
         text-overflow: ellipsis;
       }
     }
@@ -208,6 +211,7 @@ input[type="checkbox"]:checked::after {
 
   .product-filter {
     flex-direction: column;
+    margin-top: 0;
     &-block {
       margin: 0;
     }

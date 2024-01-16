@@ -1,6 +1,6 @@
 .top-bar {
     display: flex;
-    padding-left: 6%;
+    padding-left: 12%;
     padding-right: 12%;
     font-family: $top-bar-font;
     font-size: $top-bar-font-size;
@@ -62,7 +62,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex: 1;
+    // flex: 1;
+    gap:80px;
+    margin-left: auto;
 }
 
 .logo {
@@ -100,6 +102,7 @@
     border-radius: 12px 12px 12px 0;
     justify-content: space-evenly;
     align-items: center;
+    gap: 0;
 }
 
 .top-bar-menu-contacts.active {

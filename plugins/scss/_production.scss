@@ -70,3 +70,9 @@
 //   white-space: nowrap;
 // }
   
+
+@media (max-width: $middle-screen-width) {
+  .circle-container {
+    max-width: 120px;
+  }
+}

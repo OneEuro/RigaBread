@@ -3,18 +3,25 @@
     justify-content: space-between;
     &-block {
         flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2em;
         h5 {
             width: 74%;
+        }
+        h2 {
+            line-height: 124%;
         }   
     & > hr {
         margin-top: 55px;
         border-width: 2px;
         border-color: $dash-color;
+        width: 100%;
     }
 }
     .map {
         position: relative;
-        flex-basis: 40%;
+        flex-basis: 48%;
         
         &-controls {
             position: absolute;
@@ -71,6 +78,7 @@
         flex-direction: column-reverse;
         &-block {
             margin-top: 76px;
+            padding-right: 0;
         }
     }
 }
