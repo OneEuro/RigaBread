@@ -1,3 +1,39 @@
+// window.addEventListener('load', function() {
+//   var showNovelty = sessionStorage.getItem('showNovelty');
+//   if (showNovelty) {
+//     filterNovelty();
+//     // showNovelty = showNovelty === "true";
+//     // console.log("Show Novelty:", showNovelty);
+//     sessionStorage.removeItem("showNovelty");
+//   } else {
+//     console.log("showNovelty не определена");
+//   }
+// });
+
+function getSessionItem(item) {
+  var resultingItem = sessionStorage.getItem(item);
+  if (resultingItem) {
+    sessionStorage.removeItem(item);
+    return item;
+  } else {
+    console.log("item не определена");
+    return false;
+  }
+}
+
+function filterNovelty() {
+  const products = document.querySelectorAll('.product-card');
+  products.forEach((product) => {
+    var spanElement = product.querySelector('.shading');
+    var spanTextContent = spanElement.textContent;
+    if (spanTextContent !== "Новинка") {
+      product.classList.add('hidden');
+    } else {
+      product.dataset.filter = 'Novelty';
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const categoryCheckboxes = document.querySelectorAll('.category-filter');
   const brandCheckboxes = document.querySelectorAll('.brand-filter');
@@ -5,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
   
   const showMoreBtn = document.getElementById('showMoreButton');
   // const productContainer = document.querySelector('.product-filter-block');
-  const initialCardsToShow = 4;
-  
-  showMoreBtn.addEventListener('click', showMoreProducts);
+  const initialCardsToShow = 2;
   
   
-  function hideExtraCards() {
-    const allProducts = document.querySelectorAll('.product-card');
+  
+  
+  function hideExtraCards(initialCardsToShow) {
+    const allProducts = document.querySelectorAll('.product-card[data-filter="Novelty"]');
     allProducts.forEach((product, index) => {
       if (index >= initialCardsToShow) {
         product.classList.add('hidden');
@@ -19,8 +55,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
+
+  if (getSessionItem('showNovelty')) {
+    filterNovelty();
+    hideExtraCards(initialCardsToShow);
+    showMoreBtn.addEventListener('click', showMoreNovelty);
+  } else {
+    showMoreBtn.addEventListener('click', showMoreProducts);
+    filterProducts();
+  }
   // hideExtraCards();
-  filterProducts();
+
   
   brandCheckboxes.forEach(checkbox => {
     checkbox.addEventListener('change', function() {
@@ -32,7 +77,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   
+  function showMoreNovelty() {
+    const hiddenProducts = document.querySelectorAll('.product-card.hidden[data-filter="Novelty"]');
+    hiddenProducts.forEach((product) => {
+      const filter = product.getAttribute('data-filter');
+      const filterMatch = filter === 'Novelty';
+      if (filterMatch) {
+      product.classList.remove('hidden');
+      }
+    });
+  }
+
   function showMoreProducts() {
+    hideExtraCards(0);
     const hiddenProducts = document.querySelectorAll('.product-card.hidden');
     const selectedFilters = getSelectedCheckboxes(
       document.querySelectorAll('.product-filter-block input[type="checkbox"]')
@@ -97,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   function filterProducts() {
+    showMoreBtn.addEventListener('click', showMoreProducts);
     const selectedFilters = getSelectedCheckboxes(
       document.querySelectorAll('.product-filter-block input[type="checkbox"]')
     );

@@ -75,6 +75,9 @@
   .breadcrumbs span {
     font-size: 10px;
   }
+  .breadcrumbs a, .breadcrumbs a:hover, .breadcrumbs a:visited {
+    font-size: 10px;
+  }
 }
 .top-bar {
   display: flex;
@@ -735,7 +738,7 @@ a, a:hover, a:visited {
   margin-top: 40px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
   column-gap: 10px;
 }
 .product-filter .product-card-content {

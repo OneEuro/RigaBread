@@ -296,7 +296,7 @@
   border-radius: 12px;
 }
 .novelty-slider {
-  width: 60%;
+  width: 55%;
   height: 100%;
 }
 .novelty-text {
@@ -459,6 +459,7 @@
   width: 100%;
   height: 140px;
   border-radius: 12px 12px 0 0;
+  object-fit: cover;
 }
 
 .scroll-container {

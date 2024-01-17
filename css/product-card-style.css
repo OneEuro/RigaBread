@@ -53,7 +53,7 @@
 
 .top-bar {
   display: flex;
-  padding-left: 6%;
+  padding-left: 12%;
   padding-right: 12%;
   font-family: "Bion";
   font-size: 14px;
@@ -112,7 +112,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 1;
+  gap: 80px;
+  margin-left: auto;
 }
 
 .logo {
@@ -149,6 +150,7 @@
     border-radius: 12px 12px 12px 0;
     justify-content: space-evenly;
     align-items: center;
+    gap: 0;
   }
 
   .top-bar-menu-contacts.active {
@@ -309,6 +311,9 @@
     margin-bottom: 20px;
   }
   .breadcrumbs span {
+    font-size: 10px;
+  }
+  .breadcrumbs a, .breadcrumbs a:hover, .breadcrumbs a:visited {
     font-size: 10px;
   }
 }
@@ -579,6 +584,11 @@ img {
   border: 0;
 }
 
+.horizontal-margin {
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
 .vertical-margin {
   margin-top: 140px;
 }
@@ -610,6 +620,11 @@ img {
     --content-button-padding: 8px 10px;
   }
 
+  .horizontal-margin {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
   .vertical-margin {
     margin-top: 50px;
   }
@@ -626,11 +641,6 @@ a, a:hover, a:visited {
   font-size: var(--h6-font-size);
   text-decoration: none;
   color: #FAEEDB;
-}
-
-.horizontal-margin {
-  margin-left: 6%;
-  margin-right: 6%;
 }
 
 .divider {
@@ -664,7 +674,7 @@ a, a:hover, a:visited {
   box-shadow: 0px 8px 34px rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   flex: 0 1 80%;
-  padding: 0 0 20px 0;
+  padding: 20px 0 20px 0;
   margin-left: 65px;
 }
 
@@ -674,6 +684,7 @@ a, a:hover, a:visited {
 
 .product-details {
   margin-top: 32px;
+  width: 100%;
 }
 .product-details .button-container {
   text-align: right;
@@ -690,6 +701,7 @@ a, a:hover, a:visited {
   }
   .product-container .product-photos {
     margin: 0;
+    width: 100%;
   }
   .product-container .product-details .button-container {
     text-align: center;
