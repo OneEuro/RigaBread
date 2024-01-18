@@ -4,24 +4,33 @@ window.addEventListener('load', function() {
     scrollToElement(targetElement);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const anchors = document.querySelectorAll('a');
+// document.addEventListener('DOMContentLoaded', function() {
+    const anchors = document.querySelectorAll('div.top-bar a, div.site-map-grid a');
+
     const currentURL = window.location.href;
-    const startPage = 'index.html';
+    const startPage = 'http://sonicx.vdsman.ru';
 
     anchors.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
             e.preventDefault();
 
-            if (!currentURL.includes(startPage)) {
+            // if (!currentURL.includes(startPage)) {
                 
+            //     sessionStorage.setItem('targetId', extractAfterHash(targetId));
+            //     window.location.href = startPage;
+            // }
+
+            // if (!targetId.includes(startPage)) {
+            //     window.location.href = targetId;
+            // }
+
+            if (targetId.includes("page_id")) {
+                window.location.href = targetId;
+            }
+            if (currentURL.includes("page_id")) {
                 sessionStorage.setItem('targetId', extractAfterHash(targetId));
                 window.location.href = startPage;
-            }
-
-            if (!targetId.includes(startPage)) {
-                window.location.href = targetId;
             }
 
             const result = extractAfterHash(targetId);
@@ -29,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollToElement(targetElement);
         });
     });
-});
+// });
 
 function extractAfterHash(inputString) {
     const indexOfHash = inputString.indexOf('#');

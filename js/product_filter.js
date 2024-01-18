@@ -1,15 +1,3 @@
-// window.addEventListener('load', function() {
-//   var showNovelty = sessionStorage.getItem('showNovelty');
-//   if (showNovelty) {
-//     filterNovelty();
-//     // showNovelty = showNovelty === "true";
-//     // console.log("Show Novelty:", showNovelty);
-//     sessionStorage.removeItem("showNovelty");
-//   } else {
-//     console.log("showNovelty не определена");
-//   }
-// });
-
 function getSessionItem(item) {
   var resultingItem = sessionStorage.getItem(item);
   if (resultingItem) {
@@ -41,10 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   const showMoreBtn = document.getElementById('showMoreButton');
   // const productContainer = document.querySelector('.product-filter-block');
-  const initialCardsToShow = 2;
-  
-  
-  
+  const initialCardsToShow = 3;
   
   function hideExtraCards(initialCardsToShow) {
     const allProducts = document.querySelectorAll('.product-card[data-filter="Novelty"]');
