@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    var myLink = document.getElementById('productionLink'); // отключаем для моб версии переход по ссылке, что бы отработал ховер
+    myLink.addEventListener('click', function (event) {
+        if (window.innerWidth <= 480) {
+        event.preventDefault();
+        }
+    });
+
     // Получаем элементы DOM
     var menuToggle = document.querySelector('.menu-toggle');
     var menu = document.querySelector('.menu');

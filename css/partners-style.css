@@ -50,6 +50,39 @@
   justify-content: space-between;
 }
 
+#showMoreButton {
+  background-color: #FFFFFF;
+  color: #5e371b;
+  padding: 20px 25px;
+  border-radius: 1em;
+  font-size: 1.1em;
+  font-family: "Bion";
+  border: none;
+  box-shadow: 0em 8px 34px 0px rgba(0, 0, 0, 0.08);
+  position: relative;
+  padding-right: 50px;
+}
+
+#showMoreButton::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 6px;
+  background: url("/img/down-arrow.svg") no-repeat center center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 480px) {
+  #showMoreButton {
+    padding: 12px 16px;
+    border-radius: 1em;
+    font-size: 1em;
+    padding-right: 30px;
+  }
+}
 .top-bar {
   display: flex;
   padding-left: 12%;
@@ -77,7 +110,7 @@
   align-self: stretch;
   align-items: center;
   justify-content: center;
-  width: 150px;
+  width: 160px;
 }
 .dropdown-menu {
   display: none;
@@ -91,6 +124,8 @@
 }
 .dropdown-menu > div {
   padding-left: 20px;
+  padding-right: 20px;
+  white-space: nowrap;
 }
 .dropdown-menu .vertical-margin {
   margin: 10px 0;
@@ -135,6 +170,11 @@
   text-transform: none;
 }
 
+@media screen and (max-width: 768px) {
+  .menu {
+    gap: 5%;
+  }
+}
 @media screen and (max-width: 480px) {
   .menu.active {
     display: flex;
@@ -147,9 +187,8 @@
     background-color: white;
     z-index: 100;
     border-radius: 12px 12px 12px 0;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 0;
+    justify-content: center;
+    gap: 35px;
   }
 
   .top-bar-menu-contacts.active {
@@ -159,6 +198,10 @@
 
   .dropdown {
     align-self: auto;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    padding-top: 14px;
   }
 
   .menu-toggle {
@@ -418,6 +461,9 @@
   .breadcrumbs span {
     font-size: 10px;
   }
+  .breadcrumbs a, .breadcrumbs a:hover, .breadcrumbs a:visited {
+    font-size: 10px;
+  }
 }
 footer {
   background-image: url("data:image/svg+xml,%3Csvg width='1440' height='263' viewBox='0 0 1440 263' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='719.5' cy='1300' rx='3359.5' ry='1300' fill='%23281819'/%3E%3C/svg%3E%0A");
@@ -455,6 +501,7 @@ footer .site-map-grid {
 footer .site-map-grid a.references:after {
   content: url(/img/link-icon.svg);
   position: absolute;
+  padding-left: 5px;
 }
 footer p {
   font-family: var(--font-family-Bion);

@@ -10,6 +10,7 @@
     <script src="/js/top-bar.js" type="text/javascript"></script>
     <script src="/js/form_handler.js" type="text/javascript"></script>
     <script src="/js/photo-slider.js" type="text/javascript" defer></script>
+    <script src="/js/smooth_scroll.js" type="text/javascript"></script>
     <title>Карточка товара</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
         </div>
         <div class="item menu">
                 <div class="dropdown">
-                    <a href="/catalog-page.html">Продукция &#9662;</a>
+                    <a href="/catalog-page.html" id="productionLink">Продукция &#9662;</a>
                     <div class="dropdown-menu">
                         <div><a href="/catalog-page.html">Рижский хлеб</a></div>
                         <div class="vertical-margin"></div>
@@ -74,7 +75,7 @@
             </div>
             <hr>
             <div class="button-container">
-                <button class="content-button active" onclick="">Узнать цену</button>
+                <button class="content-button active" onclick="window.location.href='#form'">Узнать цену</button>
             </div>
             
         </div>
@@ -104,11 +105,11 @@
     </section>
 
     <section class="form horizontal-margin vertical-margin">
-        <div class="form-container">
-                    <div class="form-img ">
+        <div class="form-container" id="form">
+                    <div class="form-img">
                         <img src="/img/bread-collection.jpeg" alt="bread-collection">
                     </div>
-                    <div class="form-production  ">
+                    <div class="form-production">
                         <h2>Ознакомьтесь <br> с продукцией</h2>
                         <h5>Чтобы ознакомится с ценами и начать сотрудничество с нами оставьте свои контакты и мы свяжемся с вами в ближайшее время</h5>
                         <form action="#" method="post" id="contactForm" name="contactForm">
@@ -152,14 +153,14 @@
             <div class="footer-right-block">
                 <div class="site-map">
                     <p>карта сайта</p>
-                    <div class="site-map-grid">
-                        <a href="#">Главная</a>
-                        <a href="#">Продукция</a>
-                        <a class="references" href="#">Политика персональных данных</a>
-                        <a href="#">Контакты</a>
-                        <a href="#">Партнерам</a>
-                        <a class="references" href="#">Условия пользования сайтом</a>
-                    </div>
+                        <div class="site-map-grid">
+                            <a href="index.html">Главная</a>
+                            <a href="/catalog-page.html">Продукция</a>
+                            <a class="" href="/privacy-policy.html">Политика персональных данных</a>
+                            <a href="/index.html#contacts-section">Контакты</a>
+                            <a href="/partners.html">Партнерам</a>
+                            <a class="references" href="/privacy-policy.html">и условия пользования сайтом</a>
+                        </div>
                 </div>
             </div>
         </div>

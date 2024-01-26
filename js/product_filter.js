@@ -22,37 +22,52 @@ function filterNovelty() {
   });
 }
 
+function hideExtraCards(initialCardsToShow) {
+  const allProducts = document.querySelectorAll('.product-card[data-filter="Novelty"]');
+  allProducts.forEach((product, index) => {
+    if (index >= initialCardsToShow) {
+      product.classList.add('hidden');
+    }
+  });
+}
+
+function showMoreNovelty() {
+  const hiddenProducts = document.querySelectorAll('.product-card.hidden[data-filter="Novelty"]');
+  hiddenProducts.forEach((product) => {
+    const filter = product.getAttribute('data-filter');
+    const filterMatch = filter === 'Novelty';
+    if (filterMatch) {
+    product.classList.remove('hidden');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const categoryCheckboxes = document.querySelectorAll('.category-filter');
   const brandCheckboxes = document.querySelectorAll('.brand-filter');
   const packagingCheckboxes = document.querySelectorAll('.packaging-filter');
+  const badgeCheckboxes = document.querySelectorAll('.badge-filter');
   
   const showMoreBtn = document.getElementById('showMoreButton');
   // const productContainer = document.querySelector('.product-filter-block');
   const initialCardsToShow = 3;
   
-  function hideExtraCards(initialCardsToShow) {
-    const allProducts = document.querySelectorAll('.product-card[data-filter="Novelty"]');
-    allProducts.forEach((product, index) => {
-      if (index >= initialCardsToShow) {
-        product.classList.add('hidden');
-      }
-    });
-  }
+ 
   
 
-  if (getSessionItem('showNovelty')) {
-    filterNovelty();
-    hideExtraCards(initialCardsToShow);
-    showMoreBtn.addEventListener('click', showMoreNovelty);
-  } else {
-    showMoreBtn.addEventListener('click', showMoreProducts);
-    filterProducts();
-  }
+  // if (getSessionItem('showNovelty')) {
+  //   filterNovelty();
+  //   hideExtraCards(initialCardsToShow);
+  //   showMoreBtn.addEventListener('click', showMoreNovelty);
+  // } else {
+  //   showMoreBtn.addEventListener('click', showMoreProducts);
+  //   filterProducts();
+  // }
   // hideExtraCards();
-
+  showMoreBtn.addEventListener('click', showMoreProducts);
+  filterProducts();
   
-  brandCheckboxes.forEach(checkbox => {
+  brandCheckboxes.forEach(checkbox => { //проверить данную функцию
     checkbox.addEventListener('change', function() {
       const elem = document.querySelectorAll('.product-filter-block input[type="checkbox"]:checked');
       elem.forEach(element => {
@@ -62,19 +77,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   
-  function showMoreNovelty() {
-    const hiddenProducts = document.querySelectorAll('.product-card.hidden[data-filter="Novelty"]');
-    hiddenProducts.forEach((product) => {
-      const filter = product.getAttribute('data-filter');
-      const filterMatch = filter === 'Novelty';
-      if (filterMatch) {
-      product.classList.remove('hidden');
-      }
-    });
-  }
+  
 
   function showMoreProducts() {
-    hideExtraCards(0);
+    // hideExtraCards(0);
     const hiddenProducts = document.querySelectorAll('.product-card.hidden');
     const selectedFilters = getSelectedCheckboxes(
       document.querySelectorAll('.product-filter-block input[type="checkbox"]')
@@ -84,12 +90,15 @@ document.addEventListener('DOMContentLoaded', function() {
       const category = product.getAttribute('data-category');
       const brand = product.getAttribute('data-brand');
       const packaging = product.getAttribute('data-packaging');
+      const badge = product.getAttribute('data-badge');
   
       const categoryMatch = selectedFilters.category.length === 0 || selectedFilters.category.includes(category);
       const brandMatch = selectedFilters.brand.length === 0 || selectedFilters.brand.includes(brand);
       const packagingMatch = selectedFilters.packaging.length === 0 || selectedFilters.packaging.includes(packaging);
+      const badgeMatch = selectedFilters.badge.length === 0 || selectedFilters.badge.includes(badge);
+
   
-      if (categoryMatch && brandMatch && packagingMatch) {
+      if (categoryMatch && brandMatch && packagingMatch && badgeMatch) {
         product.classList.remove('hidden');
       }
     });
@@ -113,12 +122,18 @@ document.addEventListener('DOMContentLoaded', function() {
   packagingCheckboxes.forEach(checkbox => {
     checkbox.addEventListener('change', filterProducts);
   });
+
+  badgeCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', filterProducts);
+  });
+
   
   function getSelectedCheckboxes(checkboxes) {
     const selectedFilters = {
       category: [],
       brand: [],
       packaging: [],
+      badge: []
     };
   
     checkboxes.forEach((checkbox) => {
@@ -131,6 +146,8 @@ document.addEventListener('DOMContentLoaded', function() {
           selectedFilters.brand.push(filterValue);
         } else if (checkboxClasses.contains('packaging-filter')) {
           selectedFilters.packaging.push(filterValue);
+        } else if (checkboxClasses.contains('badge-filter')) {
+          selectedFilters.badge.push(filterValue);
         }
       }
     });
@@ -139,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   function filterProducts() {
-    showMoreBtn.addEventListener('click', showMoreProducts);
+    // showMoreBtn.addEventListener('click', showMoreProducts);
     const selectedFilters = getSelectedCheckboxes(
       document.querySelectorAll('.product-filter-block input[type="checkbox"]')
     );
@@ -151,12 +168,15 @@ document.addEventListener('DOMContentLoaded', function() {
       const category = product.getAttribute('data-category');
       const brand = product.getAttribute('data-brand');
       const packaging = product.getAttribute('data-packaging');
+      const badge = product.getAttribute('data-badge');
+
   
       const categoryMatch = selectedFilters.category.length === 0 || selectedFilters.category.includes(category);
       const brandMatch = selectedFilters.brand.length === 0 || selectedFilters.brand.includes(brand);
       const packagingMatch = selectedFilters.packaging.length === 0 || selectedFilters.packaging.includes(packaging);
-  
-      if (categoryMatch && brandMatch && packagingMatch) {
+      const badgeMatch = selectedFilters.badge.length === 0 || selectedFilters.badge.includes(badge);
+
+      if (categoryMatch && brandMatch && packagingMatch && badgeMatch) {
         product.classList.remove('hidden');
       } else {
         product.classList.add('hidden');

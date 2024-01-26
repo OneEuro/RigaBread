@@ -42,7 +42,7 @@
   align-self: stretch;
   align-items: center;
   justify-content: center;
-  width: 150px;
+  width: 160px;
 }
 .dropdown-menu {
   display: none;
@@ -56,6 +56,8 @@
 }
 .dropdown-menu > div {
   padding-left: 20px;
+  padding-right: 20px;
+  white-space: nowrap;
 }
 .dropdown-menu .vertical-margin {
   margin: 10px 0;
@@ -100,6 +102,11 @@
   text-transform: none;
 }
 
+@media screen and (max-width: 768px) {
+  .menu {
+    gap: 5%;
+  }
+}
 @media screen and (max-width: 480px) {
   .menu.active {
     display: flex;
@@ -112,9 +119,8 @@
     background-color: white;
     z-index: 100;
     border-radius: 12px 12px 12px 0;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 0;
+    justify-content: center;
+    gap: 35px;
   }
 
   .top-bar-menu-contacts.active {
@@ -124,6 +130,10 @@
 
   .dropdown {
     align-self: auto;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    padding-top: 14px;
   }
 
   .menu-toggle {
@@ -317,6 +327,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding-right: 3em;
+  padding-top: 20px;
 }
 .about img {
   width: 100%;
@@ -332,6 +343,9 @@
   align-items: flex-start;
   flex-basis: 50%;
   margin-left: auto;
+}
+.partner-text > h2 {
+  line-height: 124%;
 }
 .partner img {
   border-radius: 12px;
@@ -449,6 +463,7 @@
   flex: 0 0 auto;
   position: relative;
   padding-left: 0;
+  cursor: pointer;
 }
 .read-block-text {
   display: flex;
@@ -727,6 +742,7 @@ footer .site-map-grid {
 footer .site-map-grid a.references:after {
   content: url(/img/link-icon.svg);
   position: absolute;
+  padding-left: 5px;
 }
 footer p {
   font-family: var(--font-family-Bion);
@@ -802,6 +818,39 @@ footer p {
   justify-content: space-between;
 }
 
+#showMoreButton {
+  background-color: #FFFFFF;
+  color: #5e371b;
+  padding: 20px 25px;
+  border-radius: 1em;
+  font-size: 1.1em;
+  font-family: "Bion";
+  border: none;
+  box-shadow: 0em 8px 34px 0px rgba(0, 0, 0, 0.08);
+  position: relative;
+  padding-right: 50px;
+}
+
+#showMoreButton::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 6px;
+  background: url("/img/down-arrow.svg") no-repeat center center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 480px) {
+  #showMoreButton {
+    padding: 12px 16px;
+    border-radius: 1em;
+    font-size: 1em;
+    padding-right: 30px;
+  }
+}
 :root {
   --h1-font-size: 75px;
   --h2-font-size: 48px;

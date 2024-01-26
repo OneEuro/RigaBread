@@ -51,6 +51,39 @@
   justify-content: space-between;
 }
 
+#showMoreButton {
+  background-color: #FFFFFF;
+  color: #5e371b;
+  padding: 20px 25px;
+  border-radius: 1em;
+  font-size: 1.1em;
+  font-family: "Bion";
+  border: none;
+  box-shadow: 0em 8px 34px 0px rgba(0, 0, 0, 0.08);
+  position: relative;
+  padding-right: 50px;
+}
+
+#showMoreButton::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 6px;
+  background: url("/img/down-arrow.svg") no-repeat center center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 480px) {
+  #showMoreButton {
+    padding: 12px 16px;
+    border-radius: 1em;
+    font-size: 1em;
+    padding-right: 30px;
+  }
+}
 .breadcrumbs {
   padding-top: 68px;
   margin-bottom: 36px;
@@ -106,7 +139,7 @@
   align-self: stretch;
   align-items: center;
   justify-content: center;
-  width: 150px;
+  width: 160px;
 }
 .dropdown-menu {
   display: none;
@@ -120,6 +153,8 @@
 }
 .dropdown-menu > div {
   padding-left: 20px;
+  padding-right: 20px;
+  white-space: nowrap;
 }
 .dropdown-menu .vertical-margin {
   margin: 10px 0;
@@ -164,6 +199,11 @@
   text-transform: none;
 }
 
+@media screen and (max-width: 768px) {
+  .menu {
+    gap: 5%;
+  }
+}
 @media screen and (max-width: 480px) {
   .menu.active {
     display: flex;
@@ -176,9 +216,8 @@
     background-color: white;
     z-index: 100;
     border-radius: 12px 12px 12px 0;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 0;
+    justify-content: center;
+    gap: 35px;
   }
 
   .top-bar-menu-contacts.active {
@@ -188,6 +227,10 @@
 
   .dropdown {
     align-self: auto;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    padding-top: 14px;
   }
 
   .menu-toggle {
@@ -432,6 +475,7 @@ footer .site-map-grid {
 footer .site-map-grid a.references:after {
   content: url(/img/link-icon.svg);
   position: absolute;
+  padding-left: 5px;
 }
 footer p {
   font-family: var(--font-family-Bion);
@@ -748,7 +792,6 @@ a, a:hover, a:visited {
   box-sizing: border-box;
   margin: 10px 0 10px 0;
   padding: 20px;
-  box-shadow: 0px 8px 34px 0px rgba(144, 118, 75, 0.18);
   display: flex;
   flex-direction: column;
 }
@@ -757,10 +800,18 @@ a, a:hover, a:visited {
   overflow: auto;
   text-overflow: ellipsis;
 }
+.product-filter .product-card-content:hover {
+  box-shadow: 0px 8px 34px 0px rgba(144, 118, 75, 0.18);
+}
 .product-filter .product-card .button {
   font-size: 14px;
   width: 100%;
   padding: 10px 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.product-filter .product-card .product-card-content:hover .button {
+  opacity: 1;
 }
 .product-filter .product-card img {
   width: 100%;
@@ -857,6 +908,7 @@ input[type=checkbox]:checked::after {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0px 8px 34px 0px rgba(144, 118, 75, 0.18);
   }
   .product-filter .product-card-content .image-container {
     height: 150px;
@@ -865,6 +917,7 @@ input[type=checkbox]:checked::after {
     font-size: 10px;
     margin-top: 20px;
     padding: 8px 0;
+    opacity: 1;
   }
   .product-filter .product-card-content h4 {
     display: none;
@@ -883,4 +936,11 @@ input[type=checkbox]:checked::after {
   .checkbox-container {
     margin: 0;
   }
+}
+.padding-center {
+  padding: 30px;
+}
+
+.zero-margin {
+  margin: 0;
 }

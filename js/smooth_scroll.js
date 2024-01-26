@@ -25,11 +25,15 @@ window.addEventListener('load', function() {
             //     window.location.href = targetId;
             // }
 
-            if (targetId.includes("page_id")) {
+            if (targetId.includes("page_id") && currentURL != startPage) {
                 window.location.href = targetId;
             }
-            if (currentURL.includes("page_id")) {
+            if (currentURL.includes("page_id") && !targetId.includes("page_id")) {
                 sessionStorage.setItem('targetId', extractAfterHash(targetId));
+                window.location.href = startPage;
+            }
+            if (targetId == startPage) {
+                sessionStorage.removeItem('targetId');
                 window.location.href = startPage;
             }
 

@@ -111,6 +111,7 @@ img {
     margin-top: 30px;
 }
 
+
 @media (max-width: $large-screen-width) {
     :root {
         --button-padding: 8px 20px;
@@ -152,8 +153,6 @@ a,a:hover,a:visited {
     text-decoration: none;
     color: $link-color;
 }
-
-
 
 .divider {
     border: 1px solid #ccc;

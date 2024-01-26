@@ -26,7 +26,7 @@
     </div>
     <div class="item menu">
             <div class="dropdown">
-                <a href="/catalog-page.html">Продукция &#9662;</a>
+                <a href="/catalog-page.html" id="productionLink">Продукция &#9662;</a>
                 <div class="dropdown-menu">
                     <div><a href="/catalog-page.html">Рижский хлеб</a></div>
                     <div class="vertical-margin"></div>
@@ -44,7 +44,7 @@
             </div>
             <hr class="divider">
             <h6>Наша электронная почта</h6>
-            <h3>example@gmail.com</h3>
+            <h3>info@riga-hleb.ru</h3>
         </div>
     </div>
     <div class="item menu-toggle">
@@ -82,6 +82,12 @@
           <label><input type="checkbox" class="packaging-filter" value="Tray">Лоток</label>
           <label><input type="checkbox" class="packaging-filter" value="PET_bag">Пакет ПЭТ</label>
           <label><input type="checkbox" class="packaging-filter" value="Laminated_Paper">Бумага ламинир.</label>
+        </div>
+      </div>
+      <div class="product-filter-block-item padding-center"> 
+        <div class="checkbox-container zero-margin">
+          <label><input type="checkbox" class="badge-filter" value="Novelty">Новинки</label>
+          <label><input type="checkbox" class="badge-filter" value="Bestseller">Хит продаж</label>
         </div>
       </div>
 
@@ -125,6 +131,18 @@
         </div>
       </div>
   </div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span class="arrow"></span>
+    </div>
+    <div class="accordion-content">
+      <div class="checkbox-container zero-margin">
+        <label><input type="checkbox" class="badge-filter" value="Novelty">Новинки</label>
+        <label><input type="checkbox" class="badge-filter" value="Bestseller">Хит продаж</label>
+      </div>
+    </div>
+  </div>
+  </div>
   </div>
 
 
@@ -132,8 +150,8 @@
     <div class="product-filter-content">
       <h2>Мы рекомендуем</h2>
       <div class="product-card-container">
-        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray">
-          <div class="product-card-content">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray" data-badge="Bestseller">
+          <div class="product-card-content" onclick="window.location.href='/product-card.html'">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
               <img src="/img/logo.png" alt="icon">
@@ -148,8 +166,8 @@
           </div>
           
         </div>
-        <div class="product-card" data-brand="Gifts_World" data-category="Buns" data-packaging="PET_bag">
-          <div class="product-card-content">
+        <div class="product-card" data-brand="Gifts_World" data-category="Buns" data-packaging="PET_bag" data-badge="Novelty">
+          <div class="product-card-content" onclick="window.location.href='/product-card.html'">
             <div class="product-card-info">
               <span class="shading">Новинка</span>
               <img src="/img/gifts_of_peace.svg" alt="icon">
@@ -164,7 +182,7 @@
           </div>
           
         </div>
-        <div class="product-card" data-brand="Riga_Bread" data-category="Pastries" data-packaging="Laminated_Paper">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Pastries" data-packaging="Laminated_Paper" data-badge="Bestseller">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -180,7 +198,7 @@
           </div>
           
         </div>
-        <div class="product-card" data-brand="Riga_Bread" data-category="Buns" data-packaging="PET_bag">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Buns" data-packaging="PET_bag" data-badge="Bestseller">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -195,7 +213,7 @@
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray" data-badge="Novelty">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Новинка</span>
@@ -210,7 +228,7 @@
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-brand="Riga_Bread" data-category="Buns" data-packaging="Tray">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Buns" data-packaging="Tray" data-badge="Novelty">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Новинка</span>
@@ -225,7 +243,7 @@
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-brand="Gifts_World" data-category="Bread" data-packaging="Tray">
+        <div class="product-card" data-brand="Gifts_World" data-category="Bread" data-packaging="Tray" data-badge="Novelty">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Новинка</span>
@@ -240,7 +258,7 @@
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray" data-badge="Bestseller">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -255,7 +273,7 @@
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Laminated_Paper">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Laminated_Paper" data-badge="Bestseller">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -270,7 +288,7 @@
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Bread" data-packaging="Tray" data-badge="Bestseller">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -285,7 +303,7 @@
             <button class="button">Подробнее о товаре</button>
           </div>
         </div>
-        <div class="product-card" data-brand="Riga_Bread" data-category="Pastries" data-packaging="Laminated_Paper">
+        <div class="product-card" data-brand="Riga_Bread" data-category="Pastries" data-packaging="Laminated_Paper" data-badge="Bestseller">
           <div class="product-card-content">
             <div class="product-card-info">
               <span class="shading">Хит продаж</span>
@@ -381,12 +399,12 @@
             <div class="site-map">
                 <p>карта сайта</p>
                 <div class="site-map-grid">
-                    <a href="#">Главная</a>
-                    <a href="#">Продукция</a>
-                    <a class="references" href="#">Политика персональных данных</a>
-                    <a href="#">Контакты</a>
-                    <a href="#">Партнерам</a>
-                    <a class="references" href="#">Условия пользования сайтом</a>
+                    <a href="index.html">Главная</a>
+                    <a href="/catalog-page.html">Продукция</a>
+                    <a class="" href="/privacy-policy.html">Политика персональных данных</a>
+                    <a href="/index.html#contacts-section">Контакты</a>
+                    <a href="/partners.html">Партнерам</a>
+                    <a class="references" href="/privacy-policy.html">и условия пользования сайтом</a>
                 </div>
             </div>
         </div>
