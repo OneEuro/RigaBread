@@ -2,7 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
 const slider = document.querySelector(".slider");
 const slides = slider.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
-const slideWidth = slides[0].clientWidth;
+const sliderContainer = document.querySelector(".slider-container");
+const slideWidth = sliderContainer.clientWidth//slides[0].clientWidth;
+
+slider.style.width = slides.length * 100 + "%";  //нужно что бы ширина была равна в процентом соотношения(1 слайд - 100%) от кол-ва слайдов
+
 
 let currentSlide = 0;
 
