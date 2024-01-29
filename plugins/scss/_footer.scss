@@ -40,6 +40,10 @@ footer {
             }
         }
     }
+
+    .site-map-grid  a:hover {
+        text-decoration: underline;
+    }
     p  {
         font-family: var(--font-family-Bion);
         font-size: 12px;

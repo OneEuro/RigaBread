@@ -17,6 +17,10 @@
     text-decoration: none;
     font-size: $top-bar-font-size;
     font-family: $top-bar-font;
+    
+    }
+    & a:hover {
+        opacity: 60%;
     }
 }
 

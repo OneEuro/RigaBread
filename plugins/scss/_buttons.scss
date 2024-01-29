@@ -9,6 +9,21 @@
     box-shadow: 0px 7px 26px rgba(232, 133, 55, 0.25);
 }
 
+.dynamic-button {
+    display: inline-block;
+}
+.dynamic-button button {
+    transition: transform 0.8s ease;
+}
+.dynamic-button:hover button.vert-move {
+    transform: translateY(-1rem);
+    background-color: #5E371B;
+    color: #FEFEFE;
+}
+.dynamic-button:not(:hover) button.vert-move {
+    transform: translateY(0);
+}
+
 .content-button {
     background-color: $content-button-bg-color;
     padding: var(--content-button-padding);

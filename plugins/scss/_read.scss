@@ -31,13 +31,24 @@
     
 }
 
+.article-card-content {
+    transition: transform 0.8s ease;
+}
+.read-block:hover .article-card-content {
+    transform: translateY(-1rem);
+}
+
+.read-block:not(:hover) .article-card-content {
+    transform: translateY(0);
+}
+
 .scroll-container {
     overflow-x: auto;// TODO: решить проблемы обрезки read-header без использования margin-top
 }
 
 .scroll-content {
     display: flex;
-    margin-top: 16px;
+    margin-top: 25px;
 }
 
 .tab-content {

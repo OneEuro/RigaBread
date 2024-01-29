@@ -1,3 +1,5 @@
+const initialCardsToShow = 6;
+
 function getSessionItem(item) {
   var resultingItem = sessionStorage.getItem(item);
   if (resultingItem) {
@@ -21,6 +23,34 @@ function filterNovelty() {
     }
   });
 }
+
+function toggleShowMoreBtn() {
+  const btn = document.getElementById('showMoreButton');
+  if (btn) {
+    console.log("TRu");
+    var isHidden = btn.hidden;
+    isHidden = isHidden ? false : true;
+    btn.hidden = isHidden;
+  }
+}
+
+function activeShowMoreBtn() {
+  const btn = document.getElementById('showMoreButton');
+  if (btn) {
+    console.log("TRu");
+    btn.hidden = false;
+  }
+}
+
+function disableShowMoreBtn() {
+  const btn = document.getElementById('showMoreButton');
+  if (btn) {
+    console.log("false");
+    btn.hidden = true;
+  }
+}
+
+
 
 function hideExtraCards(initialCardsToShow) {
   const allProducts = document.querySelectorAll('.product-card[data-filter="Novelty"]');
@@ -50,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   const showMoreBtn = document.getElementById('showMoreButton');
   // const productContainer = document.querySelector('.product-filter-block');
-  const initialCardsToShow = 3;
-  
+  // const initialCardsToShow = 3;
+  // toggleShowMoreBtn();
  
   
 
@@ -81,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function showMoreProducts() {
     // hideExtraCards(0);
+    const allCards = document.querySelectorAll('.product-card');
     const hiddenProducts = document.querySelectorAll('.product-card.hidden');
     const selectedFilters = getSelectedCheckboxes(
       document.querySelectorAll('.product-filter-block input[type="checkbox"]')
@@ -102,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
         product.classList.remove('hidden');
       }
     });
+      disableShowMoreBtn();    
   }
   
   /////////
@@ -112,19 +144,31 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Add event listener to each checkbox
   categoryCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', filterProducts);
+    checkbox.addEventListener('change', function() {
+      filterProducts();
+      activeShowMoreBtn();
+  });
   });
   
   brandCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', filterProducts);
+    checkbox.addEventListener('change', function() {
+      filterProducts();
+      activeShowMoreBtn();
+  });
   });
   
   packagingCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', filterProducts);
+    checkbox.addEventListener('change', function() {
+      filterProducts();
+      activeShowMoreBtn();
+  });
   });
 
   badgeCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', filterProducts);
+    checkbox.addEventListener('change', function() {
+      filterProducts();
+      activeShowMoreBtn();
+  });
   });
 
   
@@ -160,8 +204,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectedFilters = getSelectedCheckboxes(
       document.querySelectorAll('.product-filter-block input[type="checkbox"]')
     );
-  
-  
     const products = document.querySelectorAll('.product-card');
   
     products.forEach((product) => {
@@ -186,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Скрыть товары, которые могут быть видны при показе еще
     const visibleProducts = document.querySelectorAll('.product-card:not(.hidden)');
     visibleProducts.forEach((product, index) => {
-      if (index >= 4) {
+      if (index >= initialCardsToShow) {
         product.classList.add('hidden');
       }
     });

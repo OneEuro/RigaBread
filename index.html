@@ -62,7 +62,7 @@
                     </div>
                     <hr class="divider">
                     <h6>Наша электронная почта</h6>
-                    <h3>info@riga-hleb.ru</h3>
+                    <h3 onclick="openEmail()">info@riga-hleb.ru</h3>
                 </div>
             </div>
             <div class="item menu-toggle">
@@ -94,31 +94,31 @@
                 <div class="center-container">
                     <div class="gallery">
                         
-                        <div class="stack-item">
+                        <div class="stack-item" onclick="window.location.href='/catalog-page.html'">
                             <div class="circle-container">
                                 <img src="/img/bread_2.png" alt="Хлеб" class="circle-image image-1">
                             </div>
                             <h4>Хлеб</h4>
                         </div>
-                        <div class="stack-item">
+                        <div class="stack-item" onclick="window.location.href='/catalog-page.html'">
                             <div class="circle-container">
                                 <img src="/img/pita.png" alt="Лаваш" class="circle-image image-1 mirrored-image">
                             </div>
                             <h4>Лаваш</h4>
                         </div>
-                        <div class="stack-item">
+                        <div class="stack-item" onclick="window.location.href='/catalog-page.html'">
                             <div class="circle-container">
                                 <img src="/img/snacks.png" alt="Снеки" class="circle-image image-3">
                             </div>
                             <h4>Чипсы</h4>
                         </div>
-                        <div class="stack-item">
+                        <div class="stack-item" onclick="window.location.href='/catalog-page.html'">
                             <div class="circle-container">
                                 <img src="/img/pastries.png" alt="Выпечка" class="circle-image image-3">
                             </div>
                             <h4>Булочки</h4>
                         </div>
-                        <div class="stack-item">
+                        <div class="stack-item" onclick="window.location.href='/catalog-page.html'">
                             <div class="circle-container">
                                 <img src="/img/confectionery.png" alt="Кондитерские изделия" class="circle-image image-2">
                             </div>
@@ -126,7 +126,8 @@
                         </div>
                         </div>
                     </div>
-                <button class="button" onclick="window.location.href='/catalog-page.html'">Каталог</button>
+                    <div class="dynamic-button"><button class="button vert-move" onclick="window.location.href='/catalog-page.html'">Каталог</button>
+                    </div>
         </section>
         <section class="content horizontal-margin">
             <div class="novelty vertical-margin">
@@ -138,7 +139,7 @@
                 <div class="novelty-text">
                     <h3>Новинки</h3>
                     <h5>Мы регулярно расширяем и обновляем<br>наш ассортимент, для удержания<br>покупательского спроса и создания<br>конкурентного преимущества</h5>
-                    <button class="content-button" onclick="redirectToCatalog()">Подробнее</button>
+                    <div class="dynamic-button"><button class="content-button vert-move" onclick="redirectToCatalog()">Подробнее</button></div>
                 </div>
             </div>
             <div class="about vertical-margin" id="about">
@@ -161,7 +162,7 @@
                     <div class="partner-text">
                         <h2>Работать <br> с нами приятно</h2>
                         <h5>Мы делаем все, чтобы бизнес наших партнеров был максимально прибыльным. Мы предложим вам выгодную цену с сохранением качества, и вы убедитесь, что купить выпечку и хлеб для реализации в вашем магазине выгодно именно у нас.<br><br>Собственная служба доставки на базе специализированного автопарка — гарантия, что свежая выпечка попадет на прилавок свежей. Мы даем гарантии на продажу наших изделий в ваших магазинах.</h5>
-                        <button class="content-button" onclick="window.location.href='/partners.html'">Стать партнером</button>
+                        <div class="dynamic-button"><button class="content-button vert-move" onclick="window.location.href='/partners.html'">Стать партнером</button></div>
                     </div>
             </div>
         </section>
@@ -200,69 +201,81 @@
                             <div class="scroll-container">
                                 <div class="scroll-content">
                                     <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <img src="/img/cook_2.jpg" alt="bread">
-                                        <div class="read-header">
-                                            <span class="button">Новости</span>
-                                        </div>
-                                        <div class="read-block-text">
-                                            <h6>21 февраля 2022</h6>
-                                            <h4>Новый супермаркет</h4>
-                                            <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
-                                        </div>
-                                    </div>
-                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <img src="/img/cook_2.jpg" alt="bread">
-                                        <div class="read-header">
-                                            <span class="button">Новости</span>
-                                        </div>
-                                        <div class="read-block-text">
-                                            <h6>21 февраля 2022</h6>
-                                            <h4>Новый супермаркет</h4>
-                                            <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Новости</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <img src="/img/cook_2.jpg" alt="bread">
-                                        <div class="read-header">
-                                            <span class="button">Новости</span>
-                                        </div>
-                                        <div class="read-block-text">
-                                            <h6>21 февраля 2022</h6>
-                                            <h4>Новый супермаркет</h4>
-                                            <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
-                                        </div>
-                                    </div>
-                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <img src="/img/cook_2.jpg" alt="bread">
-                                        <div class="read-header">
-                                            <span class="button">Новости</span>
-                                        </div>
-                                        <div class="read-block-text">
-                                            <h6>21 февраля 2022</h6>
-                                            <h4>Новый супермаркет</h4>
-                                            <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Новости</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <img src="/img/cook_2.jpg" alt="bread">
-                                        <div class="read-header">
-                                            <span class="button">Новости</span>
-                                        </div>
-                                        <div class="read-block-text">
-                                            <h6>21 февраля 2022</h6>
-                                            <h4>Новый супермаркет</h4>
-                                            <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Новости</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <img src="/img/cook_2.jpg" alt="bread">
-                                        <div class="read-header">
-                                            <span class="button">Новости</span>
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Новости</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
                                         </div>
-                                        <div class="read-block-text">
-                                            <h6>21 февраля 2022</h6>
-                                            <h4>Новый супермаркет</h4>
-                                            <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                    </div>
+                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Новости</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Новости</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -274,25 +287,29 @@
                             <div class="scroll-container">
                                 <div class="scroll-content">
                                     <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <img src="/img/cook_2.jpg" alt="bread">
-                                        <div class="read-header">
-                                            <span class="button">Рецепты</span>
-                                        </div>
-                                        <div class="read-block-text">
-                                            <h6>21 февраля 2022</h6>
-                                            <h4>Новый супермаркет</h4>
-                                            <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Рецепты</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <img src="/img/cook_2.jpg" alt="bread">
-                                        <div class="read-header">
-                                            <span class="button">Рецепты</span>
-                                        </div>
-                                        <div class="read-block-text">
-                                            <h6>21 февраля 2022</h6>
-                                            <h4>Новый супермаркет</h4>
-                                            <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Рецепты</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -302,14 +319,16 @@
                             <div class="scroll-container">
                                 <div class="scroll-content">
                                     <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <img src="/img/cook_2.jpg" alt="bread">
-                                        <div class="read-header">
-                                            <span class="button">Новинки</span>
-                                        </div>
-                                        <div class="read-block-text">
-                                            <h6>21 февраля 2022</h6>
-                                            <h4>Новый супермаркет</h4>
-                                            <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Новинки</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -330,8 +349,7 @@
                 </div>
                 <hr/>
                 <h5>Наша электронная почта</h5>
-                <h3>info@riga-hleb.ru</h3>
-                
+                <h3 style="cursor: pointer;" onclick="openEmail()">info@riga-hleb.ru</h3>
             </div>
             <div class="map">
                 <!-- <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/?ll=37.646425%2C55.756010&mode=usermaps&source=constructorLink&um=constructor%3Ada960f084ffaaa1814dbcdb231e3a91ce39fc2cf5dc4c2de047a8220b5d47531&utm_medium=mapframe&utm_source=maps&z=10" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация, поиск мест</a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.646425%2C55.756010&mode=usermaps&source=constructorLink&um=constructor%3Ada960f084ffaaa1814dbcdb231e3a91ce39fc2cf5dc4c2de047a8220b5d47531&z=10" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div> -->
