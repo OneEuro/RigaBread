@@ -94,13 +94,13 @@
     text-transform: none ;
 }
 
-@media screen and (max-width: $big-screen-width) {
-    .menu {
-        gap: 5%;
-    }
-}
+// @media screen and (max-width: $large-screen-width) {
+//     .menu {
+//         gap: 10%;
+//     }
+// }
 
-@media screen and (max-width: $middle-screen-width) {
+@media screen and (max-width: $extra-big-screen-width) {
 .menu.active {
     display: flex;
     flex-direction: column;

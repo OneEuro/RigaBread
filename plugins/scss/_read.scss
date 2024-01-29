@@ -88,3 +88,8 @@
         flex-basis: 74%;
     }
 }
+@media screen and (max-width: $extra-big-screen-width) {
+    .read-block {
+        flex-basis: 50%;
+    }
+}
