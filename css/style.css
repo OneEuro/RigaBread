@@ -840,6 +840,24 @@ footer p {
   transform: translateY(0);
 }
 
+.dynamic-input {
+  display: inline-block;
+}
+
+.dynamic-input input {
+  transition: transform 0.8s ease;
+}
+
+.dynamic-input:hover input.vert-move {
+  transform: translateY(-1rem);
+  background-color: #5E371B;
+  color: #FEFEFE;
+}
+
+.dynamic-input:not(:hover) input.vert-move {
+  transform: translateY(0);
+}
+
 .content-button {
   background-color: #FFE6C0;
   padding: var(--content-button-padding);

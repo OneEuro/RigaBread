@@ -10,5 +10,4 @@ function sendTelegramMessage(username, message) {
 }
 function openEmail() {
     window.open("mailto:info@riga-hleb.ru?subject=Уточнение информации&body=Добрый%20день!");
-    // window.location.href = "mailto:user@example.com?subject=Subject&body=message%20goes%20here";
 }

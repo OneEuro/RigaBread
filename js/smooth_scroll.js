@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
 });
 
 // document.addEventListener('DOMContentLoaded', function() {
-    const anchors = document.querySelectorAll('div.top-bar a, div.site-map-grid a');
+    const anchors = document.querySelectorAll('div.top-bar a, div.site-map-grid a, .product-details a');
 
     const currentURL = window.location.href;
     const startPage = 'http://sonicx.vdsman.ru';
@@ -63,4 +63,9 @@ function scrollToElement(element) {
             });
         }
 }
-
+function findAnchorAndScrollTo(anchor) {
+    if (anchor) {
+        const targetElement = document.getElementById(anchor);
+        scrollToElement(targetElement);
+    }
+}
