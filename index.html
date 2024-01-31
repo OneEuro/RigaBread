@@ -33,6 +33,7 @@
         <script src="/js/map4.js" type="text/javascript"></script>
         <script src="/js/nav.js" type="text/javascript"></script>
         <script src="/js/var_sending.js" type="text/javascript"></script>
+        <script src="/js/nav-tabs.js" type="text/javascript"></script>
 
     </head>
     <body>
@@ -187,20 +188,19 @@
             </div>
         </section>
         <section class="read horizontal-margin vertical-margin">
-            <!-- <div class="container"> -->
                 <h3>Читайте также</h3>
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist" id="myTabs">
-                        <li role="presentation" class=""><a href="#news" id="tab1" aria-controls="news" role="tab" data-toggle="tab" >Новости</a></li>
-                        <li role="presentation"><a href="#recipe" id="tab2" aria-controls="recipe" role="tab" data-toggle="tab" >Рецепты</a></li>
-                        <li role="presentation"><a href="#novelty"id="tab3" aria-controls="novelty" role="tab" data-toggle="tab" >Новинки</a></li>
-                    </ul>
+                    <div class="tabs-container">
+                        <button class="tab-button" id="news-btn" onclick="toggleTabs('news')">Новости</button>
+                        <button class="tab-button" id="recipes-btn" onclick="toggleTabs('recipes')">Рецепты</button>
+                        <button class="tab-button" id="novelties-btn" onclick="toggleTabs('novelties')">Новинки</button>
+                    </div>
                     <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="news">
-                            <div class="scroll-container">
-                                <div class="scroll-content">
-                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
+                    <div class="scroll-container">
+                        <div class="scroll-content">
+                            <div id="allTabs" class="tab-content active-tab">
+                                <div class=" tab-content active-tab">
+                                    <div class="read-block " onclick="window.location.href='/articles.html'">
                                         <div class="article-card-content">
                                             <img src="/img/cook_2.jpg" alt="bread">
                                             <div class="read-header">
@@ -213,59 +213,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <div class="article-card-content">
-                                            <img src="/img/cook_2.jpg" alt="bread">
-                                            <div class="read-header">
-                                                <span class="button">Новости</span>
-                                            </div>
-                                            <div class="read-block-text">
-                                                <h6>21 февраля 2022</h6>
-                                                <h4>Новый супермаркет</h4>
-                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <div class="article-card-content">
-                                            <img src="/img/cook_2.jpg" alt="bread">
-                                            <div class="read-header">
-                                                <span class="button">Новости</span>
-                                            </div>
-                                            <div class="read-block-text">
-                                                <h6>21 февраля 2022</h6>
-                                                <h4>Новый супермаркет</h4>
-                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <div class="article-card-content">
-                                            <img src="/img/cook_2.jpg" alt="bread">
-                                            <div class="read-header">
-                                                <span class="button">Новости</span>
-                                            </div>
-                                            <div class="read-block-text">
-                                                <h6>21 февраля 2022</h6>
-                                                <h4>Новый супермаркет</h4>
-                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <div class="article-card-content">
-                                            <img src="/img/cook_2.jpg" alt="bread">
-                                            <div class="read-header">
-                                                <span class="button">Новости</span>
-                                            </div>
-                                            <div class="read-block-text">
-                                                <h6>21 февраля 2022</h6>
-                                                <h4>Новый супермаркет</h4>
-                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
+                                    <div class="read-block " onclick="window.location.href='/articles.html'">
                                         <div class="article-card-content">
                                             <img src="/img/cook_2.jpg" alt="bread">
                                             <div class="read-header">
@@ -279,27 +227,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                            </div>
-                            
-                        </div>
-                        <div role="tabpanel" class="tab-pane " id="recipe">
-                            <div class="scroll-container">
-                                <div class="scroll-content">
-                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
-                                        <div class="article-card-content">
-                                            <img src="/img/cook_2.jpg" alt="bread">
-                                            <div class="read-header">
-                                                <span class="button">Рецепты</span>
-                                            </div>
-                                            <div class="read-block-text">
-                                                <h6>21 февраля 2022</h6>
-                                                <h4>Новый супермаркет</h4>
-                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
+                                <div class=" tab-content active-tab">
+                                    <div class="read-block " onclick="window.location.href='/articles.html'">
                                         <div class="article-card-content">
                                             <img src="/img/cook_2.jpg" alt="bread">
                                             <div class="read-header">
@@ -313,12 +242,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane " id="novelty">
-                            <div class="scroll-container">
-                                <div class="scroll-content">
-                                    <div class="read-block col-md-3" onclick="window.location.href='/articles.html'">
+                                <div class=" tab-content active-tab">
+                                    <div class="read-block " onclick="window.location.href='/articles.html'">
                                         <div class="article-card-content">
                                             <img src="/img/cook_2.jpg" alt="bread">
                                             <div class="read-header">
@@ -333,9 +258,73 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+
+                            <div id="tabContainer" class="tab-content">
+                                <div class="news tab-content">
+                                    <div class="read-block " onclick="window.location.href='/articles.html'">
+                                    <div class="article-card-content">
+                                        <img src="/img/cook_2.jpg" alt="bread">
+                                        <div class="read-header">
+                                            <span class="button">Новости</span>
+                                        </div>
+                                        <div class="read-block-text">
+                                            <h6>21 февраля 2022</h6>
+                                            <h4>Новый супермаркет</h4>
+                                            <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="read-block " onclick="window.location.href='/articles.html'">
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Новости</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recipes tab-content">
+                                    <div class="read-block " onclick="window.location.href='/articles.html'">
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Рецепты</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="novelties tab-content">
+                                    <div class="read-block " onclick="window.location.href='/articles.html'">
+                                        <div class="article-card-content">
+                                            <img src="/img/cook_2.jpg" alt="bread">
+                                            <div class="read-header">
+                                                <span class="button">Новинки</span>
+                                            </div>
+                                            <div class="read-block-text">
+                                                <h6>21 февраля 2022</h6>
+                                                <h4>Новый супермаркет</h4>
+                                                <h6>Разнообразный и богатый опыт укрепление и развитие структуры позволяет важные.</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
                     </div>
-            <!-- </div> -->
+                    </div>
+                
         </section>
         <section class="contacts horizontal-margin vertical-margin">
             <div class="contacts-block" id="contacts-section">

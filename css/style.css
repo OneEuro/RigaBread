@@ -462,10 +462,11 @@
   padding: 5px 15px;
 }
 .read-block {
-  flex: 0 0 auto;
   position: relative;
   padding-left: 0;
   cursor: pointer;
+  width: 300px;
+  padding-left: 10px;
 }
 .read-block-text {
   display: flex;
@@ -500,10 +501,6 @@
   margin-top: 25px;
 }
 
-.tab-content {
-  margin-top: calc(60px - 16px);
-}
-
 .nav-tabs {
   margin-top: 40px;
   border: none;
@@ -527,14 +524,28 @@
   border: none;
 }
 
-@media screen and (max-width: 480px) {
-  .read-block {
-    flex-basis: 74%;
-  }
+.tab-content {
+  display: none;
 }
+
+.active-tab {
+  display: flex;
+}
+
+.tabs-container {
+  margin: 30px 0;
+  display: flex;
+  gap: 30px;
+}
+
 @media screen and (max-width: 968px) {
   .read-block {
-    flex-basis: 50%;
+    width: 180px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .read-block {
+    width: 220px;
   }
 }
 .contacts {
@@ -811,6 +822,15 @@ footer p {
     flex-direction: column;
   }
 }
+.tab-button {
+  background-color: unset;
+  color: #5E371B;
+  font-size: var(--button-font-size);
+  font-family: "Bion";
+  border: none;
+  padding: 0;
+}
+
 .button {
   background-color: #E88537;
   padding: var(--button-padding);

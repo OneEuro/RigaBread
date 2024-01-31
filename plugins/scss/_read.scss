@@ -12,10 +12,14 @@
     }
 
     &-block {
-        flex: 0 0 auto; 
+        // flex: 0 0 auto; 
         position: relative;
         padding-left: 0;
         cursor: pointer;
+        width: 300px;
+        // max-width: 300px;
+        // min-width: 220px;
+        padding-left: 10px;
         &-text {
             display: flex;
             flex-direction: column;
@@ -52,7 +56,7 @@
 }
 
 .tab-content {
-    margin-top: calc(60px - 16px); // вычитаю scroll-content margin-top
+    // margin-top: calc(60px - 16px); // вычитаю scroll-content margin-top
 }
 
 .nav-tabs {
@@ -83,13 +87,29 @@
 
 }
 
-@media screen and (max-width: $middle-screen-width) {
-    .read-block {
-        flex-basis: 74%;
-    }
-}
+.tab-content {
+    display: none;
+  }
+
+  .active-tab {
+    display: flex;
+  }
+
+  .tabs-container {
+    margin: 30px 0;
+    display: flex;
+    gap: 30px;
+  }
+
 @media screen and (max-width: $extra-big-screen-width) {
     .read-block {
-        flex-basis: 50%;
+        // flex-basis: 50%;
+        width: 180px;
+    }
+}
+@media screen and (max-width: $middle-screen-width) {
+    .read-block {
+        // flex-basis: 74%;
+        width: 220px;
     }
 }
