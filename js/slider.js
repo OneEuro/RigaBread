@@ -1,12 +1,20 @@
 //slick slider
 document.addEventListener('DOMContentLoaded', function() {
-    // $('.production-slider').slick({
-    //     infinite: true,
-    //     slidesToShow: 6,
-    //     slidesToScroll: 1,
-    //     prevArrow:' <button class="arrow prev"></button>',
-    //     nextArrow:' <button class="arrow next"></button>'
-    //     });
+    $('.gallery').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        prevArrow:' <button class="arrow prev"></button>',
+        nextArrow:' <button class="arrow next"></button>',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ],
+        });
     $('.novelty-slider').slick({
         arrows: false,
         autoplay: true,

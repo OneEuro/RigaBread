@@ -233,9 +233,41 @@
 }
 
 .center-container {
-  display: flex;
-  justify-content: center;
   margin-top: 2em;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-position: center;
+  /* Центрирует изображение в блоке */
+  background-repeat: no-repeat;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.arrow:hover {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.prev {
+  top: 30%;
+  left: -5%;
+  background-image: url("/img/left-arrow.svg");
+}
+
+.next {
+  top: 30%;
+  right: -5%;
+  background-image: url("/img/right-arrow.svg");
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
 }
 
 .stack-item:hover .circle-container {
@@ -244,13 +276,11 @@
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
-  width: 100%;
+  position: relative;
 }
 
 .stack-item {
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
