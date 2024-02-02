@@ -37,12 +37,12 @@ fetch(filePath)
 function init(placemarks) {
     const map = new ymaps.Map('map', {
         center: [55.76, 37.64],
-        zoom: 10
+        zoom: 9
     });
     map.behaviors.disable("scrollZoom");
     const shops = [];
     var offices = [
-        new ymaps.Placemark([55.76, 37.64], { 
+        new ymaps.Placemark([55.604163, 37.503361], { 
             hintContent: 'Офис', 
             balloonContent: 'Офис' 
             })
