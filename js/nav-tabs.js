@@ -1,4 +1,4 @@
-let activeTabClass = null;
+var activeTabClass = null;
 
 function toggleTabs(tabClass) {
   const tabs = document.querySelectorAll('.tab-content');
