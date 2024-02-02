@@ -43,6 +43,7 @@
 
 .slick-initialized .slick-slide {
     display: flex;
+    // min-width: 0;
 }
 
 .stack-item:hover .circle-container {
@@ -59,10 +60,11 @@
 }
 
 .stack-item {
-  padding-top: 10px;
+  padding: 10px 10px 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
 }
   
 .circle-container {
@@ -104,6 +106,10 @@
   transform: scaleX(-1) scale(1.5);
 }
 
+.text-container {
+  word-break: break-all;
+}
+
 // .stack-item h4 {
 //   margin-top: 5px;
 //   font-size: 14px;
@@ -115,6 +121,9 @@
 
 @media (max-width: $middle-screen-width) {
   .circle-container {
-    max-width: 120px;
+    // max-width: 120px;
+  }
+  .stack-item:hover .circle-container {
+    transform: none;
   }
 }

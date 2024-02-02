@@ -2,7 +2,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     $('.gallery').slick({
         infinite: true,
+        arrows: true,
+        // centerMode: true,
         slidesToShow: 5,
+        touchMove: false,
         slidesToScroll: 1,
         prevArrow:' <button class="arrow prev"></button>',
         nextArrow:' <button class="arrow next"></button>',
@@ -10,7 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
+                    arrows: false,
+                    // transform: false,
+                    // variableWidth: true,
+                    lazyLoad: 'progressive',
+                    // slide: '',
+                    // rows: 2,
+                    // prevArrow: '',
+                    // nextArrow: '' 
                 }
             }
         ],
