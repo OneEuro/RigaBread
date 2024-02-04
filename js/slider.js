@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     $('.gallery').slick({
         infinite: true,
         arrows: true,
-        // centerMode: true,
         slidesToShow: 5,
         touchMove: false,
         slidesToScroll: 1,
@@ -15,13 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 settings: {
                     slidesToShow: 3,
                     arrows: false,
-                    // transform: false,
-                    // variableWidth: true,
                     lazyLoad: 'progressive',
-                    // slide: '',
-                    // rows: 2,
-                    // prevArrow: '',
-                    // nextArrow: '' 
                 }
             }
         ],

@@ -49,6 +49,7 @@
 @media screen and (max-width: $middle-screen-width) {
     .subscription {
         background-image: url(/img/small_subscription_bg.svg);
+        margin-bottom: -10px;//форма на моб версте создает отступ, поэтому сдвигаем чуть выше
         .flex-block {
             margin-top: 15px;
             flex-direction: column;
