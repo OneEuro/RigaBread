@@ -9,6 +9,12 @@
 @import "footer";
 @import "common";
 
+.table-wrapper {
+  width: 100%;
+  /* max-width: 500px; */
+  overflow-x: auto;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
