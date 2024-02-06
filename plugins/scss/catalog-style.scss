@@ -243,7 +243,8 @@ input[type="checkbox"]:checked::after {
         justify-content: space-between;
         box-shadow: 0px 8px 34px 0px rgba(144, 118, 75, 0.18);
         .image-container {
-          height: 150px;
+          // height: 150px; // старый вариант
+          height: 100%;
         }
         .button {
           font-size: 10px;

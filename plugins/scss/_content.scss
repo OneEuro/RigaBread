@@ -7,6 +7,7 @@
         width: 55%;
         height: 100%;
     }
+    
     &-text {
         padding-left: 68px;
         margin-top: 20px;
@@ -15,6 +16,11 @@
         }  
     }
 }
+
+.novelty-slider img {
+    height: 280px;
+    object-fit: cover;
+  }
 
 .about {
     display: flex;
@@ -109,6 +115,10 @@
                 align-self: center;
             }
         }
+    }
+
+    .novelty-slider img {
+        height: 180px;
     }
 
     .partner {

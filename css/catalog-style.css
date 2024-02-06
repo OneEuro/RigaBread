@@ -15,6 +15,15 @@
   font-style: normal;
   font-display: swap;
 }
+.tab-button {
+  background-color: unset;
+  color: #5E371B;
+  font-size: var(--button-font-size);
+  font-family: "Bion";
+  border: none;
+  padding: 0;
+}
+
 .button {
   background-color: #E88537;
   padding: var(--button-padding);
@@ -41,6 +50,24 @@
 }
 
 .dynamic-button:not(:hover) button.vert-move {
+  transform: translateY(0);
+}
+
+.dynamic-input {
+  display: inline-block;
+}
+
+.dynamic-input input {
+  transition: transform 0.8s ease;
+}
+
+.dynamic-input:hover input.vert-move {
+  transform: translateY(-1rem);
+  background-color: #5E371B;
+  color: #FEFEFE;
+}
+
+.dynamic-input:not(:hover) input.vert-move {
   transform: translateY(0);
 }
 
@@ -308,6 +335,7 @@
 @media screen and (max-width: 480px) {
   .subscription {
     background-image: url(/img/small_subscription_bg.svg);
+    margin-bottom: -10px;
   }
   .subscription .flex-block {
     margin-top: 15px;
@@ -937,7 +965,7 @@ input[type=checkbox]:checked::after {
     box-shadow: 0px 8px 34px 0px rgba(144, 118, 75, 0.18);
   }
   .product-filter .product-card-content .image-container {
-    height: 150px;
+    height: 100%;
   }
   .product-filter .product-card-content .button {
     font-size: 10px;
