@@ -15,6 +15,15 @@
   font-style: normal;
   font-display: swap;
 }
+.tab-button {
+  background-color: unset;
+  color: #5E371B;
+  font-size: var(--button-font-size);
+  font-family: "Bion";
+  border: none;
+  padding: 0;
+}
+
 .button {
   background-color: #E88537;
   padding: var(--button-padding);
@@ -361,6 +370,7 @@
 @media screen and (max-width: 480px) {
   .subscription {
     background-image: url(/img/small_subscription_bg.svg);
+    margin-bottom: -10px;
   }
   .subscription .flex-block {
     margin-top: 15px;

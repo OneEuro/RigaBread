@@ -850,7 +850,7 @@ a, a:hover, a:visited {
   flex-direction: column;
 }
 .product-filter .product-card-content-title {
-  height: 100%;
+  height: auto;
   overflow: auto;
   text-overflow: ellipsis;
 }
@@ -869,13 +869,12 @@ a, a:hover, a:visited {
 }
 .product-filter .product-card img {
   width: 100%;
-  height: 200px;
+  height: 100%;
 }
 .product-filter .product-card-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 0;
 }
 .product-filter .product-card-info > img {
   width: 50px;
@@ -889,6 +888,10 @@ a, a:hover, a:visited {
   padding: 4px 10px;
   font-size: 9px;
   font-family: var(--font-family-Bion);
+}
+
+.image-container {
+  height: 200px;
 }
 
 .checkbox-container {
@@ -954,6 +957,9 @@ input[type=checkbox]:checked::after {
   .product-filter .product-card {
     margin-bottom: 20px;
   }
+  .product-filter .product-card-info {
+    margin: 10px 0;
+  }
   .product-filter .product-card-content {
     width: auto;
     height: 100%;
@@ -965,23 +971,23 @@ input[type=checkbox]:checked::after {
     box-shadow: 0px 8px 34px 0px rgba(144, 118, 75, 0.18);
   }
   .product-filter .product-card-content .image-container {
-    height: 100%;
+    height: auto;
+  }
+  .product-filter .product-card-content-title {
+    font-size: 13px;
+    margin: 10px 0;
   }
   .product-filter .product-card-content .button {
     font-size: 10px;
-    margin-top: 20px;
     padding: 8px 0;
     opacity: 1;
-  }
-  .product-filter .product-card-content h4 {
-    display: none;
   }
   .product-filter .product-card-container {
     margin-top: 20px;
     grid-template-columns: repeat(2, 1fr);
   }
   .product-filter .product-card .shading {
-    font-size: 7px;
+    font-size: 5px;
   }
   .product-filter .product-card-info img {
     width: 30px;
