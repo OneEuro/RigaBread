@@ -1,48 +1,44 @@
 window.addEventListener('load', function() {
     const currentHash = sessionStorage.getItem('targetId');
-    const targetElement = document.getElementById(currentHash);
-    scrollToElement(targetElement);
+    findAnchorAndScrollTo(currentHash);
 });
 
-// document.addEventListener('DOMContentLoaded', function() {
-    const anchors = document.querySelectorAll('div.top-bar a, div.site-map-grid a, .product-details a');
+document.addEventListener('DOMContentLoaded', function() {
+    const anchors = document.querySelectorAll('div.top-bar a, div.site-map-grid a');
 
-    const currentURL = window.location.href;
-    const startPage = 'http://sonicx.vdsman.ru';
-
+    const currentURL = window.location.pathname;
+    const startPage = returnStartPageURL();
+ 
     anchors.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
             e.preventDefault();
-
-            // if (!currentURL.includes(startPage)) {
-                
-            //     sessionStorage.setItem('targetId', extractAfterHash(targetId));
-            //     window.location.href = startPage;
-            // }
-
-            // if (!targetId.includes(startPage)) {
-            //     window.location.href = targetId;
-            // }
-
-            if (targetId.includes("page_id") && currentURL != startPage) {
-                window.location.href = targetId;
+            if (window.innerWidth <= 480 && anchor.id === 'productionLink') { // отключаем для моб версии переход по ссылке, что бы отработал ховер
+                return;
             }
-            if (currentURL.includes("page_id") && !targetId.includes("page_id")) {
-                sessionStorage.setItem('targetId', extractAfterHash(targetId));
-                window.location.href = startPage;
+            var hashPosition = targetId.indexOf('#');
+            switch(hashPosition) {
+                case -1:
+                    sessionStorage.removeItem('targetId');
+                    // console.log("targetId",targetId);
+                    window.location.href = targetId;
+                    return;
+                default:
+                    var pathBeforeHash = targetId.substring(0, hashPosition);
+                    var hashFragment = targetId.substring(hashPosition + 1);
+                    // console.log("pathBeforeHash",pathBeforeHash);
+                    // console.log("hashFragment",hashFragment);
+                    // console.log("currentURL",currentURL);
+                    if(pathBeforeHash != currentURL) {
+                        sessionStorage.setItem('targetId', hashFragment);
+                        window.location.href = pathBeforeHash;
+                    } else {
+                        findAnchorAndScrollTo(hashFragment);
+                    }
             }
-            if (targetId == startPage) {
-                sessionStorage.removeItem('targetId');
-                window.location.href = startPage;
-            }
-
-            const result = extractAfterHash(targetId);
-            const targetElement = document.getElementById(result);
-            scrollToElement(targetElement);
         });
     });
-// });
+});
 
 function extractAfterHash(inputString) {
     const indexOfHash = inputString.indexOf('#');
@@ -51,6 +47,13 @@ function extractAfterHash(inputString) {
     } else {
         return null;
     }
+}
+
+function returnStartPageURL() {
+    let WPstartPage = 'http://sonicx.vdsman.ru';
+    var currentURL = window.location.href;
+    var baseURL = currentURL.split('?')[0];
+    return WPstartPage != baseURL ? baseURL : WPstartPage;
 }
 
 function scrollToElement(element) {
@@ -63,9 +66,20 @@ function scrollToElement(element) {
             });
         }
 }
+
+function extractSubdomain(url) {
+    var withoutProtocol = url.replace(/^https?:\/\//, '');
+
+    var subdomain = withoutProtocol.split('/')[0];
+
+    console.log("Поддомен: ", subdomain);
+}
+
 function findAnchorAndScrollTo(anchor) {
     if (anchor) {
         const targetElement = document.getElementById(anchor);
         scrollToElement(targetElement);
+    } else {
+        // console.log("anchro is ",anchor);
     }
 }
