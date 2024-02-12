@@ -765,7 +765,7 @@
 
 @media screen and (max-width: 480px) {
   .subscription {
-    background-image: url(/img/small_subscription_bg.svg);
+    background-image: url(img/small_subscription_bg.svg);
   }
   .subscription .flex-block {
     margin-top: 15px;
@@ -828,7 +828,7 @@ footer p {
 @media screen and (max-width: 480px) {
   footer {
     padding: 62px 0 10px;
-    background-image: url("/img/small_footer_bg.svg");
+    background-image: url("img/small_footer_bg.svg");
   }
   footer .footer-container {
     flex-direction: column;
