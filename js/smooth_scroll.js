@@ -5,9 +5,7 @@ window.addEventListener('load', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const anchors = document.querySelectorAll('div.top-bar a, div.site-map-grid a');
-
     const currentURL = window.location.pathname;
-    const startPage = returnStartPageURL();
  
     anchors.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -49,13 +47,6 @@ function extractAfterHash(inputString) {
     }
 }
 
-function returnStartPageURL() {
-    let WPstartPage = 'http://sonicx.vdsman.ru';
-    var currentURL = window.location.href;
-    var baseURL = currentURL.split('?')[0];
-    return WPstartPage != baseURL ? baseURL : WPstartPage;
-}
-
 function scrollToElement(element) {
     if (element) {
         const fixedHeaderHeight = 90;
@@ -65,14 +56,6 @@ function scrollToElement(element) {
             behavior: 'smooth'
             });
         }
-}
-
-function extractSubdomain(url) {
-    var withoutProtocol = url.replace(/^https?:\/\//, '');
-
-    var subdomain = withoutProtocol.split('/')[0];
-
-    console.log("Поддомен: ", subdomain);
 }
 
 function findAnchorAndScrollTo(anchor) {
