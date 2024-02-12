@@ -5,7 +5,10 @@ window.addEventListener('load', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const anchors = document.querySelectorAll('div.top-bar a, div.site-map-grid a');
-    const currentURL = window.location.pathname;
+    var fullPath = window.location.pathname;
+    var index = fullPath.indexOf('/RigaBread/');
+    var currentURL = fullPath.substring(index + '/RigaBread/'.length);
+    // const currentURL = window.location.pathname;
 
     anchors.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
