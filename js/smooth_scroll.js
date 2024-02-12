@@ -6,7 +6,7 @@ window.addEventListener('load', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const anchors = document.querySelectorAll('div.top-bar a, div.site-map-grid a');
     const currentURL = window.location.pathname;
- 
+
     anchors.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
@@ -37,15 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-function extractAfterHash(inputString) {
-    const indexOfHash = inputString.indexOf('#');
-    if (indexOfHash !== -1) {
-        return inputString.substring(indexOfHash + 1);
-    } else {
-        return null;
-    }
-}
 
 function scrollToElement(element) {
     if (element) {
