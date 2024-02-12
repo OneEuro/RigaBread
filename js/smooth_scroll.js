@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 case -1:
                     sessionStorage.removeItem('targetId');
                     // console.log("targetId",targetId);
-                    window.location.href = targetId;
+                    window.location.href = "/RigaBread" + targetId;
                     return;
                 default:
                     var pathBeforeHash = targetId.substring(0, hashPosition);
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // console.log("currentURL",currentURL);
                     if(pathBeforeHash != currentURL) {
                         sessionStorage.setItem('targetId', hashFragment);
-                        window.location.href = pathBeforeHash;
+                        window.location.href = "/RigaBread" + pathBeforeHash;
                     } else {
                         findAnchorAndScrollTo(hashFragment);
                     }
