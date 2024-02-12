@@ -256,13 +256,13 @@
 .prev {
   top: 30%;
   left: -5%;
-  background-image: url("/img/left-arrow.svg");
+  background-image: url("img/left-arrow.svg");
 }
 
 .next {
   top: 30%;
   right: -5%;
-  background-image: url("/img/right-arrow.svg");
+  background-image: url("img/right-arrow.svg");
 }
 
 .slick-initialized .slick-slide {
@@ -812,7 +812,7 @@ footer .site-map-grid {
   grid-row-gap: 6px;
 }
 footer .site-map-grid a.references:after {
-  content: url(/img/link-icon.svg);
+  content: url(img/link-icon.svg);
   position: absolute;
   padding-left: 5px;
 }
@@ -959,7 +959,7 @@ footer p {
   transform: translateY(-50%);
   width: 12px;
   height: 6px;
-  background: url("/img/down-arrow.svg") no-repeat center center;
+  background: url("img/down-arrow.svg") no-repeat center center;
   background-size: cover;
 }
 
