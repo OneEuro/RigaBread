@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 case -1:
                     sessionStorage.removeItem('targetId');
                     // console.log("targetId",targetId);
-                    window.location.href = targetId; //"/RigaBread"
+                    window.location.href = "/RigaBread" + targetId; //
                     return;
                 default:
                     var pathBeforeHash = targetId.substring(0, hashPosition);
